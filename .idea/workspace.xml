@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="temp classes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Chromosome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ChromosomeComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ChromosomeViewer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Crossover.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/EvolutionComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/EvolutionViewer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Fitness.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FittestComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GAMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Mutation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Population.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PopulationComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Selection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Terminator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ChromosomeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Jadon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/JadonTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jadon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ChromosomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ChromosomeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,13 +41,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/brutchjw/Documents/Spring2023/CSSE375/CSSE375-Team5"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Docs" />
+  </component>
+  <component name="RunManager">
+    <configuration name="GAMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GAMain" />
+      <module name="CSSE375-Team5.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GAMain" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -68,6 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1678390966629</updated>
+      <workItem from="1679504897402" duration="1988000" />
     </task>
     <task id="LOCAL-00001" summary="temp classes">
       <created>1678391167510</created>
@@ -78,6 +78,9 @@
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="temp classes" />
