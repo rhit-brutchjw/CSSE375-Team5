@@ -19,7 +19,7 @@ import javax.swing.JComponent;
  *         </pre>
  */
 public class EvolutionComponent extends JComponent {
-    public Population pop;
+    private Population pop;
 
     /**
      * ensures: initializes pop to populations

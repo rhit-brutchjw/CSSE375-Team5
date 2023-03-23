@@ -29,11 +29,9 @@ public class Terminator {
      *         score
      */
     public boolean mostFit(Population population) {
-        for (Chromosome chromosome : population.population) {
-            if (chromosome.getRank() == population.genomeLength) {
-                return true;
-            }
-        }
+    	if (population.maxFitAchieved()) {
+    		return true;
+    	}
         return false;
     } // mostFit
 

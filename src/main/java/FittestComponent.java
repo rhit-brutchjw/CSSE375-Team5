@@ -19,7 +19,7 @@ import javax.swing.JComponent;
  *
  */
 public class FittestComponent extends JComponent {
-    public Chromosome best;
+    private Chromosome best;
 
     /**
      * ensures: initializes best to bestFit

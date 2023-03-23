@@ -31,21 +31,20 @@ import javax.swing.event.MouseInputListener;
  *
  */
 public class ChromosomeViewer {
-    public static final int FRAME_WIDTH = 600;
-    public static final int FRAME_HEIGHT = 600;
-    public JFileChooser chooser = new JFileChooser("genotypes");
-    public File currentFile = new File("genotypes\\size_100.txt");
-    public JFrame frame = new JFrame();
-    public Chromosome chromosome = new Chromosome();
-    public int[][] genes = chromosome.load(currentFile);
-    public Mutation mutation = new Mutation();
-    public JLabel fileTitle = new JLabel(currentFile.getName());
-    public JPanel chromosomePanel = new JPanel();
-    public JButton mutate = new JButton("Mutate");
-    public JButton save = new JButton("Save");
-    public JButton load = new JButton("Load");
-    public JTextField mutationFactor = new JTextField();
-    public ChromosomeComponent chromosomeComponenet = new ChromosomeComponent(chromosome, genes);
+    private static final int FRAME_WIDTH = 600;
+    private static final int FRAME_HEIGHT = 600;
+    private JFileChooser chooser = new JFileChooser("genotypes");
+    private File currentFile = new File("genotypes\\size_100.txt");
+    private JFrame frame = new JFrame();
+    private Chromosome chromosome = new Chromosome();
+    private int[][] genes = chromosome.load(currentFile);
+    private JLabel fileTitle = new JLabel(currentFile.getName());
+    private JPanel chromosomePanel = new JPanel();
+    private JButton mutate = new JButton("Mutate");
+    private JButton save = new JButton("Save");
+    private JButton load = new JButton("Load");
+    private JTextField mutationFactor = new JTextField();
+    private ChromosomeComponent chromosomeComponenet = new ChromosomeComponent(chromosome, genes);
 
     /**
      * ensures: creates a new ChromosomeViewer and runs the program
@@ -122,7 +121,7 @@ public class ChromosomeViewer {
         @Override
         public void mouseClicked(MouseEvent e) {
             if (e.getX() < 400 && e.getX() > 0 && e.getY() < genes.length * 40 && e.getY() > 0) {
-                genes = mutation.changeOnClick(genes, e.getX(), e.getY());
+                genes = changeOnClick(genes, e.getX(), e.getY());
                 fileTitle.setText(currentFile.getName() + " (mutated)");
                 update(genes);
             }
@@ -156,6 +155,29 @@ public class ChromosomeViewer {
         public void mouseMoved(MouseEvent arg0) {
 
         }
+        
+        public int[][] changeOnClick(int[][] chromoArray, int x, int y) {
+            int iIndex = gridHelperI(y);
+            int jIndex = gridHelperJ(x);
+            if (chromoArray[iIndex][jIndex] == 1) {
+                chromoArray[iIndex][jIndex] = 0;
+            } else {
+                chromoArray[iIndex][jIndex] = 1;
+            }
+            return chromoArray;
+        } // changeOnClick
+        
+        public int gridHelperI(int y) {
+            int iIndex = y / 40;
+            return iIndex;
+
+        } // gridHelperI
+        
+        public int gridHelperJ(int x) {
+            int jIndex = x / 40;
+            return jIndex;
+
+        } // gridHelperJ
     }
 
     public class LoadListener implements ActionListener {
