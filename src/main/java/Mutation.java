@@ -79,7 +79,8 @@ public class Mutation {
      * @param chromoArray    the 2DArray that will change
      * @return returns the 2DArray that is changed
      */
-    public int[][] manualMutation(int mutationFactor, int[][] chromoArray) {
+    /*
+    private int[][] manualMutation(int mutationFactor, int[][] chromoArray) {
         Random random = new Random();
         ArrayList<Integer> keys = new ArrayList<Integer>();
         for (int i = 0; i < mutationFactor; i++) {
@@ -106,7 +107,7 @@ public class Mutation {
         }
         return chromoArray;
     } // manualMutation
-
+	*/
     /**
      * ensures: calls manualMutation based on the incoming Chromosome and
      * mutationFactor
@@ -116,9 +117,10 @@ public class Mutation {
      * @param mutationFactor the mutationFactor passed into manualMutation
      * @return returns the Chromosome that was changed
      */
+    /*
     public Chromosome autoMutation(Chromosome chromosome, int mutationFactor) {
         chromosome.geneArray = manualMutation(mutationFactor, chromosome.geneArray);
         return chromosome;
-
     } // autoMutation
+    */
 } // end Mutation
