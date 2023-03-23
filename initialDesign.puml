@@ -1,0 +1,154 @@
+@startuml
+class Chromosome {
+ + int[][] geneArray
+ + int geneSeed
+ + int rank
+ + getLength(): int
+ + clone(): Chromosome
+ + compareTo(Chromosome): int
+ + load(File file): int[][]
+ + save(File file, int[][] data): void
+ + drawOn(Graphics2D g, int x, int y, int value, int index): void
+ + drawSmallOn(Graphics2D g, int x, int y, int value): void
+}
+
+class ChromosomeComponent extends JComponent {
+ - Chromosome chromosome
+ - int[][] genes
+ + updateGrid(int[][] newGrid): void
+ # paintComponent(Graphics g): void
+}
+
+class ChromosomeViewer {
+ + many public JViewer Objects
+ + int[][] genes
+ + Chromosome chromosome
+ + File currentFile
+ + ChromosomeComponent chromosomeComponent
+ + {static} main(String[] args)
+ + ChromosomeViewer()
+ + update(int[][] chromosome): void
+ - MouseListener Private Class
+ + LoadListener Public Class
+}
+
+class Crossover {
+ + performCross(ArrayList<Chromosome> pop): ArrayList<Chromosome>
+}
+
+class EvolutionaryModel {
+ - Fitness fit
+ - Terminator terminator
+ + {static} Timer t
+ + Population pop
+ + {static} EvolutionViewer evViewer
+ + int curGen
+ + {static} pauseTimer(): void
+ + {static} startTimer(): void
+}
+
+class EvolutionComponent extends JComponent {
+ + Population pop
+ + updatePopulation(Population population): void
+ # paintComponent(Graphics g): void
+}
+
+class EvolutionViewer {
+ + many public JViewer objects
+ + Chromosome target
+ - String[] selectionOptions
+ - String[] fitnessOptions
+ + Population population
+ + EvolutionComponent evComp
+ + Chromosome best
+ + FittestComponent bestFit
+ + PopulationComponent allPopComponent
+ + many public flags
+ + updateGUI(Population pop): void
+ + updateFittest(Chromosome best): void
+ + updateAllPop(Population pop): void
+}
+
+class Fitness {
+ + simpleFitnessCalculation(Chromosome chromosome): void
+ + matchingFitnessCalculation(Chromosome chromosome, Chromosome individual): void
+ + consecutiveFitnessCalculation(Chromosome individual): void
+}
+
+class FittestComponent extends JComponent {
+ + Chromosome best
+ + updateBest(Chromosome newBest)
+ # paintComponent(Graphics g): void
+}
+
+class GAMain {
+ + {static} main(String[] args): void
+}
+
+class Mutation {
+ + changeOnClick(int[][] chromoArray, int x, int y): int[][]
+ + gridHelper(int y): int
+ + gridHelperJ(int x): int
+ + manualMutation(int mutationFactor, int[][] chromoArray): int[][]
+ + autoMutation(Chromosome chromosome, int mutationFactor): Chromosome
+}
+
+class Population {
+ + many public flags
+ + ArrayList<Chromosome> population
+ + Random r
+ + Selection select
+ + Crossover cross
+ + Mutation mut
+ + setElitism(int number): void
+ + addAvgFit(): void
+ + addBestFit(): void
+ + addWorstFit(): void
+ + addHammDist(): void
+ + handleSelectionMutation(int mutFactor, boolean willCrossover, int selectionMethod)
+ - randomPopulation(int popSize): ArrayList<Chromosome>
+ + drawOn(Graphics2D g): void
+}
+
+class PopulationComponent extends JComponent {
+ - ArrayList<Chromosome> curPop
+ + updateAll(ArrayList<Chromosome> newPop): void
+ # paintComponent(Graphics g): void
+}
+
+class Selection {
+ + truncation(ArrayList<Chromosome> population): ArrayList<Chromosome>
+ + rouletteWheel(ArrayList<Chromosome> population): ArrayList<Chromosome>
+ + rankedselection(ArrayList<Chromosome> population): ArrayList<Chromosome>
+}
+
+class Terminator {
+ + mostFit(Population population): boolean
+ + genCount(int curGen, int maxGen): boolean
+}
+
+ChromosomeComponent --> Chromosome
+ChromosomeViewer --> Chromosome
+ChromosomeViewer --> ChromosomeComponent
+Crossover *..> Chromosome
+EvolutionaryModel --> Fitness
+EvolutionaryModel --> Terminator
+EvolutionaryModel --> Population
+EvolutionaryModel --> EvolutionViewer
+EvolutionaryComponent --> Population
+EvolutionaryViewer --> Population
+EvolutionaryViewer --> Chromosome
+EvolutionaryViewer --> FittestComponent
+EvolutionaryViewer --> PopulationComponent
+Fitness ..> Chromosome
+FitnessComponent --> Chromosome
+GAMain ..> EvolutionaryModel
+Mutation ..> Chromosome
+Population --> Selection
+Population --> Crossover
+Population --> Mutation
+Population ..> Chromosome
+PopulationComponent *--> Chromosome
+Selection *..> Chromosome
+Terminator ..> Population
+@enduml
