@@ -105,7 +105,7 @@ public class EvolutionViewer {
                         int returnVal = chooser.showOpenDialog(evComp);
                         if (returnVal == JFileChooser.APPROVE_OPTION) {
                             File file = chooser.getSelectedFile();
-                            target.geneArray = target.load(file);
+                            target.load(file); // Loads geneArray in Chromosome
                             hasTarget = true;
                             fitnessMethod = fitness.getSelectedIndex();
                         } else if (returnVal == JFileChooser.CANCEL_OPTION) {
@@ -307,7 +307,7 @@ public class EvolutionViewer {
      */
     public void updateFittest(Chromosome best) {
         bestFit.updateBest(best);
-        highestFitnessRating.setText("Highest Fitness Rating: " + best.rank);
+        highestFitnessRating.setText("Highest Fitness Rating: " + best.getRank());
         bestFit.repaint();
         bestGUI.repaint();
         bestGUI.pack();

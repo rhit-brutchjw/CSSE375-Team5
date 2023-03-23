@@ -77,9 +77,9 @@ public class EvolutionaryModel {
 
                     // Prints to console the best, average, worst, and Hamming Distance
                     System.out.println("--------Generation: " + curGen + "--------");
-                    System.out.println("Best Score: " + pop.population.get(0).rank);
-                    System.out.println("Approximate Average: " + pop.population.get(pop.population.size() / 2).rank);
-                    System.out.println("Worst Score: " + pop.population.get(pop.population.size() - 1).rank);
+                    System.out.println("Best Score: " + pop.population.get(0).getRank());
+                    System.out.println("Approximate Average: " + pop.population.get(pop.population.size() / 2).getRank());
+                    System.out.println("Worst Score: " + pop.population.get(pop.population.size() - 1).getRank());
                     System.out.println("Average Hamming Distance : " + pop.hammDist.get(curGen - 1));
 
                     // Selection, Crossover (if applicable), then to Mutation

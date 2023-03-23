@@ -1,4 +1,4 @@
-
+ 
 
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -52,13 +52,14 @@ public class PopulationComponent extends JComponent {
         for (int i = 0; i < this.curPop.size() / 10; i++) {
             for (int l = 0; l < 10; l++) {
                 Chromosome curChrome = this.curPop.get(i * 10 + l);
-                int newRow = (i) * 5 * (curChrome.geneArray.length);
+                int[][] curChromeGenes = curChrome.getGenes();
+                int newRow = (i) * 5 * (curChromeGenes.length);
                 int newCol = l * 50;
                 x = newCol;
                 y = newRow;
-                for (int k = 0; k < curChrome.geneArray.length; k++) {
-                    for (int j = 0; j < curChrome.geneArray[0].length; j++) {
-                        curChrome.drawSmallOn(g2, x, y, curChrome.geneArray[k][j]);
+                for (int k = 0; k < curChromeGenes.length; k++) {
+                    for (int j = 0; j < curChromeGenes[0].length; j++) {
+                        curChrome.drawSmallOn(g2, x, y, curChromeGenes[k][j]);
                         x += 4;
                     }
                     x -= 40;

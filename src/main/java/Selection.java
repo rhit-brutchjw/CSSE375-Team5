@@ -19,7 +19,7 @@ import java.util.Random;
 public class Selection {
 
     /**
-     * ensures: creats a Selection Object so it's methods can be called
+     * ensures: creates a Selection Object so it's methods can be called
      */
     public Selection() {
 
@@ -65,7 +65,7 @@ public class Selection {
         ArrayList<Chromosome> output = new ArrayList<Chromosome>();
         for (Chromosome chromosome : population) {
             Chromosome temp = chromosome.clone();
-            for (int i = 0; i < chromosome.rank; i++) {
+            for (int i = 0; i < chromosome.getRank(); i++) {
                 wheel.add(temp);
             }
         }

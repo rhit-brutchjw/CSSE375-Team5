@@ -30,7 +30,7 @@ public class Terminator {
      */
     public boolean mostFit(Population population) {
         for (Chromosome chromosome : population.population) {
-            if (chromosome.rank == population.genomeLength) {
+            if (chromosome.getRank() == population.genomeLength) {
                 return true;
             }
         }

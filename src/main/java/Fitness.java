@@ -29,14 +29,15 @@ public class Fitness {
      */
     public void simpleFitnessCalculation(Chromosome chromosome) {
         int fitnessScore = 0;
-        for (int i = 0; i < chromosome.geneArray.length; i++) {
-            for (int j = 0; j < chromosome.geneArray[i].length; j++) {
-                if (chromosome.geneArray[i][j] == 1) {
+        int[][] activeGenes = chromosome.getGenes();
+        for (int i = 0; i < activeGenes.length; i++) {
+            for (int j = 0; j < activeGenes[i].length; j++) {
+                if (activeGenes[i][j] == 1) {
                     fitnessScore++;
                 }
             }
         }
-        chromosome.rank = fitnessScore;
+        chromosome.setRank(fitnessScore);
     } // simpleFitnessCalculation
 
     /**
@@ -49,14 +50,16 @@ public class Fitness {
      */
     public void matchingFitnessCalculation(Chromosome target, Chromosome individual) {
         int fitnessScore = 0;
-        for (int i = 0; i < individual.geneArray.length; i++) {
-            for (int j = 0; j < individual.geneArray[i].length; j++) {
-                if (target.geneArray[i][j] == individual.geneArray[i][j]) {
+        int[][] indGenes = individual.getGenes();
+        int[][] tarGenes = target.getGenes();
+        for (int i = 0; i < indGenes.length; i++) {
+            for (int j = 0; j < indGenes[i].length; j++) {
+                if (tarGenes[i][j] == indGenes[i][j]) {
                     fitnessScore++;
                 }
             }
         }
-        individual.rank = fitnessScore;
+        individual.setRank(fitnessScore);
     } // matchingFitnessCalculation
 
     /**
@@ -68,13 +71,14 @@ public class Fitness {
     public void consecutiveFitnessCalculation(Chromosome individual) {
         int bestScore = 0;
         int curScore = 0;
-        for (int i = 0; i < individual.geneArray.length; i++) {
-            for (int j = 0; j < individual.geneArray[i].length; j++) {
-                if (curScore == 0 && individual.geneArray[i][j] == 1) {
+        int[][] indGenes = individual.getGenes();
+        for (int i = 0; i < indGenes.length; i++) {
+            for (int j = 0; j < indGenes[i].length; j++) {
+                if (curScore == 0 && indGenes[i][j] == 1) {
                     curScore++;
-                } else if (curScore > 0 && individual.geneArray[i][j] == 1) {
+                } else if (curScore > 0 && indGenes[i][j] == 1) {
                     curScore++;
-                } else if (curScore > 0 && individual.geneArray[i][j] == 0) {
+                } else if (curScore > 0 && indGenes[i][j] == 0) {
                     if (curScore > bestScore) {
                         bestScore = curScore;
                     }
@@ -82,6 +86,6 @@ public class Fitness {
                 }
             }
         }
-        individual.rank = bestScore;
+        individual.setRank(bestScore);
     } // consecutiveFitnessCalculation
 } // end Fitness

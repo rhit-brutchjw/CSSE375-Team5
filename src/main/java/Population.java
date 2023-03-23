@@ -27,7 +27,7 @@ public class Population {
     public Random r = new Random();
     public Selection select = new Selection();
     public Crossover cross = new Crossover();
-    public Mutation mut = new Mutation();
+    //public Mutation mut = new Mutation();
     public int maxGenerations;
     public int currentGeneration;
     public ArrayList<Integer> bestFit = new ArrayList<Integer>();
@@ -67,7 +67,7 @@ public class Population {
     public void addAvgFit() {
         int avg = 0;
         for (Chromosome chromosome : population) {
-            avg += chromosome.rank;
+            avg += chromosome.getRank();
         }
         avgFit.add(avg / population.size());
     } // addAvgFit
@@ -78,8 +78,8 @@ public class Population {
     public void addBestFit() {
         int bestRank = 0;
         for (Chromosome chromosome : population) {
-            if(chromosome.rank > bestRank) {
-                bestRank = chromosome.rank;
+            if(chromosome.getRank() > bestRank) {
+                bestRank = chromosome.getRank();
             }
         }
         bestFit.add(bestRank);
@@ -89,7 +89,7 @@ public class Population {
      * ensures: adds the worst fitness score of each generation to an ArrayList
      */
     public void addWorstFit() {
-        worstFit.add(population.get(population.size() - 1).rank);
+        worstFit.add(population.get(population.size() - 1).getRank());
     } // addWorstFit
 
     /**
@@ -104,9 +104,11 @@ public class Population {
             for (int j = i + 1; j < population.size(); j++) {
                 Chromosome check = population.get(j);
                 int distance = 0;
-                for (int k = 0; k < current.geneArray.length; k++) {
-                    for (int l = 0; l < current.geneArray[k].length; l++) {
-                        if (current.geneArray[k][l] != check.geneArray[k][l]) {
+                int[][] currentGeneArray = current.getGenes();
+                int[][] compareGeneArray = check.getGenes();
+                for (int k = 0; k < currentGeneArray.length; k++) {
+                    for (int l = 0; l < currentGeneArray[k].length; l++) {
+                        if (currentGeneArray[k][l] != check.getGenes()[k][l]) {
                             distance++;
                         }
                     }
@@ -156,8 +158,7 @@ public class Population {
         }
         // Mutation
         for (int i = elitismIndex; i < temp.size(); i++) {
-            Chromosome toAdd = temp.get(i);
-            output.add(mut.autoMutation(toAdd, mutFactor));
+            output.add(temp.get(i).mutation(mutFactor, new Random()));
         }
 
         this.population = output;
