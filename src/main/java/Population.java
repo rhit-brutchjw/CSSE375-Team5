@@ -6,6 +6,7 @@ import java.awt.Graphics2D;
 import java.awt.Shape;
 import java.awt.geom.Line2D;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 /**
@@ -23,21 +24,19 @@ import java.util.Random;
  *
  */
 public class Population {
-    public ArrayList<Chromosome> population;
-    public Random r = new Random();
-    public Selection select = new Selection();
-    public Crossover cross = new Crossover();
-    public Mutation mut = new Mutation();
-    public int maxGenerations;
-    public int currentGeneration;
-    public ArrayList<Integer> bestFit = new ArrayList<Integer>();
-    public ArrayList<Integer> avgFit = new ArrayList<Integer>();
-    public ArrayList<Integer> worstFit = new ArrayList<Integer>();
-    public ArrayList<Integer> hammDist = new ArrayList<Integer>();
-    public int currentIndex = 0;
-    public int popSize;
-    public int genomeLength;
-    public int elitismIndex = 0;
+    private ArrayList<Chromosome> population;
+    private Random r = new Random();
+    private Selection select = new Selection();
+    private Crossover cross = new Crossover();
+    //public Mutation mut = new Mutation();
+    private int maxGenerations;
+    private int currentGeneration;
+    private ArrayList<Integer> bestFit = new ArrayList<Integer>();
+    private ArrayList<Integer> avgFit = new ArrayList<Integer>();
+    private ArrayList<Integer> worstFit = new ArrayList<Integer>();
+    private ArrayList<Integer> hammDist = new ArrayList<Integer>();
+    private int genomeLength;
+    private int elitismIndex = 0;
 
     /**
      * ensures: initializes popSize to popSize and genomeLength to genomeLength,
@@ -47,49 +46,50 @@ public class Population {
      * @param genomeLength used to initialize popSize
      */
     public Population(int popSize, int genomeLength) {
-        this.popSize = popSize;
         this.genomeLength = genomeLength;
         this.population = randomPopulation(popSize);
     } // Population
+    
+    public Chromosome getGene(int index) { return population.get(index); }
+    public int getSize() { return population.size(); }
+    public int getAvgHamm(int index) { return hammDist.get(index); }
+    public void setMaxGen(int maxGen) { this.maxGenerations = maxGen; }
+    public int getCurGen() { return currentGeneration; }
+    public void setCurGen(int curGen) { this.currentGeneration = curGen; } 
+    public int getGenomeLength() { return genomeLength; }
+    public void sortPopulation() { Collections.sort(population); }
+    public ArrayList<Chromosome> getPopulation() { return population; }
+    public void setElitism(int number) { elitismIndex = number; }
 
-    /**
-     * ensures: sets the elitismIndex to number
-     *
-     * @param number used to set elitismIndex
-     */
-    public void setElitism(int number) {
-        elitismIndex = number;
-    } // setElitism
-
-    /**
-     * ensures: adds the average fitness score of each generation to an ArrayList
-     */
+	public boolean maxFitAchieved() {
+        for (Chromosome chromosome : population) {
+            if (chromosome.getRank() == genomeLength) {
+                return true;
+            }
+        }
+        return false;
+	}
+    
     public void addAvgFit() {
         int avg = 0;
         for (Chromosome chromosome : population) {
-            avg += chromosome.rank;
+            avg += chromosome.getRank();
         }
         avgFit.add(avg / population.size());
     } // addAvgFit
 
-    /**
-     * ensures: adds the best fitness score of each generation to an ArrayList
-     */
     public void addBestFit() {
         int bestRank = 0;
         for (Chromosome chromosome : population) {
-            if(chromosome.rank > bestRank) {
-                bestRank = chromosome.rank;
+            if(chromosome.getRank() > bestRank) {
+                bestRank = chromosome.getRank();
             }
         }
         bestFit.add(bestRank);
     } // addBestFit
 
-    /**
-     * ensures: adds the worst fitness score of each generation to an ArrayList
-     */
     public void addWorstFit() {
-        worstFit.add(population.get(population.size() - 1).rank);
+        worstFit.add(population.get(population.size() - 1).getRank());
     } // addWorstFit
 
     /**
@@ -104,9 +104,11 @@ public class Population {
             for (int j = i + 1; j < population.size(); j++) {
                 Chromosome check = population.get(j);
                 int distance = 0;
-                for (int k = 0; k < current.geneArray.length; k++) {
-                    for (int l = 0; l < current.geneArray[k].length; l++) {
-                        if (current.geneArray[k][l] != check.geneArray[k][l]) {
+                int[][] currentGeneArray = current.getGenes();
+                int[][] compareGeneArray = check.getGenes();
+                for (int k = 0; k < currentGeneArray.length; k++) {
+                    for (int l = 0; l < currentGeneArray[k].length; l++) {
+                        if (currentGeneArray[k][l] != compareGeneArray[k][l]) {
                             distance++;
                         }
                     }
@@ -156,8 +158,7 @@ public class Population {
         }
         // Mutation
         for (int i = elitismIndex; i < temp.size(); i++) {
-            Chromosome toAdd = temp.get(i);
-            output.add(mut.autoMutation(toAdd, mutFactor));
+            output.add(temp.get(i).mutation(mutFactor, new Random()));
         }
 
         this.population = output;

@@ -5,6 +5,8 @@ import java.awt.Graphics2D;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -23,9 +25,9 @@ import java.util.Scanner;
  *
  */
 public class Chromosome implements Comparable<Chromosome> {
-    public int[][] geneArray;
-    public int geneSeed;
-    public int rank = -1;
+    private int[][] geneArray;
+    private int geneSeed;
+    private int rank = -1;
 
     /**
      * ensures: creates an empty object that can be modified later
@@ -52,13 +54,11 @@ public class Chromosome implements Comparable<Chromosome> {
      * @return the length of the geneArray
      */
     public int getLength() {
-        int output = 0;
-        for (int i = 0; i < geneArray.length; i++) {
-            for (int j = 0; j < geneArray[i].length; j++) {
-                output++;
-            }
-        }
-        return output;
+    	if (geneArray.length == 0) {
+    		return 0;
+    	} else {
+    		return geneArray.length * geneArray[0].length;
+    	}
     } // getLength
 
     /**
@@ -67,13 +67,11 @@ public class Chromosome implements Comparable<Chromosome> {
      * @return a new Chromosome with the same fields
      */
     public Chromosome clone() {
-        int[][] cloney = new int[geneArray.length][geneArray[0].length];
+        int[][] clonedGenes = new int[geneArray.length][geneArray[0].length];
         for (int i = 0; i < geneArray.length; i++) {
-            for (int j = 0; j < geneArray[i].length; j++) {
-                cloney[i][j] = this.geneArray[i][j];
-            }
+        	clonedGenes[i] = this.geneArray[i].clone();
         }
-        return new Chromosome(cloney, this.geneSeed, this.rank);
+        return new Chromosome(clonedGenes, this.geneSeed, this.rank);
     } // clone
 
     /**
@@ -85,9 +83,47 @@ public class Chromosome implements Comparable<Chromosome> {
      *         less than, equal to, or greater than the specified object.
      */
     @Override
-    public int compareTo(Chromosome chromiHomie) {
-        return chromiHomie.rank - this.rank;
+    public int compareTo(Chromosome otherChromosome) {
+        return otherChromosome.rank - this.rank;
     } // compareTo
+    
+    /**
+     * ensures: uses random to change, on average, the same number of
+     * bits as the mutationFactor
+     *
+     * @param mutationFactor the average number of bits that will change
+     * @param chromoArray    the 2DArray that will change
+     * @return 
+     * @return void, array is changed based on mutation factor
+     */
+    public Chromosome mutation(int mutationFactor, Random random) {
+        ArrayList<Integer> keys = new ArrayList<Integer>();
+        for (int i = 0; i < mutationFactor; i++) {
+            int key = random.nextInt(geneArray.length * 10);
+            if (!keys.contains(key)) {
+                keys.add(key);
+                continue;
+            }
+            i --;
+        }
+        for (int j = 0; j < geneArray.length; j++) {
+            for (int k = 0; k < geneArray[0].length; k++) {
+                int chance = random.nextInt(geneArray.length * 10);
+                for (int key : keys) {
+                    if (key == chance) {
+                        if (geneArray[j][k] == 1) {
+                        	geneArray[j][k] = 0;
+                        } else {
+                        	geneArray[j][k] = 1;
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Returns Chromosome for ease of use, but this is not needed to be used.
+        return this;
+    }
 
     /**
      * ensures: a file is turned into a 2DArray and returned
@@ -204,4 +240,9 @@ public class Chromosome implements Comparable<Chromosome> {
             g2.setColor(Color.BLACK);
         }
     } // drawSmallOn
+    
+    public int getRank() { return this.rank; }
+    public void setRank(int rank) { this.rank = rank; }
+    public int[][] getGenes() { return this.geneArray; }
+    public void updateGeneValue(int x, int y, int geneValue) { geneArray[x][y] = geneValue; }
 } // end Chromosome

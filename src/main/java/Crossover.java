@@ -36,13 +36,15 @@ public class Crossover {
         ArrayList<Chromosome> temp = new ArrayList<Chromosome>();
         for (int c = 0; c < pop.size(); c += 2) {
             Chromosome one = pop.get(c).clone();
+            int[][] oneGenes = one.getGenes();
             Chromosome two = pop.get(c + 1).clone();
-            int[][] tempArray = one.geneArray;
-            for (int i = 5; i < one.geneArray.length; i++) {
-                for (int j = 0; j < one.geneArray[0].length; j++) {
-                    tempArray[i][j] = one.geneArray[i][j];
-                    one.geneArray[i][j] = two.geneArray[i][j];
-                    two.geneArray[i][j] = tempArray[i][j];
+            int[][] twoGenes = two.getGenes();
+            int tempInt;
+            for (int i = 5; i < oneGenes.length; i++) {
+                for (int j = 0; j < oneGenes[0].length; j++) {
+                    tempInt = oneGenes[i][j];
+                    one.updateGeneValue(i, j, twoGenes[i][j]);
+                    two.updateGeneValue(i, j, tempInt);
                 }
             }
             temp.add(one);

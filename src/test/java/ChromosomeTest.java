@@ -1,7 +1,4 @@
-import org.easymock.EasyMock;
-
-
-
+//import org.easymock.EasyMock;
 
 public class ChromosomeTest {
 

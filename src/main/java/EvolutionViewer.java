@@ -16,9 +16,6 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
-
 
 import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
@@ -39,54 +36,54 @@ import javax.swing.JFileChooser;
  *         </pre>
  */
 public class EvolutionViewer {
-    public static final int FRAME_WIDTH = 1400;
-    public static final int FRAME_HEIGHT = 600;
-    public Chromosome target = new Chromosome(null, -1, -1);
-    public JFileChooser chooser = new JFileChooser("genotypes");
-    public JFrame evolutionGUI = new JFrame();
-    public JFrame bestGUI = new JFrame();
-    public JFrame allPopGUI = new JFrame();
-    public JPanel wordPanel = new JPanel();
-    public JPanel options = new JPanel();
-    public JButton start = new JButton("Start");
-    public JCheckBox crossover = new JCheckBox();
-    public JLabel title = new JLabel("Fitness over Generations");
-    public JLabel mutationText = new JLabel("Mutation Rate (N/pop)");
-    public JLabel populationSizeText = new JLabel("Population Size");
-    public JLabel generationsText = new JLabel("Generations");
-    public JLabel genomeText = new JLabel("Genome Length");
-    public JLabel selectionText = new JLabel("Selection");
-    public JLabel fitnessText = new JLabel("Fitness Function");
-    public JLabel elitismText = new JLabel("Elitism");
-    public JLabel crossoverText = new JLabel("Crossover?");
-    public JLabel mostFitLegend = new JLabel("Most Fit");
-    public JLabel avgFitLegend = new JLabel("Average Fit");
-    public JLabel leastFitLegend = new JLabel("Least Fit");
-    public JLabel hammLegend = new JLabel("Hamming Distance");
-    public JLabel highestFitnessRating = new JLabel("Highest Fitness Rating: ");
-    public JTextField mutationRate = new JTextField();
-    public JTextField populationSize = new JTextField();
-    public JTextField generations = new JTextField();
-    public JTextField genomeLength = new JTextField();
-    public JTextField elitism = new JTextField();
+	private static final int FRAME_WIDTH = 1400;
+	private static final int FRAME_HEIGHT = 600;
+	private JFileChooser chooser = new JFileChooser("genotypes");
+	private JFrame evolutionGUI = new JFrame();
+	private JFrame bestGUI = new JFrame();
+	private JFrame allPopGUI = new JFrame();
+	private JPanel wordPanel = new JPanel();
+	private JPanel options = new JPanel();
+	private JButton start = new JButton("Start");
+	private JCheckBox crossover = new JCheckBox();
+	private JLabel title = new JLabel("Fitness over Generations");
+	private JLabel mutationText = new JLabel("Mutation Rate (N/pop)");
+	private JLabel populationSizeText = new JLabel("Population Size");
+	private JLabel generationsText = new JLabel("Generations");
+	private JLabel genomeText = new JLabel("Genome Length");
+	private JLabel selectionText = new JLabel("Selection");
+	private JLabel fitnessText = new JLabel("Fitness Function");
+	private JLabel elitismText = new JLabel("Elitism");
+	private JLabel crossoverText = new JLabel("Crossover?");
+	private JLabel mostFitLegend = new JLabel("Most Fit");
+	private JLabel avgFitLegend = new JLabel("Average Fit");
+    private JLabel leastFitLegend = new JLabel("Least Fit");
+    private JLabel hammLegend = new JLabel("Hamming Distance");
+    private JLabel highestFitnessRating = new JLabel("Highest Fitness Rating: ");
+    private JTextField mutationRate = new JTextField();
+    private JTextField populationSize = new JTextField();
+    private JTextField generations = new JTextField();
+    private JTextField genomeLength = new JTextField();
+    private JTextField elitism = new JTextField();
     private String[] selectionOptions = { "Truncation", "Roulette", "Ranked" };
-    public JComboBox<String> selection = new JComboBox<>(selectionOptions);
+    private JComboBox<String> selection = new JComboBox<>(selectionOptions);
     private String[] fitnessOptions = { "Simple", "Matching", "Consecutive" };
-    public JComboBox<String> fitness = new JComboBox<>(fitnessOptions);
-    public Population population;
-    public EvolutionComponent evComp = new EvolutionComponent(population);
-    public Chromosome best;
-    public FittestComponent bestFit;
-    public PopulationComponent allPopComponent;
-    public boolean isPaused = true;
-    public boolean isStarted = false;
-    public boolean willCrossover;
-    public boolean isFinished = false;
-    public boolean hasTarget = false;
-    public int selectionMethod;
-    public int fitnessMethod;
-    public int mutationFactor = 1;
-    public int maxGen;
+    private JComboBox<String> fitness = new JComboBox<>(fitnessOptions);
+    private Population population;
+    private EvolutionComponent evComp = new EvolutionComponent(population);
+	private Chromosome target = new Chromosome(null, -1, -1);
+    private Chromosome best;
+    private FittestComponent bestFit;
+    private PopulationComponent allPopComponent;
+    private boolean isPaused = true;
+    private boolean isStarted = false;
+    private boolean willCrossover;
+    private boolean isFinished = false;
+    private boolean hasTarget = false;
+    private int selectionMethod;
+    private int fitnessMethod;
+    private int mutationFactor = 1;
+    private int maxGen;
 
     /**
      *
@@ -105,7 +102,7 @@ public class EvolutionViewer {
                         int returnVal = chooser.showOpenDialog(evComp);
                         if (returnVal == JFileChooser.APPROVE_OPTION) {
                             File file = chooser.getSelectedFile();
-                            target.geneArray = target.load(file);
+                            target.load(file); // Loads geneArray in Chromosome
                             hasTarget = true;
                             fitnessMethod = fitness.getSelectedIndex();
                         } else if (returnVal == JFileChooser.CANCEL_OPTION) {
@@ -130,19 +127,19 @@ public class EvolutionViewer {
                                     Integer.parseInt(genomeLength.getText()));
                             population.setElitism(Integer.parseInt(elitism.getText()));
                             evComp.updatePopulation(population);
-                            bestGUI.setPreferredSize(new Dimension(450, 5 * population.genomeLength));
+                            bestGUI.setPreferredSize(new Dimension(450, 5 * population.getGenomeLength()));
                             bestGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                             bestGUI.setTitle("Best Fitness Score");
-                            if (population.popSize > population.genomeLength) {
-                                allPopGUI.setPreferredSize(new Dimension(600, 6 * population.popSize));
+                            if (population.getSize() > population.getGenomeLength()) {
+                                allPopGUI.setPreferredSize(new Dimension(600, 6 * population.getSize()));
                             } else {
-                                allPopGUI.setPreferredSize(new Dimension(600, 6 * population.genomeLength));
+                                allPopGUI.setPreferredSize(new Dimension(600, 6 * population.getGenomeLength()));
                             }
                             allPopGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                             allPopGUI.setTitle("All Population Viewer");
-                            best = population.population.get(0);
+                            best = population.getGene(0);
                             bestFit = new FittestComponent(best);
-                            allPopComponent = new PopulationComponent(population.population);
+                            allPopComponent = new PopulationComponent(population.getPopulation());
                         } else if (Integer.parseInt(populationSize.getText()) % 10 != 0) {
                             JOptionPane.showMessageDialog(null, "Please enter a multiple of 10 for population size.",
                                     "Warning", 2);
@@ -167,7 +164,7 @@ public class EvolutionViewer {
                     } catch (NumberFormatException n) {
                     }
                     try {
-                        if (Integer.parseInt(mutationRate.getText()) < population.population.size()) {
+                        if (Integer.parseInt(mutationRate.getText()) < population.getSize()) {
                             mutationFactor = Integer.parseInt(mutationRate.getText());
                         } else {
                             JOptionPane.showMessageDialog(null,
@@ -274,7 +271,7 @@ public class EvolutionViewer {
         if (isFinished) {
             start.setText("Restart");
         }
-        if (pop.currentGeneration == 1) {
+        if (pop.getCurGen() == 1) {
             bestGUI.add(highestFitnessRating, BorderLayout.SOUTH);
             highestFitnessRating.setBounds(250, 480, 150, 20);
             allPopGUI.add(allPopComponent, BorderLayout.CENTER);
@@ -307,7 +304,7 @@ public class EvolutionViewer {
      */
     public void updateFittest(Chromosome best) {
         bestFit.updateBest(best);
-        highestFitnessRating.setText("Highest Fitness Rating: " + best.rank);
+        highestFitnessRating.setText("Highest Fitness Rating: " + best.getRank());
         bestFit.repaint();
         bestGUI.repaint();
         bestGUI.pack();
@@ -320,10 +317,35 @@ public class EvolutionViewer {
      * @param pop the Population that is used to update the PopulationComponent
      */
     public void updateAllPop(Population pop) {
-        allPopComponent.updateAll(pop.population);
+        allPopComponent.updateAll(pop.getPopulation());
         allPopComponent.repaint();
         allPopGUI.repaint();
         allPopGUI.pack();
         allPopGUI.setVisible(true);
     } // updateAllPop
+    
+    public boolean checkDisposal() {
+        if (isFinished) {
+            evolutionGUI.dispose();
+            bestGUI.dispose();
+            allPopGUI.dispose();
+            new EvolutionaryModel();
+            isFinished = false;
+            return true;
+        } else {
+        	return false;
+        }
+    }
+    
+    public boolean isStarted() { return isStarted; }
+    public boolean isFinished() { return isFinished; }
+    public void setFinished(boolean isFinished) { this.isFinished = isFinished; } 
+    public int getFitnessMethod() { return fitnessMethod; }
+    public int getMaxGen() { return maxGen; }
+    public Population getPopulation() { return population; }
+    public Chromosome getTarget() {return target; }
+
+	public void handlePopSelectionMutation(Population pop) {
+		pop.handleSelectionMutation(mutationFactor, willCrossover, selectionMethod);
+	}
 } // end EvolutionViewer

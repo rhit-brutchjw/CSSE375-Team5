@@ -19,7 +19,7 @@ import javax.swing.JComponent;
  *
  */
 public class FittestComponent extends JComponent {
-    public Chromosome best;
+    private Chromosome best;
 
     /**
      * ensures: initializes best to bestFit
@@ -45,13 +45,13 @@ public class FittestComponent extends JComponent {
      */
     @Override
     protected void paintComponent(Graphics g) {
-
+    	int[][] bestGenes = best.getGenes();
         Graphics2D g2 = (Graphics2D) g;
-        for (int i = 0; i < this.best.geneArray.length; i++) {
+        for (int i = 0; i < bestGenes.length; i++) {
             int y = 0;
             y += i * 40;
-            for (int j = 0; j < this.best.geneArray[i].length; j++) {
-                best.drawOn(g2, j * 40, y, this.best.geneArray[i][j], i * 10 + j);
+            for (int j = 0; j < bestGenes[i].length; j++) {
+                best.drawOn(g2, j * 40, y, bestGenes[i][j], i * 10 + j);
             }
 
         }
