@@ -4,13 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="temp classes">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="fixed issues with ChromosomeViewer main(), should run now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jadon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$LoadListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$LoadListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$MouseMutateListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$MouseMutateListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Crossover.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Crossover.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FittestComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FittestComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Mutation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Mutation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Population.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Population.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/PopulationComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/PopulationComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Selection.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Selection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Terminator.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Terminator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ChromosomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ChromosomeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Chromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Chromosome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ChromosomeComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChromosomeComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ChromosomeViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChromosomeViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Crossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Crossover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Fitness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fitness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FittestComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FittestComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GAMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GAMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Mutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Mutation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Population.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PopulationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PopulationComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Selection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Terminator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Terminator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +60,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="fixChromosomeViewer" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -41,11 +76,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Docs" />
-  </component>
-  <component name="RunManager">
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/brutchjw/Documents/Spring2023/CSSE375/CSSE375-Team5"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.ChromosomeViewer">
+    <configuration name="ChromosomeViewer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChromosomeViewer" />
+      <module name="CSSE375-Team5.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GAMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GAMain" />
       <module name="CSSE375-Team5.main" />
@@ -55,6 +99,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GAMain" />
+        <item itemvalue="Application.ChromosomeViewer" />
+        <item itemvalue="Application.ChromosomeViewer" />
         <item itemvalue="Application.GAMain" />
       </list>
     </recent_temporary>
@@ -76,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678391167510</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed issues with ChromosomeViewer main(), should run now">
+      <created>1679934534672</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679934534672</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,6 +138,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="temp classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="temp classes" />
+    <MESSAGE value="fixed issues with ChromosomeViewer main(), should run now" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed issues with ChromosomeViewer main(), should run now" />
   </component>
 </project>

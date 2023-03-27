@@ -20,21 +20,6 @@ import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
 
-/**
- * Class: EvolutionViewer
- *
- * @author brutchjw and rameydj <br>
- *         Purpose: Used to display the best, worst, and average fitness scores
- *         of each generation of a population, as well as the average Hamming
- *         Distance between generations, and allows parameters that affect the
- *         Genetic Algorithm to be entered at runtime. Also displays the best
- *         Chromosome of each generation, and the entire population. <br>
- *         For example:
- *
- *         <pre>
- *         EvolutionViewer example = new EvolutionViewer();
- *         </pre>
- */
 public class EvolutionViewer {
 	private static final int FRAME_WIDTH = 1400;
 	private static final int FRAME_HEIGHT = 600;
@@ -85,9 +70,6 @@ public class EvolutionViewer {
     private int mutationFactor = 1;
     private int maxGen;
 
-    /**
-     *
-     */
     public EvolutionViewer() {
         evolutionGUI.setPreferredSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT));
         evolutionGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -258,12 +240,6 @@ public class EvolutionViewer {
 
     } // EvolutionViewer
 
-    /**
-     * ensures: updates the frame once per generation, and if the Genetic Algorithm
-     * has started, displays the best Chromosome and the entire population
-     *
-     * @param pop used to update the population of EvolutionComponent
-     */
     public void updateGUI(Population pop) {
         if (isStarted) {
             evolutionGUI.setAlwaysOnTop(true);
@@ -296,12 +272,6 @@ public class EvolutionViewer {
 
     } // updateGUI
 
-    /**
-     * ensures: updates the display for the best Chromosome each generation
-     *
-     * @param best the current best Chromosome that is used to update the
-     *             FittestComponent
-     */
     public void updateFittest(Chromosome best) {
         bestFit.updateBest(best);
         highestFitnessRating.setText("Highest Fitness Rating: " + best.getRank());
@@ -311,11 +281,6 @@ public class EvolutionViewer {
         bestGUI.setVisible(true);
     } // updateFittest
 
-    /**
-     * ensures: updates the display for the entire population each generation
-     *
-     * @param pop the Population that is used to update the PopulationComponent
-     */
     public void updateAllPop(Population pop) {
         allPopComponent.updateAll(pop.getPopulation());
         allPopComponent.repaint();

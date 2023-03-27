@@ -16,20 +16,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.event.MouseInputListener;
 
-/**
- * Class: ChromosomeViewer
- *
- * @author brutchjw and rameydj <br>
- *         Purpose: Used to view a single Chromosome object, mutate it based on
- *         clicks or a button, and can load a new Chromosome or save the current
- *         one after it has been changed <br>
- *         For example:
- *
- *         <pre>
- *         ChromosomeViewer exampleViewer = new ChromosomeViewer();
- *         </pre>
- *
- */
 public class ChromosomeViewer {
     private static final int FRAME_WIDTH = 600;
     private static final int FRAME_HEIGHT = 600;
@@ -46,19 +32,10 @@ public class ChromosomeViewer {
     private JTextField mutationFactor = new JTextField();
     private ChromosomeComponent chromosomeComponent = new ChromosomeComponent(chromosome, genes);
 
-    /**
-     * ensures: creates a new ChromosomeViewer and runs the program
-     *
-     * @param args
-     */
     public static void main(String[] args) {
         new ChromosomeViewer();
     } // main
 
-    /**
-     * ensures: creates a JFrame, several buttons, a ChromosomeComponent, and
-     * displays a Chromosome
-     */
     public ChromosomeViewer() {
         frame.setPreferredSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -100,14 +77,7 @@ public class ChromosomeViewer {
         frame.add(fileTitle, BorderLayout.NORTH);
         update(genes);
     } // ChromosomeViewer
-
-    /**
-     * ensures: updates and repaints the frame to display any changes to the
-     * Chromosome and ChromosomeComponent
-     *
-     * @param chromosome the 2DArray that is passed into ChromosomeComponent's
-     *                   updateGrid method
-     */
+    
     public void update(int[][] chromosome) {
         chromosomeComponent.updateGrid(chromosome);
         chromosomeComponent.repaint();

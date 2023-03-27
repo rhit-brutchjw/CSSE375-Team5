@@ -5,45 +5,18 @@ import java.awt.Graphics2D;
 import java.util.ArrayList;
 import javax.swing.JComponent;
 
-/**
- * Class: PopulationComponent <br>
- * Extends: JComponent
- *
- * @author brutchjw and rameydj <br>
- *         Purpose: Used to draw the entire population each generation <br>
- *         For example:
- *
- *         <pre>
- *         PopulationComponent example = new PopulationComponent(population);
- *         </pre>
- *
- */
 public class PopulationComponent extends JComponent {
     private ArrayList<Chromosome> curPop;
 
-    /**
-     * ensures: initializes curPop to population
-     *
-     * @param population used to initialize curPop
-     */
     public PopulationComponent(ArrayList<Chromosome> population) {
         super();
         this.curPop = population;
     } // PopulationComponent
 
-    /**
-     * ensures: updates curPop to newPop
-     *
-     * @param newPop used to update curPop
-     */
     public void updateAll(ArrayList<Chromosome> newPop) {
         this.curPop = newPop;
     } // updateAll
 
-    /**
-     * ensures: draws the entire population by calling Chromosome's drawSmallOn
-     * method for each Chromosome Object inside of the population
-     */
     @Override
     protected void paintComponent(Graphics g) {
         int x = 0;

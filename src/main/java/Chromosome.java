@@ -9,50 +9,20 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-/**
- * Class: Chromosome
- *
- * @author brutchjw & rameydj <br>
- *         Purpose: Used to hold a 2D array of bit strings containing 1's or
- *         0's, a random seed, and a rank. <br>
- *         Can be compared to other chromosomes based on rank. <br>
- *         For example:
- *
- *         <pre>
- *         Chromosome example = new Chromosome(int[][] geneArray, 0);
- *         </pre>
- *
- *
- */
 public class Chromosome implements Comparable<Chromosome> {
     private int[][] geneArray;
     private int geneSeed;
     private int rank = -1;
 
-    /**
-     * ensures: creates an empty object that can be modified later
-     */
     public Chromosome() {
     } // Chromosome
 
-    /**
-     * ensures: initializes geneArray to geneArray and geneSeed to seed
-     *
-     * @param geneArray used to initialize the Chromosome's geneArray <br>
-     *                  requires: geneArray to have column length of 10
-     * @param seed      used to initialize the Chromosome's seed
-     */
     public Chromosome(int[][] geneArray, int seed, int rank) {
         this.geneArray = geneArray;
         this.geneSeed = seed;
         this.rank = rank;
     } // Chromosome
 
-    /**
-     * ensures: the length of the geneArray is returned
-     *
-     * @return the length of the geneArray
-     */
     public int getLength() {
     	if (geneArray.length == 0) {
     		return 0;
@@ -61,11 +31,6 @@ public class Chromosome implements Comparable<Chromosome> {
     	}
     } // getLength
 
-    /**
-     * ensures: a deep copy of a Chromosome is made and returned
-     *
-     * @return a new Chromosome with the same fields
-     */
     public Chromosome clone() {
         int[][] clonedGenes = new int[geneArray.length][geneArray[0].length];
         for (int i = 0; i < geneArray.length; i++) {
@@ -74,28 +39,11 @@ public class Chromosome implements Comparable<Chromosome> {
         return new Chromosome(clonedGenes, this.geneSeed, this.rank);
     } // clone
 
-    /**
-     * ensures: returns a negative integer, zero, or a positive integer for sorting
-     * purposes
-     *
-     * @param chromiHomie the other Chromosome object being compared
-     * @return a negative integer, zero, or a positive integer as this object is
-     *         less than, equal to, or greater than the specified object.
-     */
     @Override
     public int compareTo(Chromosome otherChromosome) {
         return otherChromosome.rank - this.rank;
     } // compareTo
-    
-    /**
-     * ensures: uses random to change, on average, the same number of
-     * bits as the mutationFactor
-     *
-     * @param mutationFactor the average number of bits that will change
-     * @param chromoArray    the 2DArray that will change
-     * @return 
-     * @return void, array is changed based on mutation factor
-     */
+
     public Chromosome mutation(int mutationFactor, Random random) {
         ArrayList<Integer> keys = new ArrayList<Integer>();
         for (int i = 0; i < mutationFactor; i++) {
@@ -125,13 +73,6 @@ public class Chromosome implements Comparable<Chromosome> {
         return this;
     }
 
-    /**
-     * ensures: a file is turned into a 2DArray and returned
-     *
-     * @param file the file that gets loaded, scanned, and turned into a 2DArray of
-     *             ints requires: there must be 10 ints per row
-     * @return a 2DArray of ints
-     */
     public int[][] load(File file) {
         Scanner sc;
         Scanner scan;
@@ -163,12 +104,6 @@ public class Chromosome implements Comparable<Chromosome> {
         return geneArray;
     } // load
 
-    /**
-     * ensures: a file is written and saved to the genotypes directory
-     *
-     * @param file the file that gets saved
-     * @param data the 2DArray of ints that gets saved on the file
-     */
     public void save(File file, int[][] data) {
         FileWriter fos;
         try {
@@ -189,16 +124,6 @@ public class Chromosome implements Comparable<Chromosome> {
         }
     } // save
 
-    /**
-     * ensures: draws a rectangle with its color determined by the bit value, and
-     * labels the index
-     *
-     * @param g     the graphics object used for drawing
-     * @param x     the x location the rectangle is drawn at
-     * @param y     the y location the rectangle is drawn at
-     * @param value the binary value of the bit, so it can be represented as a color
-     * @param index the index of the bit
-     */
     public void drawOn(Graphics2D g, int x, int y, int value, int index) {
 
         g = (Graphics2D) g.create();
@@ -217,14 +142,6 @@ public class Chromosome implements Comparable<Chromosome> {
         g.drawString(Integer.toString(index), x + 20, y + 20);
     } // drawOn
 
-    /**
-     * ensures: draws a rectangle with its color determined by the bit value
-     *
-     * @param g2    the graphics object used for drawing
-     * @param x     the x location the rectangle is drawn at
-     * @param y     the y location the rectangle is drawn at
-     * @param value the binary value of the bit, so it can be represented as a color
-     */
     public void drawSmallOn(Graphics2D g2, int x, int y, int value) {
         g2 = (Graphics2D) g2.create();
         if (value == 0) {

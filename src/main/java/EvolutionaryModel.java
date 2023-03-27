@@ -4,20 +4,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.Timer;
 
-/**
- * Class: EvolutionaryModel
- *
- * @author brutchjw and rameydj <br>
- *         Purpose: Used to run a Genetic Algorithm with various parameters
- *         given at runtime <br>
- *         For example:
- *
- *         <pre>
- *         EvolutionaryModel example = new EvolutionaryModel();
- *         </pre>
- *
- *
- */
 public class EvolutionaryModel {
     private Fitness fit = new Fitness();
     private Terminator terminator = new Terminator();
@@ -25,11 +11,6 @@ public class EvolutionaryModel {
     private Population pop = null;
     private static EvolutionViewer evViewer;
 
-    /**
-     * ensures: Creates a Timer object which runs the Genetic Algorithm once per
-     * timer delay, Creates an EvolutionViewer object which visualizes the results
-     * of the Genetic Algorithm
-     */
     public EvolutionaryModel() {
         evViewer = new EvolutionViewer();
 
@@ -94,17 +75,10 @@ public class EvolutionaryModel {
 
     } // EvolutionaryModel
 
-	/**
-	 * ensures: pauses the timer, and thus the Genetic Algorithm
-	 */
 	public static void pauseTimer() {
 		t.stop();
 	} // pauseTimer
 
-	/**
-	 * ensures: starts the timer, and thus the Genetic Algorithm, also restarts the
-	 * process when the Genetic Algorithm has finished
-	 */
 	public static void startTimer() {
 		if (!evViewer.checkDisposal()) {
 			t.start();
