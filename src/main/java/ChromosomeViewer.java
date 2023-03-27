@@ -44,7 +44,7 @@ public class ChromosomeViewer {
     private JButton save = new JButton("Save");
     private JButton load = new JButton("Load");
     private JTextField mutationFactor = new JTextField();
-    private ChromosomeComponent chromosomeComponenet = new ChromosomeComponent(chromosome, genes);
+    private ChromosomeComponent chromosomeComponent = new ChromosomeComponent(chromosome, genes);
 
     /**
      * ensures: creates a new ChromosomeViewer and runs the program
@@ -68,13 +68,13 @@ public class ChromosomeViewer {
         chromosomePanel.add(load);
         chromosomePanel.add(mutate);
         chromosomePanel.add(mutationFactor);
-        chromosomeComponenet.addMouseListener(new MouseMutateListener());
+        chromosomeComponent.addMouseListener(new MouseMutateListener());
         load.addActionListener(new LoadListener());
         save.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent arg0) {
-                int returnVal = chooser.showSaveDialog(chromosomeComponenet);
+                int returnVal = chooser.showSaveDialog(chromosomeComponent);
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
                     File fileToSave = chooser.getSelectedFile();
                     chromosome.save(fileToSave, genes);
@@ -95,7 +95,7 @@ public class ChromosomeViewer {
                 update(genes);
             }
         });
-        frame.add(chromosomeComponenet);
+        frame.add(chromosomeComponent);
         frame.add(chromosomePanel, BorderLayout.SOUTH);
         frame.add(fileTitle, BorderLayout.NORTH);
         update(genes);
@@ -109,8 +109,8 @@ public class ChromosomeViewer {
      *                   updateGrid method
      */
     public void update(int[][] chromosome) {
-        chromosomeComponenet.updateGrid(chromosome);
-        chromosomeComponenet.repaint();
+        chromosomeComponent.updateGrid(chromosome);
+        chromosomeComponent.repaint();
         frame.repaint();
         frame.pack();
         frame.setVisible(true);
@@ -184,7 +184,7 @@ public class ChromosomeViewer {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            int returnVal = chooser.showOpenDialog(chromosomeComponenet);
+            int returnVal = chooser.showOpenDialog(chromosomeComponent);
             if (returnVal == JFileChooser.APPROVE_OPTION) {
                 currentFile = chooser.getSelectedFile();
                 genes = chromosome.load(currentFile);

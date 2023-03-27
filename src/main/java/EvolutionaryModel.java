@@ -2,7 +2,6 @@
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Collections;
 import javax.swing.Timer;
 
 /**
@@ -25,7 +24,6 @@ public class EvolutionaryModel {
     private static Timer t;
     private Population pop = null;
     private static EvolutionViewer evViewer;
-    private int curGen;
 
     /**
      * ensures: Creates a Timer object which runs the Genetic Algorithm once per
@@ -96,20 +94,20 @@ public class EvolutionaryModel {
 
     } // EvolutionaryModel
 
-    /**
-     * ensures: pauses the timer, and thus the Genetic Algorithm
-     */
-    public static void pauseTimer() {
-        t.stop();
-    } // pauseTimer
+	/**
+	 * ensures: pauses the timer, and thus the Genetic Algorithm
+	 */
+	public static void pauseTimer() {
+		t.stop();
+	} // pauseTimer
 
-    /**
-     * ensures: starts the timer, and thus the Genetic Algorithm, also restarts the
-     * process when the Genetic Algorithm has finished
-     */
-    public static void startTimer() {
-        if (!evViewer.checkDisposal()) {
-        	t.start();
-        }
-    } // startTimer
+	/**
+	 * ensures: starts the timer, and thus the Genetic Algorithm, also restarts the
+	 * process when the Genetic Algorithm has finished
+	 */
+	public static void startTimer() {
+		if (!evViewer.checkDisposal()) {
+			t.start();
+		}
+	} // startTimer
 } // end EvolutionaryModel

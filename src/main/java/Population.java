@@ -35,7 +35,6 @@ public class Population {
     private ArrayList<Integer> avgFit = new ArrayList<Integer>();
     private ArrayList<Integer> worstFit = new ArrayList<Integer>();
     private ArrayList<Integer> hammDist = new ArrayList<Integer>();
-    private int currentIndex = 0;
     private int genomeLength;
     private int elitismIndex = 0;
 
@@ -60,19 +59,17 @@ public class Population {
     public int getGenomeLength() { return genomeLength; }
     public void sortPopulation() { Collections.sort(population); }
     public ArrayList<Chromosome> getPopulation() { return population; }
+    public void setElitism(int number) { elitismIndex = number; }
 
-    /**
-     * ensures: sets the elitismIndex to number
-     *
-     * @param number used to set elitismIndex
-     */
-    public void setElitism(int number) {
-        elitismIndex = number;
-    } // setElitism
-
-    /**
-     * ensures: adds the average fitness score of each generation to an ArrayList
-     */
+	public boolean maxFitAchieved() {
+        for (Chromosome chromosome : population) {
+            if (chromosome.getRank() == genomeLength) {
+                return true;
+            }
+        }
+        return false;
+	}
+    
     public void addAvgFit() {
         int avg = 0;
         for (Chromosome chromosome : population) {
@@ -81,9 +78,6 @@ public class Population {
         avgFit.add(avg / population.size());
     } // addAvgFit
 
-    /**
-     * ensures: adds the best fitness score of each generation to an ArrayList
-     */
     public void addBestFit() {
         int bestRank = 0;
         for (Chromosome chromosome : population) {
@@ -94,9 +88,6 @@ public class Population {
         bestFit.add(bestRank);
     } // addBestFit
 
-    /**
-     * ensures: adds the worst fitness score of each generation to an ArrayList
-     */
     public void addWorstFit() {
         worstFit.add(population.get(population.size() - 1).getRank());
     } // addWorstFit
@@ -117,7 +108,7 @@ public class Population {
                 int[][] compareGeneArray = check.getGenes();
                 for (int k = 0; k < currentGeneArray.length; k++) {
                     for (int l = 0; l < currentGeneArray[k].length; l++) {
-                        if (currentGeneArray[k][l] != check.getGenes()[k][l]) {
+                        if (currentGeneArray[k][l] != compareGeneArray[k][l]) {
                             distance++;
                         }
                     }
@@ -259,13 +250,4 @@ public class Population {
         }
 
     } // drawOn
-
-	public boolean maxFitAchieved() {
-        for (Chromosome chromosome : population) {
-            if (chromosome.getRank() == genomeLength) {
-                return true;
-            }
-        }
-        return false;
-	}
 } // end Population

@@ -159,8 +159,7 @@ public class Chromosome implements Comparable<Chromosome> {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        
-        this.geneArray = geneArray;
+
         return geneArray;
     } // load
 

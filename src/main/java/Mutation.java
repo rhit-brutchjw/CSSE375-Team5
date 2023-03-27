@@ -1,8 +1,3 @@
-
-
-import java.util.ArrayList;
-import java.util.Random;
-
 /**
  * Class: Mutation
  *
