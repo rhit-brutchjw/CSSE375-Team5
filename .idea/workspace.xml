@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="fixed issues with ChromosomeViewer main(), should run now">
+    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="removed javadocs">
+      <change afterPath="$PROJECT_DIR$/src/test/java/EvolutionaryModelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$1.class" afterDir="false" />
@@ -26,21 +27,7 @@
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/Selection.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Selection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/Terminator.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Terminator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Chromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Chromosome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChromosomeComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChromosomeComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChromosomeViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChromosomeViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Crossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Crossover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionViewer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fitness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fitness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FittestComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FittestComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GAMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GAMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Mutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Mutation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Population.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PopulationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PopulationComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Selection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Terminator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Terminator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +69,7 @@
     "last_opened_file_path": "C:/Users/brutchjw/Documents/Spring2023/CSSE375/CSSE375-Team5"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ChromosomeViewer">
+  <component name="RunManager" selected="Application.GAMain">
     <configuration name="ChromosomeViewer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ChromosomeViewer" />
       <module name="CSSE375-Team5.main" />
@@ -130,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679934534672</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="removed javadocs">
+      <created>1679946137360</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679946137360</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +133,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="temp classes" />
     <MESSAGE value="fixed issues with ChromosomeViewer main(), should run now" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed issues with ChromosomeViewer main(), should run now" />
+    <MESSAGE value="removed javadocs" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed javadocs" />
   </component>
 </project>

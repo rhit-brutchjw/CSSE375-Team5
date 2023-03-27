@@ -6,7 +6,6 @@ import javax.swing.Timer;
 
 public class EvolutionaryModel {
     private Fitness fit = new Fitness();
-    private Terminator terminator = new Terminator();
     private static Timer t;
     private Population pop = null;
     private static EvolutionViewer evViewer;
@@ -39,7 +38,7 @@ public class EvolutionaryModel {
                     pop.sortPopulation();
 
                     // Terminate calculation
-                    if (terminator.mostFit(pop) || terminator.genCount(evViewer.getMaxGen(), curGen)) {
+                    if(pop.maxFitAchieved() || evViewer.getMaxGen() == curGen) {
                         evViewer.setFinished(true);
                         ((Timer) arg0.getSource()).stop();
                     }
