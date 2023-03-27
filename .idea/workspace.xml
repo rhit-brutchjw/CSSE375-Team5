@@ -4,30 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="removed javadocs">
-      <change afterPath="$PROJECT_DIR$/src/test/java/EvolutionaryModelTest.java" afterDir="false" />
+    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="removed lazy class terminator">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RankSelection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RouletteSelection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TruncationSelection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$LoadListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$LoadListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$MouseMutateListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$MouseMutateListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Crossover.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Crossover.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionComponent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FittestComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FittestComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Mutation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Mutation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/Population.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Population.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/PopulationComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/PopulationComponent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/Selection.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Selection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Terminator.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Terminator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Terminator.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Population.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Selection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +36,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="fixChromosomeViewer" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,6 +60,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "C:/Users/brutchjw/Documents/Spring2023/CSSE375/CSSE375-Team5"
   }
 }]]></component>
@@ -124,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679946137360</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="removed lazy class terminator">
+      <created>1679948436203</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679948436203</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +136,7 @@
     <MESSAGE value="temp classes" />
     <MESSAGE value="fixed issues with ChromosomeViewer main(), should run now" />
     <MESSAGE value="removed javadocs" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed javadocs" />
+    <MESSAGE value="removed lazy class terminator" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed lazy class terminator" />
   </component>
 </project>

@@ -26,7 +26,6 @@ import java.util.Random;
 public class Population {
     private ArrayList<Chromosome> population;
     private Random r = new Random();
-    private Selection select = new Selection();
     private Crossover cross = new Crossover();
     //public Mutation mut = new Mutation();
     private int maxGenerations;
@@ -110,7 +109,7 @@ public class Population {
         hammDist.add(total / tracker);
     } // addHammDist
 
-    public void handleSelectionMutation(int mutFactor, boolean willCrossover, int selectionMethod) {
+    public void handleSelectionMutation(int mutFactor, boolean willCrossover, Selection selectionMethod) {
         // Deep clone population
         ArrayList<Chromosome> temp = new ArrayList<Chromosome>();
         for (Chromosome chromosome : this.population) {
@@ -124,13 +123,8 @@ public class Population {
             output.add(elite);
         }
         // Selection
-        if(selectionMethod == 0) {
-            temp = select.truncation(temp);
-        } else if(selectionMethod == 1) {
-            temp = select.rouletteWheel(temp);
-        } else if(selectionMethod == 2) {
-            temp = select.rankedSelection(temp);
-        }
+        temp = selectionMethod.performSelection(temp);
+
         // Crossover
         if (willCrossover) {
             temp = cross.performCross(temp);

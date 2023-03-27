@@ -65,7 +65,7 @@ public class EvolutionViewer {
     private boolean willCrossover;
     private boolean isFinished = false;
     private boolean hasTarget = false;
-    private int selectionMethod;
+    private Selection selectionMethod;
     private int fitnessMethod;
     private int mutationFactor = 1;
     private int maxGen;
@@ -79,7 +79,13 @@ public class EvolutionViewer {
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 if (!isStarted) {
-                    selectionMethod = selection.getSelectedIndex();
+                    if(selection.getSelectedIndex() == 0) {
+                        selectionMethod = new TruncationSelection();
+                    }else if(selection.getSelectedIndex() == 1) {
+                        selectionMethod = new RouletteSelection();
+                    } else if(selection.getSelectedIndex() == 2) {
+                        selectionMethod = new RankSelection();
+                    }
                     if (fitness.getSelectedIndex() == 1) {
                         int returnVal = chooser.showOpenDialog(evComp);
                         if (returnVal == JFileChooser.APPROVE_OPTION) {
