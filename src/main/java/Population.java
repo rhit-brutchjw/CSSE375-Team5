@@ -26,7 +26,6 @@ import java.util.Random;
 public class Population {
     private ArrayList<Chromosome> population;
     private Random r = new Random();
-    private Selection select = new Selection();
     private Crossover cross = new Crossover();
     //public Mutation mut = new Mutation();
     private int maxGenerations;
@@ -38,13 +37,6 @@ public class Population {
     private int genomeLength;
     private int elitismIndex = 0;
 
-    /**
-     * ensures: initializes popSize to popSize and genomeLength to genomeLength,
-     * also generates a random population based on the popSize
-     *
-     * @param popSize      used to initialize popSize
-     * @param genomeLength used to initialize popSize
-     */
     public Population(int popSize, int genomeLength) {
         this.genomeLength = genomeLength;
         this.population = randomPopulation(popSize);
@@ -92,10 +84,6 @@ public class Population {
         worstFit.add(population.get(population.size() - 1).getRank());
     } // addWorstFit
 
-    /**
-     * ensures: calculates and adds the average Hamming Distance of each generation
-     * to an ArrayList
-     */
     public void addHammDist() {
         int total = 0;
         int tracker = 0;
@@ -121,17 +109,7 @@ public class Population {
         hammDist.add(total / tracker);
     } // addHammDist
 
-    /**
-     * ensures: for all of the Chromosome objects inside the population, creates
-     * deep clones of them, performs selection based on the passed in method, performs crossover if
-     * applicable, mutates them, and then updates the population to the resulting
-     * ArrayList
-     *
-     * @param mutFactor     the mutation factor that is passed to autoMutation
-     * @param willCrossover the boolean that decides whether or not crossover should
-     *                      occur
-     */
-    public void handleSelectionMutation(int mutFactor, boolean willCrossover, int selectionMethod) {
+    public void handleSelectionMutation(int mutFactor, boolean willCrossover, Selection selectionMethod) {
         // Deep clone population
         ArrayList<Chromosome> temp = new ArrayList<Chromosome>();
         for (Chromosome chromosome : this.population) {
@@ -145,13 +123,8 @@ public class Population {
             output.add(elite);
         }
         // Selection
-        if(selectionMethod == 0) {
-            temp = select.truncation(temp);
-        } else if(selectionMethod == 1) {
-            temp = select.rouletteWheel(temp);
-        } else if(selectionMethod == 2) {
-            temp = select.rankedSelection(temp);
-        }
+        temp = selectionMethod.performSelection(temp);
+
         // Crossover
         if (willCrossover) {
             temp = cross.performCross(temp);
@@ -164,13 +137,6 @@ public class Population {
         this.population = output;
     } // handleSelectionMutation
 
-    /**
-     * ensures: creates an ArrayList of random Chromosome Objects and returns the
-     * result
-     *
-     * @param popSize the length of the ArrayList to be created
-     * @return returns the resulting ArrayList of Chromosome Objects
-     */
     private ArrayList<Chromosome> randomPopulation(int popSize) {
 
         ArrayList<Chromosome> output = new ArrayList<Chromosome>();
@@ -195,13 +161,6 @@ public class Population {
 
     } // randomPopulation
 
-    /**
-     * ensures: draws the x and y axes, the graph's legend, the best, worst, and
-     * average fitness scores of each generation, and the average Hamming Distance
-     * of each generation
-     *
-     * @param g the Graphics2D Object used for drawing
-     */
     public void drawOn(Graphics2D g) {
         g.drawRect(100, 50, 1000, 400);
         g.setColor(Color.GREEN);

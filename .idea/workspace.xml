@@ -4,13 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="temp classes">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="removed lazy class terminator">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RankSelection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RouletteSelection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/TruncationSelection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Jadon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Population.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Population.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Selection.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Selection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Terminator.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ChromosomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ChromosomeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Population.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Selection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,10 +36,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -41,11 +57,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Docs" />
-  </component>
-  <component name="RunManager">
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/brutchjw/Documents/Spring2023/CSSE375/CSSE375-Team5"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.GAMain">
+    <configuration name="ChromosomeViewer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChromosomeViewer" />
+      <module name="CSSE375-Team5.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GAMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GAMain" />
       <module name="CSSE375-Team5.main" />
@@ -55,6 +81,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GAMain" />
+        <item itemvalue="Application.ChromosomeViewer" />
+        <item itemvalue="Application.ChromosomeViewer" />
         <item itemvalue="Application.GAMain" />
       </list>
     </recent_temporary>
@@ -76,7 +105,28 @@
       <option name="project" value="LOCAL" />
       <updated>1678391167510</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed issues with ChromosomeViewer main(), should run now">
+      <created>1679934534672</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679934534672</updated>
+    </task>
+    <task id="LOCAL-00003" summary="removed javadocs">
+      <created>1679946137360</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1679946137360</updated>
+    </task>
+    <task id="LOCAL-00004" summary="removed lazy class terminator">
+      <created>1679948436203</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679948436203</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -84,6 +134,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="temp classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="temp classes" />
+    <MESSAGE value="fixed issues with ChromosomeViewer main(), should run now" />
+    <MESSAGE value="removed javadocs" />
+    <MESSAGE value="removed lazy class terminator" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed lazy class terminator" />
   </component>
 </project>

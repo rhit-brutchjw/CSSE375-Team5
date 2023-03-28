@@ -16,22 +16,9 @@ import java.util.ArrayList;
  *
  */
 public class Crossover {
-
-    /**
-     * ensures: Creates a Crossover object so the performCross method can be
-     * accessed
-     */
     public Crossover() {
     } // Crossover
 
-    /**
-     * ensures: returns an ArrayList of Chromosomes after one point crossover has
-     * happened
-     *
-     * @param pop the ArrayList of Chromosomes that undergoes one point crossover
-     * @return returns the ArrayList of Chromosomes that has undergone one point
-     *         crossover
-     */
     public ArrayList<Chromosome> performCross(ArrayList<Chromosome> pop) {
         ArrayList<Chromosome> temp = new ArrayList<Chromosome>();
         for (int c = 0; c < pop.size(); c += 2) {
