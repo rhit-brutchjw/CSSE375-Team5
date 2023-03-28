@@ -8,9 +8,8 @@ import javax.swing.JComponent;
 public class PopulationComponent extends JComponent {
     private ArrayList<Chromosome> curPop;
 
-    public PopulationComponent(ArrayList<Chromosome> population) {
+    public PopulationComponent() {
         super();
-        this.curPop = population;
     } // PopulationComponent
 
     public void updateAll(ArrayList<Chromosome> newPop) {

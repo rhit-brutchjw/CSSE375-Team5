@@ -8,9 +8,8 @@ import javax.swing.JComponent;
 public class FittestComponent extends JComponent {
     private Chromosome best;
 
-    public FittestComponent(Chromosome bestFit) {
+    public FittestComponent() {
         super();
-        this.best = bestFit;
     } // FittestComponent
 
     public void updateBest(Chromosome newBest) {
