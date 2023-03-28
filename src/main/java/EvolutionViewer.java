@@ -20,7 +20,7 @@ import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
 
-public class EvolutionViewer {
+public class EvolutionViewer implements Display {
 	private static final int FRAME_WIDTH = 1400;
 	private static final int FRAME_HEIGHT = 600;
 	private JFileChooser chooser = new JFileChooser("genotypes");
@@ -54,8 +54,8 @@ public class EvolutionViewer {
     private JComboBox<String> selection = new JComboBox<>(selectionOptions);
     private String[] fitnessOptions = { "Simple", "Matching", "Consecutive" };
     private JComboBox<String> fitness = new JComboBox<>(fitnessOptions);
-    private Population population;
-    private EvolutionComponent evComp = new EvolutionComponent(population);
+//    private Population population;
+    private EvolutionComponent evComp = new EvolutionComponent();
 	private Chromosome target = new Chromosome(null, -1, -1);
     private Chromosome best;
     private FittestComponent bestFit;
@@ -70,7 +70,9 @@ public class EvolutionViewer {
     private int mutationFactor = 1;
     private int maxGen;
 
-    public EvolutionViewer() {
+    public EvolutionViewer(Settings settings) {
+        //settings is here
+
         evolutionGUI.setPreferredSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT));
         evolutionGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         evolutionGUI.setTitle("Evolution Viewer");
@@ -78,56 +80,47 @@ public class EvolutionViewer {
 
             @Override
             public void actionPerformed(ActionEvent arg0) {
-                if (!isStarted) {
                     if(selection.getSelectedIndex() == 0) {
-                        selectionMethod = new TruncationSelection();
+                        settings.setSelectionMethod(new TruncationSelection());
                     }else if(selection.getSelectedIndex() == 1) {
-                        selectionMethod = new RouletteSelection();
+                        settings.setSelectionMethod(new RouletteSelection());
                     } else if(selection.getSelectedIndex() == 2) {
-                        selectionMethod = new RankSelection();
+                        settings.setSelectionMethod(new RankSelection());
                     }
                     if (fitness.getSelectedIndex() == 1) {
                         int returnVal = chooser.showOpenDialog(evComp);
                         if (returnVal == JFileChooser.APPROVE_OPTION) {
                             File file = chooser.getSelectedFile();
-                            target.load(file); // Loads geneArray in Chromosome
-                            hasTarget = true;
-                            fitnessMethod = fitness.getSelectedIndex();
+                            settings.setTarget(file);
                         } else if (returnVal == JFileChooser.CANCEL_OPTION) {
                             return;
                         }
                     } else {
-                        fitnessMethod = fitness.getSelectedIndex();
+                        try {
+                            settings.setGenomeLength(Integer.parseInt(genomeLength.getText()));
+                        } catch (NumberFormatException n ) {
+                        }
                     }
-                    willCrossover = crossover.isSelected();
-
+                    settings.setFitnessMethod(fitness.getSelectedIndex());
+                    settings.setCrossover(crossover.isSelected());
                     try {
-                        if (hasTarget && Integer.parseInt(genomeLength.getText()) != target.getLength()) {
-                            JOptionPane.showMessageDialog(null,
-                                    "Please make genome length match the target genome length of: "
-                                            + Integer.toString(target.getLength()),
-                                    "Warning", 2);
-                            return;
-                        } else if (Integer.parseInt(populationSize.getText()) % 10 == 0
+                        if (Integer.parseInt(populationSize.getText()) % 10 == 0
                                 && Integer.parseInt(genomeLength.getText()) % 10 == 0
                                 && Integer.parseInt(elitism.getText()) >= 0) {
-                            population = new Population(Integer.parseInt(populationSize.getText()),
-                                    Integer.parseInt(genomeLength.getText()));
-                            population.setElitism(Integer.parseInt(elitism.getText()));
-                            evComp.updatePopulation(population);
-                            bestGUI.setPreferredSize(new Dimension(450, 5 * population.getGenomeLength()));
+                            settings.setPopulationSize(Integer.parseInt(populationSize.getText()));
+                            bestGUI.setPreferredSize(new Dimension(450, 5 * settings.getGenomeLength()));
                             bestGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                             bestGUI.setTitle("Best Fitness Score");
-                            if (population.getSize() > population.getGenomeLength()) {
-                                allPopGUI.setPreferredSize(new Dimension(600, 6 * population.getSize()));
+
+                            if (settings.getPopulationSize() > settings.getGenomeLength()) {
+                                allPopGUI.setPreferredSize(new Dimension(600, 6 * settings.getPopulationSize()));
                             } else {
-                                allPopGUI.setPreferredSize(new Dimension(600, 6 * population.getGenomeLength()));
+                                allPopGUI.setPreferredSize(new Dimension(600, 6 * settings.getGenomeLength()));
                             }
                             allPopGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                             allPopGUI.setTitle("All Population Viewer");
-                            best = population.getGene(0);
-                            bestFit = new FittestComponent(best);
-                            allPopComponent = new PopulationComponent(population.getPopulation());
+                            bestFit = new FittestComponent();
+                            allPopComponent = new PopulationComponent();
                         } else if (Integer.parseInt(populationSize.getText()) % 10 != 0) {
                             JOptionPane.showMessageDialog(null, "Please enter a multiple of 10 for population size.",
                                     "Warning", 2);
@@ -149,44 +142,29 @@ public class EvolutionViewer {
                                     "Please enter an elitism amount less than the population size.", "Warning", 2);
                             return;
                         }
+                        settings.setElitism(Integer.parseInt(elitism.getText()));
                     } catch (NumberFormatException n) {
+                        JOptionPane.showMessageDialog(null,
+                                "Please enter an elitism amount less than the population size.", "Warning", 2);
+                        return;
                     }
                     try {
-                        if (Integer.parseInt(mutationRate.getText()) < population.getSize()) {
-                            mutationFactor = Integer.parseInt(mutationRate.getText());
-                        } else {
-                            JOptionPane.showMessageDialog(null,
-                                    "Please enter a mutation rate less than the population size.", "Warning", 2);
+                        if (Integer.parseInt(mutationRate.getText()) >= Integer.parseInt(populationSize.getText())) {
+                            JOptionPane.showMessageDialog(null, "Please enter a mutation rate less than the population size.", "Warning", 2);
                             return;
                         }
+                        settings.setMutationFactor(Integer.parseInt(mutationRate.getText()));
                     } catch (NumberFormatException n) {
                         JOptionPane.showMessageDialog(null, "Please enter an integer for mutation rate.", "Warning", 2);
                         return;
                     }
                     try {
-                        maxGen = Integer.parseInt(generations.getText());
-                        isStarted = true;
+                        settings.setMaxGenerations(Integer.parseInt(generations.getText()));
                     } catch (NumberFormatException n) {
                         JOptionPane.showMessageDialog(null, "Please enter an integer for number of generations.",
                                 "Warning", 2);
-                        return;
                     }
-                }
-                if (isPaused == false && !isFinished) {
-                    EvolutionaryModel.pauseTimer();
-                    System.out.println("Timer is stopped");
-                    start.setText("Resume");
-                    isPaused = true;
-                } else if (isPaused == true) {
-                    EvolutionaryModel.startTimer();
-                    isPaused = false;
-                    start.setText("Pause");
-                } else if (isFinished) {
-                    start.setText("Start");
-                    isStarted = false;
-                    EvolutionaryModel.startTimer();
-                    System.out.println("");
-                }
+                    EvolutionaryModel.t.start();
             }
 
         });
@@ -246,14 +224,24 @@ public class EvolutionViewer {
 
     } // EvolutionViewer
 
-    public void updateGUI(Population pop) {
-        if (isStarted) {
-            evolutionGUI.setAlwaysOnTop(true);
-        }
+    @Override
+    public void updateMostFit(Chromosome chromosome) {
+        bestFit.updateBest(chromosome);
+        highestFitnessRating.setText("Highest Fitness Rating: " + chromosome.getRank());
+        bestFit.repaint();
+        bestGUI.repaint();
+        bestGUI.pack();
+        bestGUI.setVisible(true);
+    }
+
+    @Override
+    public void updatePopulation(Population population) {
+        //stuff from updateGUI method
+        evolutionGUI.setAlwaysOnTop(true);
         if (isFinished) {
             start.setText("Restart");
         }
-        if (pop.getCurGen() == 1) {
+        if (population.getCurGen() == 1) {
             bestGUI.add(highestFitnessRating, BorderLayout.SOUTH);
             highestFitnessRating.setBounds(250, 480, 150, 20);
             allPopGUI.add(allPopComponent, BorderLayout.CENTER);
@@ -270,53 +258,22 @@ public class EvolutionViewer {
             bestGUI.pack();
             bestGUI.setVisible(true);
         }
-        evComp.updatePopulation(pop);
+        evComp.updatePopulation(population);
         evComp.repaint();
         evolutionGUI.repaint();
         evolutionGUI.pack();
         evolutionGUI.setVisible(true);
 
-    } // updateGUI
-
-    public void updateFittest(Chromosome best) {
-        bestFit.updateBest(best);
-        highestFitnessRating.setText("Highest Fitness Rating: " + best.getRank());
-        bestFit.repaint();
-        bestGUI.repaint();
-        bestGUI.pack();
-        bestGUI.setVisible(true);
-    } // updateFittest
-
-    public void updateAllPop(Population pop) {
-        allPopComponent.updateAll(pop.getPopulation());
+        //update allPop method stuff
+        allPopComponent.updateAll(population.getPopulation());
         allPopComponent.repaint();
         allPopGUI.repaint();
         allPopGUI.pack();
         allPopGUI.setVisible(true);
-    } // updateAllPop
-    
-    public boolean checkDisposal() {
-        if (isFinished) {
-            evolutionGUI.dispose();
-            bestGUI.dispose();
-            allPopGUI.dispose();
-            new EvolutionaryModel();
-            isFinished = false;
-            return true;
-        } else {
-        	return false;
-        }
     }
-    
-    public boolean isStarted() { return isStarted; }
-    public boolean isFinished() { return isFinished; }
-    public void setFinished(boolean isFinished) { this.isFinished = isFinished; } 
-    public int getFitnessMethod() { return fitnessMethod; }
-    public int getMaxGen() { return maxGen; }
-    public Population getPopulation() { return population; }
-    public Chromosome getTarget() {return target; }
 
-	public void handlePopSelectionMutation(Population pop) {
-		pop.handleSelectionMutation(mutationFactor, willCrossover, selectionMethod);
-	}
+    @Override
+    public void markFinished() {
+        this.isFinished = true;
+    }
 } // end EvolutionViewer

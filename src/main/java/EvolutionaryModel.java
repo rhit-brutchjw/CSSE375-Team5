@@ -6,81 +6,64 @@ import javax.swing.Timer;
 
 public class EvolutionaryModel {
     private Fitness fit = new Fitness();
-    private static Timer t;
-    private Population pop = null;
-    private static EvolutionViewer evViewer;
+    public static Timer t;
+    private Population population;
 
-    public EvolutionaryModel() {
-        evViewer = new EvolutionViewer();
-
+    public EvolutionaryModel(Settings settings, Display display) {
         t = new Timer(50, new ActionListener() {
             int curGen = 0;
-
             @Override
             public void actionPerformed(ActionEvent arg0) {
-                if (evViewer.isStarted()) {
-                    if (curGen == 0) {
-                        pop = evViewer.getPopulation();
-                        pop.setMaxGen(evViewer.getMaxGen());
-                    }
-                    curGen++;
-                    // Fitness Calculation
-                    for (Chromosome chromosome : pop.getPopulation()) {
-                        if (evViewer.getFitnessMethod() == 1) {
-                            fit.matchingFitnessCalculation(evViewer.getTarget(), chromosome);
-                        } else if (evViewer.getFitnessMethod() == 0) {
-                            fit.simpleFitnessCalculation(chromosome);
-                        } else if (evViewer.getFitnessMethod() == 2) {
-                            fit.consecutiveFitnessCalculation(chromosome);
-                        }
-                    }
-                    // Sorts populations
-                    pop.sortPopulation();
-
-                    // Terminate calculation
-                    if(pop.maxFitAchieved() || evViewer.getMaxGen() == curGen) {
-                        evViewer.setFinished(true);
-                        ((Timer) arg0.getSource()).stop();
-                    }
-
-                    // Adds points to ArrayList for graphing purposes
-                    pop.addAvgFit();
-                    pop.addBestFit();
-                    pop.addWorstFit();
-                    pop.addHammDist();
-                    pop.setCurGen(curGen);
-
-                    // Updates main GUI
-                    evViewer.updateGUI(pop);
-
-                    // Prints to console the best, average, worst, and Hamming Distance
-                    System.out.println("--------Generation: " + curGen + "--------");
-                    System.out.println("Best Score: " + pop.getGene(0).getRank());
-                    System.out.println("Approximate Average: " + pop.getGene((pop.getSize() / 2)).getRank());
-                    System.out.println("Worst Score: " + pop.getGene(pop.getSize() - 1).getRank());
-                    System.out.println("Average Hamming Distance : " + pop.getAvgHamm(curGen - 1));
-
-                    // Selection, Crossover (if applicable), then to Mutation
-                    evViewer.handlePopSelectionMutation(pop);
-
-                    // Updates additional displays
-                    evViewer.updateFittest(pop.getGene(0));
-                    evViewer.updateAllPop(pop);
-
+                if (curGen == 0) {
+                    population = new Population(settings.getPopulationSize(), settings.getGenomeLength());
+                    population.setMaxGen(settings.getMaxGenerations());
+                    population.setElitism(settings.getElitism());
                 }
-            }
+                curGen++;
 
+                // Fitness Calculation
+                for (Chromosome chromosome : population.getPopulation()) {
+                    if (settings.getFitnessMethod() == 1) {
+                        fit.matchingFitnessCalculation(settings.getTarget(), chromosome);
+                    } else if (settings.getFitnessMethod() == 0) {
+                        fit.simpleFitnessCalculation(chromosome);
+                    } else if (settings.getFitnessMethod() == 2) {
+                        fit.consecutiveFitnessCalculation(chromosome);
+                    }
+                }
+
+                // Sorts populations
+                population.sortPopulation();
+
+                // Terminate calculation
+                if(population.maxFitAchieved() || settings.getMaxGenerations() == curGen) {
+                    display.markFinished();
+                    ((Timer) arg0.getSource()).stop();
+                }
+
+                // Adds points to ArrayList for graphing purposes
+                population.addAvgFit();
+                population.addBestFit();
+                population.addWorstFit();
+                population.addHammDist();
+                population.setCurGen(curGen);
+
+                // Prints to console the best, average, worst, and Hamming Distance
+                System.out.println("--------Generation: " + curGen + "--------");
+                System.out.println("Best Score: " + population.getGene(0).getRank());
+                System.out.println("Approximate Average: " + population.getGene((population.getSize() / 2)).getRank());
+                System.out.println("Worst Score: " + population.getGene(population.getSize() - 1).getRank());
+                System.out.println("Average Hamming Distance : " + population.getAvgHamm(curGen - 1));
+
+                // Selection, Crossover (if applicable), then to Mutation
+                population.handleSelectionMutation(settings.getMutationFactor(),
+                        settings.willPerformCrossover(), settings.getSelectionMethod());
+
+                // Updates displays
+                display.updatePopulation(population);
+                display.updateMostFit(population.getGene(0));
+            }
         });
 
-    } // EvolutionaryModel
-
-	public static void pauseTimer() {
-		t.stop();
-	} // pauseTimer
-
-	public static void startTimer() {
-		if (!evViewer.checkDisposal()) {
-			t.start();
-		}
-	} // startTimer
-} // end EvolutionaryModel
+    }
+}
