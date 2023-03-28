@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="removed lazy class terminator">
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="DecoupleGUIBranch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,6 +43,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/brutchjw/Documents/Spring2023/CSSE375/CSSE375-Team5&quot;
+  }
+}</component>
   <component name="RunManager" selected="Application.GAMain">
     <configuration name="ChromosomeViewer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ChromosomeViewer" />
@@ -111,23 +119,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="temp classes" />
     <MESSAGE value="fixed issues with ChromosomeViewer main(), should run now" />
     <MESSAGE value="removed javadocs" />
     <MESSAGE value="removed lazy class terminator" />
-    <MESSAGE value="stash changes to fix pull" />
-    <option name="LAST_COMMIT_MESSAGE" value="stash changes to fix pull" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed lazy class terminator" />
   </component>
 </project>
