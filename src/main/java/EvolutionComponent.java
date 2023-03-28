@@ -7,9 +7,8 @@ import javax.swing.JComponent;
 public class EvolutionComponent extends JComponent {
     private Population pop;
 
-    public EvolutionComponent(Population population) {
+    public EvolutionComponent() {
         super();
-        this.pop = population;
     } // EvolutionComponent
 
     public void updatePopulation(Population population) {
