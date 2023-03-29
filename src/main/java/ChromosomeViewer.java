@@ -4,6 +4,7 @@ import java.awt.Dimension;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
 import java.util.Random;
@@ -86,8 +87,7 @@ public class ChromosomeViewer {
         frame.setVisible(true);
     } // update
 
-    private class MouseMutateListener implements MouseInputListener {
-
+    private class MouseMutateListener extends MouseAdapter {
         @Override
         public void mouseClicked(MouseEvent e) {
             if (e.getX() < 400 && e.getX() > 0 && e.getY() < genes.length * 40 && e.getY() > 0) {
@@ -97,35 +97,6 @@ public class ChromosomeViewer {
             }
         }
 
-        @Override
-        public void mouseEntered(MouseEvent e) {
-        }
-
-        @Override
-        public void mouseExited(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mousePressed(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent e) {
-
-        }
-
-        @Override
-        public void mouseDragged(MouseEvent arg0) {
-
-        }
-
-        @Override
-        public void mouseMoved(MouseEvent arg0) {
-
-        }
-        
         public int[][] changeOnClick(int[][] chromoArray, int x, int y) {
             int iIndex = gridHelperI(y);
             int jIndex = gridHelperJ(x);
