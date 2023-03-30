@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="removed lazy class terminator">
+    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="refactored long method">
+      <change afterPath="$PROJECT_DIR$/src/main/java/MockGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SettingsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SystemTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Display.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Settings.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,15 +31,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="DecoupleGUIBranch" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -50,7 +60,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/brutchjw/Documents/Spring2023/CSSE375/CSSE375-Team5&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.GAMain">
+  <component name="RunManager" selected="Gradle.SystemTest.testSystemRunsDefaultParams">
     <configuration name="ChromosomeViewer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ChromosomeViewer" />
       <module name="CSSE375-Team5.main" />
@@ -65,12 +75,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SystemTest.testSystemRunsDefaultParams" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;SystemTest.testSystemRunsDefaultParams&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SystemTest.testSystemRunsDefaultParams" />
         <item itemvalue="Application.GAMain" />
         <item itemvalue="Application.ChromosomeViewer" />
         <item itemvalue="Application.GAMain" />
-        <item itemvalue="Application.ChromosomeViewer" />
         <item itemvalue="Application.ChromosomeViewer" />
       </list>
     </recent_temporary>
@@ -113,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679948436203</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactored long method">
+      <created>1680034539053</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680034539053</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +164,7 @@
     <MESSAGE value="fixed issues with ChromosomeViewer main(), should run now" />
     <MESSAGE value="removed javadocs" />
     <MESSAGE value="removed lazy class terminator" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed lazy class terminator" />
+    <MESSAGE value="refactored long method" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored long method" />
   </component>
 </project>

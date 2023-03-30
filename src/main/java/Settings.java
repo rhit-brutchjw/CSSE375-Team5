@@ -50,8 +50,6 @@ public class Settings {
     public void setTarget(File file) {
         this.target.load(file);
         this.genomeLength = target.getLength();
-//        this.target =
-//        this.genomeLength =
     }
 
     public int getMutationFactor() {
