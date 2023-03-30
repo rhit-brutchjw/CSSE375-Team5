@@ -125,39 +125,26 @@ public class Chromosome implements Comparable<Chromosome> {
     } // save
 
     public void drawOn(Graphics2D g, int x, int y, int value, int index) {
-
         g = (Graphics2D) g.create();
-        if (value == 0) {
-            g.setColor(Color.BLACK);
-        } else if (value == 1) {
-            g.setColor(Color.GREEN);
-        }
+        g.setColor(getRectColorBasedOnCellValue(value));
         g.fillRect(x, y, 40, 40);
-
-        if (value == 0) {
-            g.setColor(Color.WHITE);
-        } else if (value == 1) {
-            g.setColor(Color.BLACK);
-        }
+        g.setColor(getTextColorBasedOnCellValue(value));
         g.drawString(Integer.toString(index), x + 20, y + 20);
     } // drawOn
 
     public void drawSmallOn(Graphics2D g2, int x, int y, int value) {
         g2 = (Graphics2D) g2.create();
-        if (value == 0) {
-            g2.setColor(Color.BLACK);
-        } else if (value == 1) {
-            g2.setColor(Color.GREEN);
-        }
+        g2.setColor(getRectColorBasedOnCellValue(value));
         g2.fillRect(x, y, 4, 4);
-
-        if (value == 0) {
-            g2.setColor(Color.WHITE);
-        } else if (value == 1) {
-            g2.setColor(Color.BLACK);
-        }
     } // drawSmallOn
-    
+
+    private Color getRectColorBasedOnCellValue(int value) {
+        return value == 0 ? Color.BLACK : Color.GREEN;
+    }
+    private Color getTextColorBasedOnCellValue(int value) {
+        return value == 0 ? Color.WHITE : Color.BLACK;
+    }
+
     public int getRank() { return this.rank; }
     public void setRank(int rank) { this.rank = rank; }
     public int[][] getGenes() { return this.geneArray; }
