@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="removed lazy class terminator">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/CSSE375-Team5.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/CSSE375-Team5.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/CSSE375-Team5.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/CSSE375-Team5.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$LoadListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$LoadListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$MouseMutateListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$MouseMutateListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Chromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Chromosome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ChromosomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ChromosomeTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="Added some tests to test refactored features.&#10;Testing MouseAdapter refactor to be done at later date." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -156,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680034854916</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added some tests to test refactored features.&#10;Testing MouseAdapter refactor to be done at later date.">
+      <created>1680214741350</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680214741350</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +175,7 @@
     <MESSAGE value="fixed issues with ChromosomeViewer main(), should run now" />
     <MESSAGE value="removed javadocs" />
     <MESSAGE value="removed lazy class terminator" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed lazy class terminator" />
+    <MESSAGE value="Added some tests to test refactored features.&#10;Testing MouseAdapter refactor to be done at later date." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some tests to test refactored features.&#10;Testing MouseAdapter refactor to be done at later date." />
   </component>
 </project>
