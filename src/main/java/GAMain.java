@@ -6,6 +6,6 @@ public class GAMain {
         //create a new display subclass, example below
         Settings settings = new Settings();
         Display display = new EvolutionViewer(settings);
-        new EvolutionaryModel(settings, display);
+        EvolutionaryModel evm = new EvolutionaryModel(settings, display);
     } // main
 } // end GAMain

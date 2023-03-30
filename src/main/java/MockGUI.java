@@ -28,7 +28,7 @@ public class MockGUI implements Display {
         settings.setMaxGenerations(maxGen);
     }
 
-    public void genomeLength(int genomeLength) {
+    public void setGenomeLength(int genomeLength) {
         settings.setGenomeLength(genomeLength);
     }
 

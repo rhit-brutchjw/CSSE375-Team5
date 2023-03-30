@@ -24,10 +24,9 @@ public class SystemTest {
         new EvolutionaryModel(settings, display);
 
         //set params here
-
-
-
-
+        display.setCrossover(true);
+        display.setPopulationSize(125);
+        display.setGenomeLength(125);
         //end set params
 
         display.setMaxGen(2); // for testability
@@ -36,15 +35,26 @@ public class SystemTest {
         Assertions.assertTrue(display.isFinished());
     }
 
-    @Test
-    void testSystemCrashesNoParams() {
-
-    }
-
-    @Test
-    void testSystemCrashesIncorrectParams() {
-
-    }
+//    @Test
+//    void testSystemCrashesIncorrectParams() {
+//        Settings settings = new Settings();
+//        MockGUI display = new MockGUI(settings);
+//        new EvolutionaryModel(settings, display);
+//
+//        //set params here
+//        display.setCrossover(true);
+//        display.setPopulationSize(0);
+//        display.setGenomeLength(125);
+//        //end set params
+//
+//        boolean caught = false;
+//        try {
+//            display.startRun();
+//        } catch (ArithmeticException a) {
+//            a.printStackTrace();
+//            caught = true;
+//        }
+//    }
 
 
 }
