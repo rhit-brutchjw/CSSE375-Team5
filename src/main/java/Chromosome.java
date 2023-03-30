@@ -138,10 +138,10 @@ public class Chromosome implements Comparable<Chromosome> {
         g2.fillRect(x, y, 4, 4);
     } // drawSmallOn
 
-    private Color getRectColorBasedOnCellValue(int value) {
+    public Color getRectColorBasedOnCellValue(int value) {
         return value == 0 ? Color.BLACK : Color.GREEN;
     }
-    private Color getTextColorBasedOnCellValue(int value) {
+    public Color getTextColorBasedOnCellValue(int value) {
         return value == 0 ? Color.WHITE : Color.BLACK;
     }
 
