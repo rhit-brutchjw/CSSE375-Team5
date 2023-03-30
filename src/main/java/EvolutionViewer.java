@@ -164,7 +164,7 @@ public class EvolutionViewer implements Display {
                         JOptionPane.showMessageDialog(null, "Please enter an integer for number of generations.",
                                 "Warning", 2);
                     }
-                    EvolutionaryModel.t.start();
+                    startRun();
             }
 
         });
@@ -275,5 +275,10 @@ public class EvolutionViewer implements Display {
     @Override
     public void markFinished() {
         this.isFinished = true;
+    }
+
+    @Override
+    public void startRun() {
+        EvolutionaryModel.t.start();
     }
 } // end EvolutionViewer
