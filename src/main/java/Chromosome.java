@@ -73,57 +73,6 @@ public class Chromosome implements Comparable<Chromosome> {
         return this;
     }
 
-    public int[][] load(File file) {
-        Scanner sc;
-        Scanner scan;
-        try {
-            sc = new Scanner(file);
-            scan = new Scanner(file);
-            int rows = 0;
-            int columns = 10;
-            int count = 0;
-            while (scan.hasNextLine()) {
-                count++;
-                scan.nextLine();
-            }
-            rows = count;
-            geneArray = new int[rows][columns];
-            while (sc.hasNextLine()) {
-                for (int i = 0; i < geneArray.length; i++) {
-                    String[] line = sc.nextLine().trim().split(" ");
-                    for (int j = 0; j < line.length; j++) {
-                        geneArray[i][j] = Integer.parseInt(line[j]);
-                    }
-                }
-            }
-            sc.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        return geneArray;
-    } // load
-
-    public void save(File file, int[][] data) {
-        FileWriter fos;
-        try {
-            fos = new FileWriter(file);
-            for (int i = 0; i < data.length; i++) {
-                for (int j = 0; j < data[i].length; j++) {
-                    String text = Integer.toString(data[i][j]);
-                    fos.write(text);
-                    fos.write(" ");
-                }
-                if (i < 9) {
-                    fos.write("\n");
-                }
-            }
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    } // save
-
     public void drawOn(Graphics2D g, int x, int y, int value, int index) {
         g = (Graphics2D) g.create();
         g.setColor(getRectColorBasedOnCellValue(value));

@@ -8,6 +8,7 @@ public class Settings {
     private int genomeLength = 100;
     private int populationSize = 100;
     private int elitism = 1;
+    private FileLoader fileLoader = new FileLoader();
     private Selection selectionMethod = new TruncationSelection();
     private Chromosome target = new Chromosome();
 
@@ -48,7 +49,7 @@ public class Settings {
     }
 
     public void setTarget(File file) {
-        this.target.load(file);
+        this.target = fileLoader.load(file);
         this.genomeLength = target.getLength();
     }
 
