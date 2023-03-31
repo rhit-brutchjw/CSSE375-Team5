@@ -21,10 +21,11 @@ public class ChromosomeViewer {
     private static final int FRAME_WIDTH = 600;
     private static final int FRAME_HEIGHT = 600;
     private JFileChooser chooser = new JFileChooser("genotypes");
+    private FileLoader fileLoader = new FileLoader();
     private File currentFile = new File("genotypes\\size_100.txt");
     private JFrame frame = new JFrame();
-    private Chromosome chromosome = new Chromosome();
-    private int[][] genes = chromosome.load(currentFile);
+    private Chromosome chromosome = fileLoader.load(currentFile);
+    private int[][] genes = chromosome.getGenes();
     private JLabel fileTitle = new JLabel(currentFile.getName());
     private JPanel chromosomePanel = new JPanel();
     private JButton mutate = new JButton("Mutate");
@@ -55,7 +56,7 @@ public class ChromosomeViewer {
                 int returnVal = chooser.showSaveDialog(chromosomeComponent);
                 if (returnVal == JFileChooser.APPROVE_OPTION) {
                     File fileToSave = chooser.getSelectedFile();
-                    chromosome.save(fileToSave, genes);
+                    fileLoader.save(fileToSave, chromosome.getGenes());
                 }
             }
         });
@@ -128,7 +129,8 @@ public class ChromosomeViewer {
             int returnVal = chooser.showOpenDialog(chromosomeComponent);
             if (returnVal == JFileChooser.APPROVE_OPTION) {
                 currentFile = chooser.getSelectedFile();
-                genes = chromosome.load(currentFile);
+                chromosome = fileLoader.load(currentFile);
+                genes = chromosome.getGenes();
                 fileTitle.setText(currentFile.getName());
                 update(genes);
             }
