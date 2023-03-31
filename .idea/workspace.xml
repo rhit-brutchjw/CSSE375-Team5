@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="removed lazy class terminator">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="Added Software Artifacts: design and requirements documents">
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/GAMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/GAMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +61,17 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Docs" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rameydj\Desktop\CSSE375-Team5\Docs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rameydj\Desktop\CSSE375-Team5\Docs" />
+    </key>
   </component>
   <component name="RunManager" selected="Gradle.SystemTest">
     <configuration name="GAMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -215,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680034854916</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added Software Artifacts: design and requirements documents">
+      <created>1680222594723</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680222594723</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +257,7 @@
     <MESSAGE value="fixed issues with ChromosomeViewer main(), should run now" />
     <MESSAGE value="removed javadocs" />
     <MESSAGE value="removed lazy class terminator" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed lazy class terminator" />
+    <MESSAGE value="Added Software Artifacts: design and requirements documents" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Software Artifacts: design and requirements documents" />
   </component>
 </project>
