@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class RouletteSelection implements Selection {
+	// The better the rank (closeness to the desired result)
+	// The more likely it is to remain in the next generation
+	
     @Override
     public ArrayList<Chromosome> performSelection(ArrayList<Chromosome> population) {
         Random r = new Random();

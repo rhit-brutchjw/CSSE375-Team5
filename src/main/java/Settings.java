@@ -73,8 +73,24 @@ public class Settings {
         return selectionMethod;
     }
 
-    public void setSelectionMethod(Selection method) {
-        this.selectionMethod = method;
+    public void setSelectionMethod(int sIndex) {
+    	switch (sIndex) {
+    	case 0:
+    		this.selectionMethod = new TruncationSelection();
+    		break;
+    	case 1:
+    		this.selectionMethod = new RouletteSelection();
+    		break;
+    	case 2:
+    		this.selectionMethod = new RandomSelection();
+    		break;
+    	case 3:
+    		this.selectionMethod = new WorstSelection();
+    		break;
+    	case 4:
+    		this.selectionMethod = new DiversitySelection();
+    		break;
+    	}
     }
 
     public int getElitism() {
@@ -84,7 +100,6 @@ public class Settings {
     public void setElitism(int elitism) {
         this.elitism = elitism;
     }
-
     //need method to set target, and when setting target make it so that genomeLength = target.length(),
     //gets rid of need to error check
 }
