@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import java.awt.*;
 
-
 public class ChromosomeViewerTest {
 
     @Test
@@ -35,6 +34,70 @@ public class ChromosomeViewerTest {
         cv.changeOnClick(arrayToClick, 399, 399);
         Assertions.assertEquals(1, arrayToClick[9][9]);
     }
+
+    @Test
+    void testGridHelperI1() {
+        ChromosomeViewer cv = new ChromosomeViewer();
+        Assertions.assertEquals(0, cv.gridHelperI(0));
+    }
+    @Test
+    void testGridHelperI2() {
+        ChromosomeViewer cv = new ChromosomeViewer();
+        Assertions.assertEquals(0, cv.gridHelperI(39));
+    }
+    @Test
+    void testGridHelperI3() {
+        ChromosomeViewer cv = new ChromosomeViewer();
+        Assertions.assertEquals(1, cv.gridHelperI(40));
+    }
+    @Test
+    void testGridHelperI4() {
+        ChromosomeViewer cv = new ChromosomeViewer();
+        Assertions.assertEquals(9, cv.gridHelperI(399));
+    }
+
+    @Test
+    void testGridHelperJ1() {
+        ChromosomeViewer cv = new ChromosomeViewer();
+        Assertions.assertEquals(0, cv.gridHelperJ(0));
+    }
+    @Test
+    void testGridHelperJ2() {
+        ChromosomeViewer cv = new ChromosomeViewer();
+        Assertions.assertEquals(0, cv.gridHelperJ(39));
+    }
+    @Test
+    void testGridHelperJ3() {
+        ChromosomeViewer cv = new ChromosomeViewer();
+        Assertions.assertEquals(1, cv.gridHelperJ(40));
+    }
+    @Test
+    void testGridHelperJ4() {
+        ChromosomeViewer cv = new ChromosomeViewer();
+        Assertions.assertEquals(9, cv.gridHelperJ(399));
+    }
+
+    @Test
+    void testFullClickChange1() {
+        ChromosomeViewer cv = new ChromosomeViewer();
+        int[][] array = new int[10][10];
+        setupArrayForTest(array);
+        Assertions.assertEquals(0, array[0][0]);
+        array = cv.changeOnClick(array, 39, 15);
+        Assertions.assertEquals(1, array[0][0]);
+    }
+
+    @Test
+    void testFullClickChange2() {
+        ChromosomeViewer cv = new ChromosomeViewer();
+        int[][] array = new int[10][10];
+        setupArrayForTest(array);
+        Assertions.assertEquals(0, array[9][9]);
+        array = cv.changeOnClick(array, 380, 378);
+        Assertions.assertEquals(1, array[9][9]);
+    }
+
+
 
 
     void setupArrayForTest(int[][] array) {

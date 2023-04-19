@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="removed lazy class terminator">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ChromosomeComponentTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ChromosomeViewerTest.java" afterDir="false" />
+    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="UT for ChromosomeViewer passing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$LoadListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$LoadListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$MouseMutateListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$MouseMutateListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChromosomeViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChromosomeViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ChromosomeViewerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ChromosomeViewerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +39,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="UnitTestPatch2.1" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -81,7 +72,7 @@
       <recent name="C:\Users\rameydj\Desktop\CSSE375-Team5\Docs" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ChromosomeViewerTest.testChangeOnClick3">
+  <component name="RunManager" selected="Gradle.ChromosomeViewerTest">
     <configuration name="ChromosomeViewerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -199,8 +190,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ChromosomeViewerTest.testChangeOnClick3" />
         <item itemvalue="Gradle.ChromosomeViewerTest" />
+        <item itemvalue="Gradle.ChromosomeViewerTest.testChangeOnClick3" />
         <item itemvalue="Gradle.ChromosomeViewerTest.testChangeOnClick" />
         <item itemvalue="Gradle.SystemTest.testSystemRunsCustomParams" />
         <item itemvalue="Gradle.SystemTest.testSystemCrashesNoParams" />
@@ -259,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680222594723</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="UT for ChromosomeViewer passing">
+      <created>1681925102117</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681925102117</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,6 +280,7 @@
     <MESSAGE value="removed javadocs" />
     <MESSAGE value="removed lazy class terminator" />
     <MESSAGE value="Added Software Artifacts: design and requirements documents" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Software Artifacts: design and requirements documents" />
+    <MESSAGE value="UT for ChromosomeViewer passing" />
+    <option name="LAST_COMMIT_MESSAGE" value="UT for ChromosomeViewer passing" />
   </component>
 </project>
