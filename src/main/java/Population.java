@@ -185,51 +185,7 @@ public class Population {
     }
 
     public void drawOn(Graphics2D g) {
-        g.drawRect(100, 50, 1000, 400);
-        g.setColor(Color.GREEN);
-        g.fillRect(980, 320, 10, 10);
-        g.setColor(Color.RED);
-        g.fillRect(980, 345, 10, 10);
-        g.setColor(Color.YELLOW);
-        g.fillRect(980, 370, 10, 10);
-        g.setColor(Color.MAGENTA);
-        g.fillRect(980, 395, 10, 10);
-        g.setStroke(new BasicStroke(3f));
-        for (int i = 0; i < genomeLength / 10 + 1; i++) {
-            g.setColor(Color.BLACK);
-            g.drawString(Integer.toString(i * 10), 80, 450 - (400 / (genomeLength / 10)) * i);
-        }
-        int helper = 0;
-        for (int i = 0; i < currentGeneration + 1; i++) {
-            int a = maxGenerations / 10;
-            if (i % a == 0) {
-                helper++;
-                g.setColor(Color.BLACK);
-                g.drawString(Integer.toString(i), (100 * helper), 470);
-            }
-        }
-        for (int i = 0; i < currentGeneration - 1; i++) {
-            g.setColor(Color.GREEN);
-            Shape l = new Line2D.Double(100 + (i) * (1000.0 / maxGenerations),
-                    450 - bestFit.get(i) * (400.0 / (genomeLength)), 100 + (i + 1) * (1000.0 / maxGenerations),
-                    450 - bestFit.get(i + 1) * (400.0 / (genomeLength)));
-            g.draw(l);
-            g.setColor(Color.RED);
-            Shape l1 = new Line2D.Double(100 + (i) * (1000.0 / maxGenerations),
-                    450 - worstFit.get(i) * (400.0 / (genomeLength)), 100 + (i + 1) * (1000.0 / maxGenerations),
-                    450 - worstFit.get(i + 1) * (400.0 / (genomeLength)));
-            g.draw(l1);
-            g.setColor(Color.YELLOW);
-            Shape l2 = new Line2D.Double(100 + (i) * (1000.0 / maxGenerations),
-                    450 - avgFit.get(i) * (400.0 / (genomeLength)), 100 + (i + 1) * (1000.0 / maxGenerations),
-                    450 - avgFit.get(i + 1) * (400.0 / (genomeLength)));
-            g.draw(l2);
-            g.setColor(Color.MAGENTA);
-            Shape l3 = new Line2D.Double(100 + (i) * (1000.0 / maxGenerations),
-                    450 - hammDist.get(i) * (400.0 / (genomeLength)), 100 + (i + 1) * (1000.0 / maxGenerations),
-                    450 - hammDist.get(i + 1) * (400.0 / (genomeLength)));
-            g.draw(l3);
-        }
+
 
     } // drawOn
 } // end Population
