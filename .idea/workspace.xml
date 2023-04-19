@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="UT for ChromosomeViewer passing">
+    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="ChromosomeViewerTest complete, moving onto next">
+      <change afterPath="$PROJECT_DIR$/src/test/java/EvolutionComponentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ChromosomeViewerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ChromosomeViewerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EvolutionaryModelTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +75,7 @@
       <recent name="C:\Users\rameydj\Desktop\CSSE375-Team5\Docs" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ChromosomeViewerTest">
+  <component name="RunManager" selected="Gradle.EvolutionComponentTest">
     <configuration name="ChromosomeViewerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -142,7 +145,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SystemTest.testSystemCrashesNoParams" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EvolutionComponentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -155,7 +158,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;SystemTest.testSystemCrashesNoParams&quot;" />
+            <option value="&quot;EvolutionComponentTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -165,7 +168,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SystemTest.testSystemRunsCustomParams" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EvolutionComponentTest.testUpdatePopulation1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -178,7 +181,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;SystemTest.testSystemRunsCustomParams&quot;" />
+            <option value="&quot;EvolutionComponentTest.testUpdatePopulation1&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -190,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.EvolutionComponentTest" />
+        <item itemvalue="Gradle.EvolutionComponentTest.testUpdatePopulation1" />
         <item itemvalue="Gradle.ChromosomeViewerTest" />
         <item itemvalue="Gradle.ChromosomeViewerTest.testChangeOnClick3" />
         <item itemvalue="Gradle.ChromosomeViewerTest.testChangeOnClick" />
-        <item itemvalue="Gradle.SystemTest.testSystemRunsCustomParams" />
-        <item itemvalue="Gradle.SystemTest.testSystemCrashesNoParams" />
       </list>
     </recent_temporary>
   </component>
@@ -257,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681925102117</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="ChromosomeViewerTest complete, moving onto next">
+      <created>1681926144134</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681926144134</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +291,7 @@
     <MESSAGE value="removed lazy class terminator" />
     <MESSAGE value="Added Software Artifacts: design and requirements documents" />
     <MESSAGE value="UT for ChromosomeViewer passing" />
-    <option name="LAST_COMMIT_MESSAGE" value="UT for ChromosomeViewer passing" />
+    <MESSAGE value="ChromosomeViewerTest complete, moving onto next" />
+    <option name="LAST_COMMIT_MESSAGE" value="ChromosomeViewerTest complete, moving onto next" />
   </component>
 </project>

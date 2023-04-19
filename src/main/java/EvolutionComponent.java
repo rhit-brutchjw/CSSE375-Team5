@@ -14,7 +14,7 @@ public class EvolutionComponent extends JComponent {
     public void updatePopulation(Population population) {
         this.pop = population;
     } // updatePopulation
-
+    public Population getPop() { return this.pop; }
     @Override
     protected void paintComponent(Graphics g) {
 
