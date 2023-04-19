@@ -88,7 +88,30 @@ public class ChromosomeViewer {
         frame.setVisible(true);
     } // update
 
-    private class MouseMutateListener extends MouseAdapter {
+    public int[][] changeOnClick(int[][] chromoArray, int x, int y) {
+        int iIndex = gridHelperI(y);
+        int jIndex = gridHelperJ(x);
+        if (chromoArray[iIndex][jIndex] == 1) {
+            chromoArray[iIndex][jIndex] = 0;
+        } else {
+            chromoArray[iIndex][jIndex] = 1;
+        }
+        return chromoArray;
+    } // changeOnClick
+
+    public int gridHelperI(int y) {
+        int iIndex = y / 40;
+        return iIndex;
+
+    } // gridHelperI
+
+    public int gridHelperJ(int x) {
+        int jIndex = x / 40;
+        return jIndex;
+
+    } // gridHelperJ
+
+    public class MouseMutateListener extends MouseAdapter {
         @Override
         public void mouseClicked(MouseEvent e) {
             if (e.getX() < 400 && e.getX() > 0 && e.getY() < genes.length * 40 && e.getY() > 0) {
@@ -97,29 +120,6 @@ public class ChromosomeViewer {
                 update(genes);
             }
         }
-
-        public int[][] changeOnClick(int[][] chromoArray, int x, int y) {
-            int iIndex = gridHelperI(y);
-            int jIndex = gridHelperJ(x);
-            if (chromoArray[iIndex][jIndex] == 1) {
-                chromoArray[iIndex][jIndex] = 0;
-            } else {
-                chromoArray[iIndex][jIndex] = 1;
-            }
-            return chromoArray;
-        } // changeOnClick
-        
-        public int gridHelperI(int y) {
-            int iIndex = y / 40;
-            return iIndex;
-
-        } // gridHelperI
-        
-        public int gridHelperJ(int x) {
-            int jIndex = x / 40;
-            return jIndex;
-
-        } // gridHelperJ
     }
 
     public class LoadListener implements ActionListener {
