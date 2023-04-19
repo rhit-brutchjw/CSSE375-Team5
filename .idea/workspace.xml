@@ -5,9 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="Added Software Artifacts: design and requirements documents">
+      <change afterPath="$PROJECT_DIR$/src/main/java/EvolutionFX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$LoadListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$LoadListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$MouseMutateListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$MouseMutateListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Crossover.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Crossover.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FittestComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/FittestComponent.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/GAMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/GAMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Mutation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Population.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Population.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/PopulationComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/PopulationComponent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Selection.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Selection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Population.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,26 +57,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="UnitTestPatch2.1" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/build.gradle" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/test/java/ChromosomeTest.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/GAMain.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/EvolutionViewer.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/EvolutionComponent.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/EvolutionViewer.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/GAMain.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/test/java/ChromosomeTest.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -62,9 +87,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Docs" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/brutchjw/Documents/Spring2023/CSSE375/CSSE375-Team5/javafx-sdk-20/lib",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\rameydj\Desktop\CSSE375-Team5\Docs" />
@@ -73,9 +104,23 @@
       <recent name="C:\Users\rameydj\Desktop\CSSE375-Team5\Docs" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SystemTest">
+  <component name="RunManager" selected="Application.Launcher">
+    <configuration name="EvolutionFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="EvolutionFX" />
+      <module name="CSSE375-Team5.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GAMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GAMain" />
+      <module name="CSSE375-Team5.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Launcher" />
       <module name="CSSE375-Team5.main" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -127,59 +172,20 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SystemTest.testSystemCrashesNoParams" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;SystemTest.testSystemCrashesNoParams&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="SystemTest.testSystemRunsCustomParams" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;SystemTest.testSystemRunsCustomParams&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Application.GAMain" />
+      <item itemvalue="Application.EvolutionFX" />
+      <item itemvalue="Application.Launcher" />
+      <item itemvalue="Gradle.SystemTest" />
+      <item itemvalue="Gradle.SystemTest.testSystemCrashesIncorrectParams" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GAMain" />
+        <item itemvalue="Application.Launcher" />
+        <item itemvalue="Application.EvolutionFX" />
         <item itemvalue="Gradle.SystemTest" />
         <item itemvalue="Gradle.SystemTest.testSystemCrashesIncorrectParams" />
-        <item itemvalue="Gradle.SystemTest.testSystemCrashesNoParams" />
-        <item itemvalue="Gradle.SystemTest.testSystemRunsCustomParams" />
-        <item itemvalue="Application.GAMain" />
       </list>
     </recent_temporary>
   </component>
