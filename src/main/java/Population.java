@@ -161,6 +161,29 @@ public class Population {
 
     } // randomPopulation
 
+    public int getCurrentGeneration() {
+        return currentGeneration;
+    }
+    public int getMaxGenerations() {
+        return maxGenerations;
+    }
+
+    public ArrayList<Integer> getBestFit() {
+        return bestFit;
+    }
+
+    public ArrayList<Integer> getWorstFit() {
+        return worstFit;
+    }
+
+    public ArrayList<Integer> getAvgFit() {
+        return avgFit;
+    }
+
+    public ArrayList<Integer> getHammDist() {
+        return hammDist;
+    }
+
     public void drawOn(Graphics2D g) {
         g.drawRect(100, 50, 1000, 400);
         g.setColor(Color.GREEN);
