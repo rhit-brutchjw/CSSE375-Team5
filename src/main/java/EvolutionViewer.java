@@ -68,10 +68,10 @@ public class EvolutionViewer implements Display {
 		evolutionGUI.setTitle("Evolution Viewer");
 		bestGUI.setTitle("Active Best Chromosome");
 		allPopGUI.setTitle("Active Population");
-		
+
 		setUpStartActionListener(settings);
 		setUpChromosomeMakerListener();
-		
+
 		setUpJPanels();
 
 		buildGUI();
@@ -134,13 +134,13 @@ public class EvolutionViewer implements Display {
 	public void startRun() {
 		EvolutionaryModel.t.start();
 	}
-	
+
 	public void setUpStartActionListener(Settings settings) {
 		start.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				
+
 				if (start.getText().equals("Restart")) {
 					evolutionGUI.dispose();
 					bestGUI.dispose();
@@ -148,7 +148,7 @@ public class EvolutionViewer implements Display {
 					Display display = new EvolutionViewer(settings);
 			        EvolutionaryModel evm = new EvolutionaryModel(settings, display);
 				}
-				
+
 		    	switch (selection.getSelectedIndex()) {
 		    	case 0:
 		    		settings.setSelectionMethod(new TruncationSelection());
@@ -166,7 +166,7 @@ public class EvolutionViewer implements Display {
 		    		settings.setSelectionMethod(new DiversitySelection());
 		    		break;
 		    	}
-				
+
 				if (fitness.getSelectedIndex() == 1) {
 					int returnVal = chooser.showOpenDialog(evComp);
 					if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -249,17 +249,17 @@ public class EvolutionViewer implements Display {
 			}
 		});
 	}
-	
+
 	public void setUpChromosomeMakerListener() {
 		chromosomeMaker.addActionListener(new ActionListener() {
-			
+
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 		        new ChromosomeViewer();
 			}
 		});
 	}
-	
+
 	private void setUpJPanels() {
 		Dimension d = new Dimension(70, 20);
 		Dimension d1 = new Dimension(20, 20);
@@ -314,7 +314,7 @@ public class EvolutionViewer implements Display {
 		numSettings.add(row4);
 		numSettings.add(row5);
 	}
-	
+
 	private void buildGUI() {
 		wordPanel.add(title, BorderLayout.NORTH);
 		evolutionGUI.add(evComp, BorderLayout.CENTER);
@@ -324,7 +324,7 @@ public class EvolutionViewer implements Display {
 		avgFitLegend.setBounds(1000, 350, 100, 50);
 		leastFitLegend.setBounds(1000, 375, 100, 50);
 		hammLegend.setBounds(1000, 400, 120, 50);
-		
+
 		options.repaint();
 		evolutionGUI.add(wordPanel, BorderLayout.NORTH);
 		evolutionGUI.pack();

@@ -7,9 +7,11 @@ import javax.swing.Timer;
 public class EvolutionaryModel {
     private final Settings settings;
     private final Display display;
-    private Fitness fit = new Fitness();
+
     public static Timer t;
     private Population population;
+
+    public Population getPopulation() {return population;}
 
     public EvolutionaryModel(Settings settings, Display display) {
         this.settings = settings;
@@ -61,15 +63,9 @@ public class EvolutionaryModel {
                 }
             }
 
-            private void calculateFitness() {
+            public void calculateFitness() {//refactoring
                 for (Chromosome chromosome : population.getPopulation()) {
-                    if (settings.getFitnessMethod() == 1) {
-                        fit.matchingFitnessCalculation(settings.getTarget(), chromosome);
-                    } else if (settings.getFitnessMethod() == 0) {
-                        fit.simpleFitnessCalculation(chromosome);
-                    } else if (settings.getFitnessMethod() == 2) {
-                        fit.consecutiveFitnessCalculation(chromosome);
-                    }
+                    settings.getFitnessMethod().doFitnessCalculation(settings.getTarget(), chromosome);
                 }
                 population.sortPopulation();
             }

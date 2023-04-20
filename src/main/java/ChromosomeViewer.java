@@ -29,16 +29,16 @@ public class ChromosomeViewer {
     private JButton saveButton;
     private JButton loadButton;
     private JTextField mutationFactor;
-    
+
     private FileLoader fileLoader;
     private File currentFile;
-    
+
     private JLabel fileTitle;
-    
+
     private Chromosome chromosome;
     private int[][] genes;
     private ChromosomeComponent chromosomeComponent;
-    
+
     public ChromosomeViewer() {
         frame = new JFrame();
         chromosomePanel = new JPanel();
@@ -46,11 +46,11 @@ public class ChromosomeViewer {
         closeButton = new JButton("Close");
         saveButton = new JButton("Save");
         loadButton = new JButton("Load");
-    	
+
         mutationFactor = new JTextField();
         fileTitle = new JLabel();
         fileTitle.setHorizontalAlignment(JLabel.CENTER);
-        
+
 
         chooser = new JFileChooser(DEFAULT_FOLDER_PATH);
         fileLoader = new FileLoader();
@@ -58,17 +58,17 @@ public class ChromosomeViewer {
         chromosome = fileLoader.load(currentFile);
         int[][] genes = chromosome.getGenes();
         chromosomeComponent = new ChromosomeComponent(chromosome, genes);
-        
+
     	setUpFrame();
     	setUpChromosomePanel();
-        
+
     	chromosomeComponent.addMouseListener(new MouseMutateListener());
-        
+
     	setUpActionListeners();
-    	
+
     	update(genes);
     } // ChromosomeViewer
-    
+
     private void setUpFrame() {
         frame.setPreferredSize(new Dimension(FRAME_WIDTH, FRAME_HEIGHT));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -77,7 +77,7 @@ public class ChromosomeViewer {
         frame.add(chromosomePanel, BorderLayout.SOUTH);
         frame.add(fileTitle, BorderLayout.NORTH);
     }
-    
+
     private void setUpChromosomePanel() {
         Dimension d = new Dimension(100, 20);
         mutationFactor.setPreferredSize(d);
@@ -87,7 +87,7 @@ public class ChromosomeViewer {
         chromosomePanel.add(mutateButton);
         chromosomePanel.add(mutationFactor);
     }
-    
+
     private void setUpActionListeners() {
     	closeButton.addActionListener(new CloseListener());
         loadButton.addActionListener(new LoadListener());
@@ -106,7 +106,7 @@ public class ChromosomeViewer {
 
     private class MouseMutateListener extends MouseAdapter {
         private final int cellSize = 40;
-    	
+
     	@Override
         public void mouseClicked(MouseEvent e) {
             int x = e.getX();
@@ -120,15 +120,15 @@ public class ChromosomeViewer {
             }
         }
     }
-    
+
     private class CloseListener implements ActionListener {
-    	
+
     	@Override
     	public void actionPerformed(ActionEvent arg0) {
     		frame.dispose();
     	}
     }
-    
+
     private class SaveListener implements ActionListener {
 
         @Override
@@ -138,7 +138,7 @@ public class ChromosomeViewer {
                 File fileToSave = chooser.getSelectedFile();
                 fileLoader.save(fileToSave, chromosome.getGenes());
             }
-        }    	
+        }
     }
 
     private class LoadListener implements ActionListener {
@@ -155,9 +155,9 @@ public class ChromosomeViewer {
             }
         }
     }
-    
+
     private class MutateListener implements ActionListener {
-    	
+
         @Override
         public void actionPerformed(ActionEvent arg0) {
             try {

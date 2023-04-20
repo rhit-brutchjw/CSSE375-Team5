@@ -17,7 +17,7 @@ public class ChromosomeComponent extends JComponent {
     public void updateGrid(int[][] newGrid) {
         this.genes = newGrid;
     } // updateGrid
-
+    public int[][] getGrid() { return this.genes;}
     @Override
     protected void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
