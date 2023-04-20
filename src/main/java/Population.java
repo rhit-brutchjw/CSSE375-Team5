@@ -9,20 +9,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
-/**
- * Class: Population
- *
- * @author brutchjw and rameydj <br>
- *         Purpose: Used to generate a population of random Chromosome Objects
- *         and handle selection, crossover, mutation, elitism, as well as draw
- *         the average, best, and worst fitness scores of each generation <br>
- *         For example:
- *
- *         <pre>
- *         Population examplePop = new Population(100, 100);
- *         </pre>
- *
- */
 public class Population {
     private ArrayList<Chromosome> population;
     private Random r = new Random();

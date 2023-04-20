@@ -65,17 +65,17 @@ public class IntegrationTest {
 
     @Test
     public void simpleFitnessCalcGivenOnes_ReturnsScore100() {
-        Fitness f = new Fitness();
+        FitnessStrategy f = new FitnessSimple();
         int[][] array = new int[10][10];
         Chromosome c = new Chromosome(array,0,0);
         testHelper1(c);
-        f.simpleFitnessCalculation(c);
+        f.doFitnessCalculation(null, c);
         Assertions.assertEquals(100,c.getRank());
     }
 
     @Test
     public void matchingFitnessCalcC1GivenSomeOnes_ReturnsScore97() {
-        Fitness f = new Fitness();
+        FitnessStrategy f = new FitnessMatching();
         int[][] array = new int[10][10];
         int[][] array2 = new int[10][10];
         Chromosome c1 = new Chromosome(array, 0, 0);
@@ -83,7 +83,7 @@ public class IntegrationTest {
         c1.updateGeneValue(2,2,1);
         c1.updateGeneValue(3,3,1);
         Chromosome c2 = new Chromosome(array2, 0, 0);
-        f.matchingFitnessCalculation(c2, c1);
+        f.doFitnessCalculation(c2, c1);
         Assertions.assertEquals(97, c1.getRank());
     }
 

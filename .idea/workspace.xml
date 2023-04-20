@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="IntegrationTest exist and pass, working on molding Fitness into a strategy pattern solution to decompose conditional inside various classes.">
+    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="Unit, integration, and system tests exist and passing for all testable units. &#10;Any viewer or component used in JSwing not tested for obvious reasons.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/FitnessConsecutive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FitnessMatching.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FitnessSimple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/FitnessStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fitness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fitness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FitnessS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Fitness.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Population.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/FitnessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FitnessTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IntegrationTest.java" afterDir="false" />
     </list>
@@ -76,8 +82,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -121,6 +127,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.CSSE375-Team5 [test]">
+    <configuration name="GAMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GAMain" />
+      <module name="CSSE375-Team5.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CSSE375-Team5 [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -205,43 +218,20 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FitnessTest.consecutiveFitnessCalcGivenAllOnes_Returns100" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;FitnessTest.consecutiveFitnessCalcGivenAllOnes_Returns100&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Gradle.CSSE375-Team5 [test]" />
-      <item itemvalue="Gradle.FitnessTest.consecutiveFitnessCalcGivenAllOnes_Returns100" />
       <item itemvalue="Gradle.CSSE375-Team5 [check]" />
       <item itemvalue="Gradle.CSSE375-Team5 [jacocoTestReport]" />
       <item itemvalue="Gradle.CSSE375-Team5 [jacocoTestCoverageVerification]" />
+      <item itemvalue="Application.GAMain" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.CSSE375-Team5 [test]" />
+        <item itemvalue="Application.GAMain" />
         <item itemvalue="Gradle.CSSE375-Team5 [jacocoTestCoverageVerification]" />
         <item itemvalue="Gradle.CSSE375-Team5 [jacocoTestReport]" />
         <item itemvalue="Gradle.CSSE375-Team5 [check]" />
-        <item itemvalue="Gradle.FitnessTest.consecutiveFitnessCalcGivenAllOnes_Returns100" />
       </list>
     </recent_temporary>
   </component>
@@ -332,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681967911050</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Unit, integration, and system tests exist and passing for all testable units. &#10;Any viewer or component used in JSwing not tested for obvious reasons.">
+      <created>1682017397245</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682017397245</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +357,8 @@
     <MESSAGE value="EvolutionComponentTest complete, just wrote a test on update population, moving onto next" />
     <MESSAGE value="Fitness UnitTests passing" />
     <MESSAGE value="IntegrationTest exist and pass, working on molding Fitness into a strategy pattern solution to decompose conditional inside various classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="IntegrationTest exist and pass, working on molding Fitness into a strategy pattern solution to decompose conditional inside various classes." />
+    <MESSAGE value="Unit, integration, and system tests exist and passing for all testable units. &#10;Any viewer or component used in JSwing not tested for obvious reasons." />
+    <option name="LAST_COMMIT_MESSAGE" value="Unit, integration, and system tests exist and passing for all testable units. &#10;Any viewer or component used in JSwing not tested for obvious reasons." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
