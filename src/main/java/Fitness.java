@@ -46,6 +46,7 @@ public class Fitness {
                     if (curScore > bestScore) {
                         bestScore = curScore;
                     }
+
                     curScore = 0;
                 }
             }

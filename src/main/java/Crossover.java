@@ -1,20 +1,5 @@
-
-
 import java.util.ArrayList;
 
-/**
- * Class: Crossover
- *
- * @author brutchjw and rameydj <br>
- *         Purpose: Used to perform one point crossover between two Chromosomes
- *         inside of a Population's ArrayList of Chromosomes <br>
- *         For example:
- *
- *         <pre>
- *         Crossover example = new Crossover();
- *         </pre>
- *
- */
 public class Crossover {
     public Crossover() {
     } // Crossover
