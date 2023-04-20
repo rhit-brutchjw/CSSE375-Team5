@@ -4,22 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="Unit, integration, and system tests exist and passing for all testable units. &#10;Any viewer or component used in JSwing not tested for obvious reasons.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/FitnessConsecutive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FitnessMatching.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FitnessSimple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/FitnessStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fitness.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Population.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Settings.java" afterDir="false" />
+    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="Made Fitness a strategy pattern to get EvolutionaryModel under test.&#10;Changed Fitness inside EvolutionaryModel to take advantage of the polymorphism.&#10;Refactored tests that relied on old fitness.">
       <change beforePath="$PROJECT_DIR$/src/test/java/FitnessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FitnessTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -329,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682017397245</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Made Fitness a strategy pattern to get EvolutionaryModel under test.&#10;Changed Fitness inside EvolutionaryModel to take advantage of the polymorphism.&#10;Refactored tests that relied on old fitness.">
+      <created>1682027269826</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1682027269826</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +351,8 @@
     <MESSAGE value="Fitness UnitTests passing" />
     <MESSAGE value="IntegrationTest exist and pass, working on molding Fitness into a strategy pattern solution to decompose conditional inside various classes." />
     <MESSAGE value="Unit, integration, and system tests exist and passing for all testable units. &#10;Any viewer or component used in JSwing not tested for obvious reasons." />
-    <option name="LAST_COMMIT_MESSAGE" value="Unit, integration, and system tests exist and passing for all testable units. &#10;Any viewer or component used in JSwing not tested for obvious reasons." />
+    <MESSAGE value="Made Fitness a strategy pattern to get EvolutionaryModel under test.&#10;Changed Fitness inside EvolutionaryModel to take advantage of the polymorphism.&#10;Refactored tests that relied on old fitness." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made Fitness a strategy pattern to get EvolutionaryModel under test.&#10;Changed Fitness inside EvolutionaryModel to take advantage of the polymorphism.&#10;Refactored tests that relied on old fitness." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
