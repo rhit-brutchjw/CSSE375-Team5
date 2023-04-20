@@ -71,6 +71,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/master" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -181,11 +184,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GAMain" />
+        <item itemvalue="Gradle.SystemTest.testSystemCrashesIncorrectParams" />
+        <item itemvalue="Gradle.SystemTest" />
         <item itemvalue="Application.Launcher" />
         <item itemvalue="Application.EvolutionFX" />
-        <item itemvalue="Gradle.SystemTest" />
-        <item itemvalue="Gradle.SystemTest.testSystemCrashesIncorrectParams" />
+        <item itemvalue="Application.GAMain" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680222594723</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Merged changes from master hopefully can merge now">
+      <created>1682027959780</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682027959780</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +274,7 @@
     <MESSAGE value="removed javadocs" />
     <MESSAGE value="removed lazy class terminator" />
     <MESSAGE value="Added Software Artifacts: design and requirements documents" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Software Artifacts: design and requirements documents" />
+    <MESSAGE value="Merged changes from master hopefully can merge now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merged changes from master hopefully can merge now" />
   </component>
 </project>
