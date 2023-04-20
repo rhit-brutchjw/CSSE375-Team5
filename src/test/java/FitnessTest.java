@@ -94,7 +94,7 @@ public class FitnessTest {
 
         f.consecutiveFitnessCalculation(c);
 
-        //Assertions.assertEquals(100, c.getRank());
+        Assertions.assertEquals(100, c.getRank());
     }
 
 
@@ -102,14 +102,14 @@ public class FitnessTest {
     private void testHelper1(Chromosome c) {
         for(int i = 0; i < 10; i++) {
             for(int j = 0; j < 10; j++) {
-                c.updateGeneValue(j,i,1);
+                c.updateGeneValue(i,j,1);
             }
         }
     }
 
     private void testHelper2(Chromosome c) {
         for(int i = 0; i < 10; i++) {
-            c.updateGeneValue(1,i,1);
+            c.updateGeneValue(0,i,1);
         }
     }
 }

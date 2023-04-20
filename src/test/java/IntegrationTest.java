@@ -21,6 +21,7 @@ public class IntegrationTest {
         display.startRun();
         Thread.sleep(2000);
         Assertions.assertTrue(display.isFinished());
+
     }
 
 
@@ -85,6 +86,8 @@ public class IntegrationTest {
         f.matchingFitnessCalculation(c2, c1);
         Assertions.assertEquals(97, c1.getRank());
     }
+
+
 
     private void testHelper1(Chromosome c) {
         for(int i = 0; i < 10; i++) {

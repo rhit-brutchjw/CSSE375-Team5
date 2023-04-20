@@ -63,7 +63,7 @@ public class EvolutionaryModel {
                 }
             }
 
-            public void calculateFitness() {
+            public void calculateFitness() {//refactoring
                 for (Chromosome chromosome : population.getPopulation()) {
                     if (settings.getFitnessMethod() == 1) {
                         fit.matchingFitnessCalculation(settings.getTarget(), chromosome);

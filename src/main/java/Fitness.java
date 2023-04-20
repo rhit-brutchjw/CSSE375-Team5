@@ -41,8 +41,13 @@ public class Fitness {
                 if (curScore == 0 && indGenes[i][j] == 1) {
                     curScore++;
                 } else if (curScore > 0 && indGenes[i][j] == 1) {
+
                     curScore++;
+                    if (curScore > bestScore) {
+                        bestScore = curScore;
+                    }
                 } else if (curScore > 0 && indGenes[i][j] == 0) {
+                    System.out.println("curScore"+ curScore);
                     if (curScore > bestScore) {
                         bestScore = curScore;
                     }
@@ -53,4 +58,7 @@ public class Fitness {
         }
         individual.setRank(bestScore);
     } // consecutiveFitnessCalculation
+
+
+
 } // end Fitness
