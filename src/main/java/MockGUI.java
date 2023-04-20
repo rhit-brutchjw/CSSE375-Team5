@@ -40,8 +40,8 @@ public class MockGUI implements Display {
         settings.setElitism(elitism);
     }
 
-    public void setSelectionMethod(int sIndex) {
-        settings.setSelectionMethod(sIndex);
+    public void setSelectionMethod(Selection selectionMethod) {
+        settings.setSelectionMethod(selectionMethod);
     }
 
     public void setTarget(File file) {

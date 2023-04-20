@@ -149,7 +149,23 @@ public class EvolutionViewer implements Display {
 			        EvolutionaryModel evm = new EvolutionaryModel(settings, display);
 				}
 				
-				settings.setSelectionMethod(selection.getSelectedIndex());
+		    	switch (selection.getSelectedIndex()) {
+		    	case 0:
+		    		settings.setSelectionMethod(new TruncationSelection());
+		    		break;
+		    	case 1:
+		    		settings.setSelectionMethod(new RouletteSelection());
+		    		break;
+		    	case 2:
+		    		settings.setSelectionMethod(new RandomSelection());
+		    		break;
+		    	case 3:
+		    		settings.setSelectionMethod(new WorstSelection());
+		    		break;
+		    	case 4:
+		    		settings.setSelectionMethod(new DiversitySelection());
+		    		break;
+		    	}
 				
 				if (fitness.getSelectedIndex() == 1) {
 					int returnVal = chooser.showOpenDialog(evComp);
