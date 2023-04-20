@@ -11,6 +11,8 @@ public class EvolutionaryModel {
     public static Timer t;
     private Population population;
 
+    public Population getPopulation() {return population;}
+
     public EvolutionaryModel(Settings settings, Display display) {
         this.settings = settings;
         this.display = display;
@@ -61,7 +63,7 @@ public class EvolutionaryModel {
                 }
             }
 
-            private void calculateFitness() {
+            public void calculateFitness() {
                 for (Chromosome chromosome : population.getPopulation()) {
                     if (settings.getFitnessMethod() == 1) {
                         fit.matchingFitnessCalculation(settings.getTarget(), chromosome);

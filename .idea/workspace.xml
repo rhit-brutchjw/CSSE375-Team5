@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="Added Software Artifacts: design and requirements documents">
-      <change afterPath="$PROJECT_DIR$/src/test/java/FitnessTest.java" afterDir="false" />
+    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="Fitness UnitTests passing">
+      <change afterPath="$PROJECT_DIR$/src/main/java/FitnessS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Crossover.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Crossover.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChromosomeComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChromosomeComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Crossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Crossover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fitness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Fitness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ChromosomeComponentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ChromosomeComponentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FileLoaderTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IntegrationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,8 +68,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -118,7 +112,49 @@
       <recent name="C:\Users\rameydj\Desktop\CSSE375-Team5\Docs" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.FitnessTest">
+  <component name="RunManager" selected="Gradle.CSSE375-Team5 [test]">
+    <configuration name="CSSE375-Team5 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CSSE375-Team5 [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="FitnessTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -142,7 +178,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FitnessTest.consecutiveFitnessCalcGivenAll10Ones_Returns10" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="IntegrationTest.FullEvoModel1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -155,7 +191,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;FitnessTest.consecutiveFitnessCalcGivenAll10Ones_Returns10&quot;" />
+            <option value="&quot;IntegrationTest.FullEvoModel1&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -165,7 +201,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="FitnessTest.consecutiveFitnessCalcGivenAllOnes_Returns100" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="IntegrationTest.testPopulationFullRun" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -178,53 +214,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;FitnessTest.consecutiveFitnessCalcGivenAllOnes_Returns100&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="FitnessTest.consecutiveFitnessCalcGivenAllTenOnes_Returns10" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;FitnessTest.consecutiveFitnessCalcGivenAllTenOnes_Returns10&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="FitnessTest.consecutiveFitnessCalcGivenAllZeros_ReturnsZero" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;FitnessTest.consecutiveFitnessCalcGivenAllZeros_ReturnsZero&quot;" />
+            <option value="&quot;IntegrationTest.testPopulationFullRun&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -236,18 +226,18 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.FitnessTest" />
-      <item itemvalue="Gradle.FitnessTest.consecutiveFitnessCalcGivenAllZeros_ReturnsZero" />
-      <item itemvalue="Gradle.FitnessTest.consecutiveFitnessCalcGivenAll10Ones_Returns10" />
-      <item itemvalue="Gradle.FitnessTest.consecutiveFitnessCalcGivenAllTenOnes_Returns10" />
-      <item itemvalue="Gradle.FitnessTest.consecutiveFitnessCalcGivenAllOnes_Returns100" />
+      <item itemvalue="Gradle.IntegrationTest.testPopulationFullRun" />
+      <item itemvalue="Gradle.IntegrationTest.FullEvoModel1" />
+      <item itemvalue="Gradle.CSSE375-Team5 [build]" />
+      <item itemvalue="Gradle.CSSE375-Team5 [test]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CSSE375-Team5 [test]" />
+        <item itemvalue="Gradle.CSSE375-Team5 [build]" />
+        <item itemvalue="Gradle.IntegrationTest.FullEvoModel1" />
+        <item itemvalue="Gradle.IntegrationTest.testPopulationFullRun" />
         <item itemvalue="Gradle.FitnessTest" />
-        <item itemvalue="Gradle.FitnessTest.consecutiveFitnessCalcGivenAllOnes_Returns100" />
-        <item itemvalue="Gradle.FitnessTest.consecutiveFitnessCalcGivenAllTenOnes_Returns10" />
-        <item itemvalue="Gradle.FitnessTest.consecutiveFitnessCalcGivenAll10Ones_Returns10" />
-        <item itemvalue="Gradle.FitnessTest.consecutiveFitnessCalcGivenAllZeros_ReturnsZero" />
       </list>
     </recent_temporary>
   </component>
@@ -324,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681927012059</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fitness UnitTests passing">
+      <created>1681962421515</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681962421515</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +347,8 @@
     <MESSAGE value="UT for ChromosomeViewer passing" />
     <MESSAGE value="ChromosomeViewerTest complete, moving onto next" />
     <MESSAGE value="EvolutionComponentTest complete, just wrote a test on update population, moving onto next" />
-    <option name="LAST_COMMIT_MESSAGE" value="EvolutionComponentTest complete, just wrote a test on update population, moving onto next" />
+    <MESSAGE value="Fitness UnitTests passing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fitness UnitTests passing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
