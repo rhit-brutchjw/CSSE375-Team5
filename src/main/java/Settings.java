@@ -78,8 +78,8 @@ public class Settings {
         return selectionMethod;
     }
 
-    public void setSelectionMethod(Selection method) {
-        this.selectionMethod = method;
+    public void setSelectionMethod(Selection selectionMethod) {
+    	this.selectionMethod = selectionMethod;
     }
 
     public int getElitism() {

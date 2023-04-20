@@ -2,6 +2,9 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class RankSelection implements Selection {
+	// Randomly selects chromosomes for the next population
+	// With increased likelihood for higher "placing" chromosomes (can even duplicate)
+	
     @Override
     public ArrayList<Chromosome> performSelection(ArrayList<Chromosome> population) {
         Random r = new Random();
