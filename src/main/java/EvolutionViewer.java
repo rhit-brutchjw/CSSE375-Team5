@@ -60,15 +60,7 @@ public class EvolutionViewer implements Display {
     private Chromosome best;
     private FittestComponent bestFit;
     private PopulationComponent allPopComponent;
-    private boolean isPaused = true;
-    private boolean isStarted = false;
-    private boolean willCrossover;
     private boolean isFinished = false;
-    private boolean hasTarget = false;
-    private Selection selectionMethod;
-    private int fitnessMethod;
-    private int mutationFactor = 1;
-    private int maxGen;
 
     public EvolutionViewer(Settings settings) {
         //settings is here
