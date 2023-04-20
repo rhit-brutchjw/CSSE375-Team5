@@ -4,25 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="Added Software Artifacts: design and requirements documents">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$LoadListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$LoadListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$MouseMutateListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$MouseMutateListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Crossover.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Crossover.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionComponent.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionComponent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Population.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Population.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SettingsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SettingsTest.java" afterDir="false" />
+    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="Did one last test refactor inside SettingsTest.java, ready for merge">
+      <change afterPath="$PROJECT_DIR$/src/main/java/FitnessAlternating.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -321,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682027959780</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Did one last test refactor inside SettingsTest.java, ready for merge">
+      <created>1682034646371</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682034646371</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,6 +335,7 @@
     <MESSAGE value="removed lazy class terminator" />
     <MESSAGE value="Added Software Artifacts: design and requirements documents" />
     <MESSAGE value="Merged changes from master hopefully can merge now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged changes from master hopefully can merge now" />
+    <MESSAGE value="Did one last test refactor inside SettingsTest.java, ready for merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Did one last test refactor inside SettingsTest.java, ready for merge" />
   </component>
 </project>
