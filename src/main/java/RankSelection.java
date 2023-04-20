@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 
-public class RandomSelection implements Selection {
+public class RankSelection implements Selection {
 	// Randomly selects chromosomes for the next population
 	// With increased likelihood for higher "placing" chromosomes (can even duplicate)
 	

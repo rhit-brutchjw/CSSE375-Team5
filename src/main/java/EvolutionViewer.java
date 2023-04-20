@@ -157,7 +157,7 @@ public class EvolutionViewer implements Display {
 		    		settings.setSelectionMethod(new RouletteSelection());
 		    		break;
 		    	case 2:
-		    		settings.setSelectionMethod(new RandomSelection());
+		    		settings.setSelectionMethod(new RankSelection());
 		    		break;
 		    	case 3:
 		    		settings.setSelectionMethod(new WorstSelection());
