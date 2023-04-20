@@ -73,8 +73,8 @@ public class Settings {
         return selectionMethod;
     }
 
-    public void setSelectionMethod(Selection method) {
-        this.selectionMethod = method;
+    public void setSelectionMethod(Selection selectionMethod) {
+    	this.selectionMethod = selectionMethod;
     }
 
     public int getElitism() {
@@ -84,7 +84,6 @@ public class Settings {
     public void setElitism(int elitism) {
         this.elitism = elitism;
     }
-
     //need method to set target, and when setting target make it so that genomeLength = target.length(),
     //gets rid of need to error check
 }

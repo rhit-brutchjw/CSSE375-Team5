@@ -116,7 +116,11 @@ public class Population {
             Chromosome copy = chromosome.clone();
             temp.add(copy);
         }
-        // Elitism
+        
+        // Elitism - Exclude for "Worst"
+        if (selectionMethod instanceof WorstSelection || selectionMethod instanceof DiversitySelection) {
+        	elitismIndex = 0;
+        }
         ArrayList<Chromosome> output = new ArrayList<Chromosome>();
         for (int i = 0; i < elitismIndex; i++) {
             Chromosome elite = this.population.get(i).clone();

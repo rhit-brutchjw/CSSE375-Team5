@@ -14,29 +14,24 @@ public class Chromosome implements Comparable<Chromosome> {
     private int geneSeed;
     private int rank = -1;
 
-    public Chromosome() {
-    } // Chromosome
-
+    public Chromosome() { }
+    
     public Chromosome(int[][] geneArray, int seed, int rank) {
         this.geneArray = geneArray;
         this.geneSeed = seed;
         this.rank = rank;
-    } // Chromosome
+    }
 
     public int getLength() {
-    	if (geneArray.length == 0) {
-    		return 0;
-    	} else {
-    		return geneArray.length * geneArray[0].length;
-    	}
-    } // getLength
+    	return (geneArray.length == 0) ? 0 : geneArray.length * geneArray[0].length;
+    }
 
     public Chromosome clone() {
-        int[][] clonedGenes = new int[geneArray.length][geneArray[0].length];
+        int[][] clonedGenes = new int[geneArray.length][];
         for (int i = 0; i < geneArray.length; i++) {
-        	clonedGenes[i] = this.geneArray[i].clone();
+            clonedGenes[i] = geneArray[i].clone();
         }
-        return new Chromosome(clonedGenes, this.geneSeed, this.rank);
+        return new Chromosome(clonedGenes, geneSeed, rank);
     } // clone
 
     @Override
