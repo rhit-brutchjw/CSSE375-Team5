@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="Added Software Artifacts: design and requirements documents" />
+    <list default="true" id="444d79d1-eee9-4909-8830-0ce49883fa1d" name="Changes" comment="Did one last test refactor inside SettingsTest.java, ready for merge">
+      <change afterPath="$PROJECT_DIR$/src/main/java/FitnessAlternating.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,6 +101,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\rameydj\Desktop\CSSE375-Team5\Docs" />
@@ -107,29 +114,29 @@
       <recent name="C:\Users\rameydj\Desktop\CSSE375-Team5\Docs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GAMain">
-    <configuration name="EvolutionFX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="EvolutionFX" />
-      <module name="CSSE375-Team5.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Gradle.SettingsTest">
+    <configuration name="CSSE375-Team5 [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="GAMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GAMain" />
-      <module name="CSSE375-Team5.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Launcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Launcher" />
-      <module name="CSSE375-Team5.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SystemTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SettingsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -142,7 +149,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;SystemTest&quot;" />
+            <option value="&quot;SettingsTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -152,7 +159,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SystemTest.testSystemCrashesIncorrectParams" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SettingsTest.testCrossoverSet" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -165,7 +172,53 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;SystemTest.testSystemCrashesIncorrectParams&quot;" />
+            <option value="&quot;SettingsTest.testCrossoverSet&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SettingsTest.testFitnessSet" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;SettingsTest.testFitnessSet&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SettingsTest.testTargetSet" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;SettingsTest.testTargetSet&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -176,19 +229,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.GAMain" />
-      <item itemvalue="Application.EvolutionFX" />
-      <item itemvalue="Application.Launcher" />
-      <item itemvalue="Gradle.SystemTest" />
-      <item itemvalue="Gradle.SystemTest.testSystemCrashesIncorrectParams" />
+      <item itemvalue="Gradle.CSSE375-Team5 [test]" />
+      <item itemvalue="Gradle.SettingsTest.testCrossoverSet" />
+      <item itemvalue="Gradle.SettingsTest.testFitnessSet" />
+      <item itemvalue="Gradle.SettingsTest.testTargetSet" />
+      <item itemvalue="Gradle.SettingsTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SystemTest.testSystemCrashesIncorrectParams" />
-        <item itemvalue="Gradle.SystemTest" />
-        <item itemvalue="Application.Launcher" />
-        <item itemvalue="Application.EvolutionFX" />
-        <item itemvalue="Application.GAMain" />
+        <item itemvalue="Gradle.SettingsTest" />
+        <item itemvalue="Gradle.SettingsTest.testTargetSet" />
+        <item itemvalue="Gradle.SettingsTest.testFitnessSet" />
+        <item itemvalue="Gradle.SettingsTest.testCrossoverSet" />
+        <item itemvalue="Gradle.CSSE375-Team5 [test]" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682027959780</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Did one last test refactor inside SettingsTest.java, ready for merge">
+      <created>1682034646371</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682034646371</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,6 +335,7 @@
     <MESSAGE value="removed lazy class terminator" />
     <MESSAGE value="Added Software Artifacts: design and requirements documents" />
     <MESSAGE value="Merged changes from master hopefully can merge now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merged changes from master hopefully can merge now" />
+    <MESSAGE value="Did one last test refactor inside SettingsTest.java, ready for merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Did one last test refactor inside SettingsTest.java, ready for merge" />
   </component>
 </project>
