@@ -4,7 +4,7 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.util.*;
 
-public class Chromosome implements Comparable<Chromosome> {
+public class Chromosome implements Comparable<Chromosome>, Cloneable {
     private int[][] geneArray;
     private int geneSeed;
     private int rank = -1;

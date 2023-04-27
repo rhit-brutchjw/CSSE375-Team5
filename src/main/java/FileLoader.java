@@ -37,26 +37,6 @@ public class FileLoader {
         return null;
     } // load
 
-/*    public void save(File file, int[][] data) {
-        FileWriter fos;
-        try {
-            fos = new FileWriter(file);
-            for (int i = 0; i < data.length; i++) {
-                for (int j = 0; j < data[i].length; j++) {
-                    String text = Integer.toString(data[i][j]);
-                    fos.write(text);
-                    fos.write(" ");
-                }
-                if (i < 9) {
-                    fos.write("\n");
-                }
-            }
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    } // save */
-
     public void save(File file, int[][] data) {
         try (PrintWriter writer = new PrintWriter(file)) {
             for (int[] row : data) {
