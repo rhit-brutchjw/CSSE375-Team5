@@ -1,6 +1,5 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
+import java.io.*;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class FileLoader {
@@ -13,7 +12,7 @@ public class FileLoader {
         try {
             sc = new Scanner(file);
             scan = new Scanner(file);
-            int rows = 0;
+            int rows;
             int columns = 10;
             int count = 0;
             while (scan.hasNextLine()) {
@@ -38,7 +37,7 @@ public class FileLoader {
         return null;
     } // load
 
-    public void save(File file, int[][] data) {
+/*    public void save(File file, int[][] data) {
         FileWriter fos;
         try {
             fos = new FileWriter(file);
@@ -56,5 +55,15 @@ public class FileLoader {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    } // save
+    } // save */
+
+    public void save(File file, int[][] data) {
+        try (PrintWriter writer = new PrintWriter(file)) {
+            for (int[] row : data) {
+                writer.println(Arrays.toString(row).replaceAll("[\\[\\],]", ""));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

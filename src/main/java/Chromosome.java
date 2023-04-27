@@ -2,12 +2,7 @@
 
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.util.ArrayList;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Chromosome implements Comparable<Chromosome> {
     private int[][] geneArray;
@@ -26,6 +21,7 @@ public class Chromosome implements Comparable<Chromosome> {
     	return (geneArray.length == 0) ? 0 : geneArray.length * geneArray[0].length;
     }
 
+    @Override
     public Chromosome clone() {
         int[][] clonedGenes = new int[geneArray.length][];
         for (int i = 0; i < geneArray.length; i++) {
@@ -40,30 +36,20 @@ public class Chromosome implements Comparable<Chromosome> {
     } // compareTo
 
     public Chromosome mutation(int mutationFactor, Random random) {
-        ArrayList<Integer> keys = new ArrayList<Integer>();
-        for (int i = 0; i < mutationFactor; i++) {
-            int key = random.nextInt(geneArray.length * 10);
-            if (!keys.contains(key)) {
-                keys.add(key);
-                continue;
-            }
-            i --;
+        int geneLength = geneArray.length;
+        int geneWidth = geneArray[0].length;
+
+        Set<Integer> keys = new HashSet<>();
+        while (keys.size() < mutationFactor) {
+            keys.add(random.nextInt(geneLength * geneWidth));
         }
-        for (int j = 0; j < geneArray.length; j++) {
-            for (int k = 0; k < geneArray[0].length; k++) {
-                int chance = random.nextInt(geneArray.length * 10);
-                for (int key : keys) {
-                    if (key == chance) {
-                        if (geneArray[j][k] == 1) {
-                        	geneArray[j][k] = 0;
-                        } else {
-                        	geneArray[j][k] = 1;
-                        }
-                    }
-                }
-            }
+
+        for (int key : keys) {
+            int row = key / geneWidth;
+            int col = key % geneWidth;
+            geneArray[row][col] ^= 1;
         }
-        
+
         // Returns Chromosome for ease of use, but this is not needed to be used.
         return this;
     }

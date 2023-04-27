@@ -56,7 +56,7 @@ public class EvolutionFX extends Application implements Display {
     public void start(Stage stage) {
         settings = new Settings();
 
-        selection.getItems().addAll("Truncation", "Roulette", "Ranked");
+        selection.getItems().addAll("Truncation", "Roulette", "Ranked", "Worst", "Diversify");
         fitness.getItems().addAll("Simple", "Matching", "Consecutive");
         options.setSpacing(10);
         options.getChildren().addAll(start, new VBox(10, mutationText, mutationRate),
@@ -205,6 +205,10 @@ public class EvolutionFX extends Application implements Display {
                 settings.setSelectionMethod(new RouletteSelection());
             } else if(selection.getSelectionModel().getSelectedIndex() == 2) {
                 settings.setSelectionMethod(new RankSelection());
+            } else if(selection.getSelectionModel().getSelectedIndex() == 3) {
+                settings.setSelectionMethod(new WorstSelection());
+            } else if(selection.getSelectionModel().getSelectedIndex() == 4) {
+                settings.setSelectionMethod(new DiversitySelection());
             }
         }
     }
