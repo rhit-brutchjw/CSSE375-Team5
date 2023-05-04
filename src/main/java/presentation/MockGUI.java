@@ -48,7 +48,7 @@ public class MockGUI implements Display {
         settings.setElitism(elitism);
     }
 
-    public void setSelectionMethod(Selection selectionMethod) {
+    public void setSelectionMethod(int selectionMethod) {
         settings.setSelectionMethod(selectionMethod);
     }
 

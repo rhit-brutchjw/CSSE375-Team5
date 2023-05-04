@@ -4,71 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc808d60-d551-4c59-859b-44415381902c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/CSSE375-Team5.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/CSSE375-Team5.test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="fc808d60-d551-4c59-859b-44415381902c" name="Changes" comment="Seperation of concerns into different packages as follows&#10;components: contains components used in Java Swing&#10;data: I/O FileLoader case&#10;logic: Base units of the algorithm, includes Chromosome, Population, and settings&#10;operations: different parts of the algorithm that operate on a Chromosome or Population &#10;presentation: main controllers for GUIs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeComponent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$LoadListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$MouseMutateListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Crossover.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionComponent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FittestComponent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/GAMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Population.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/PopulationComponent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Selection.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/initialDesign.puml" beforeDir="false" afterPath="$PROJECT_DIR$/initialDesign.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Chromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Chromosome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChromosomeComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/ChromosomeComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChromosomeViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/ChromosomeViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Crossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/Crossover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DiversitySelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/DiversitySelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/EvolutionComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/EvolutionFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/EvolutionViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/EvolutionaryModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FileLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/FileLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fitness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/Fitness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FitnessAlternating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/FitnessAlternating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FitnessConsecutive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/FitnessConsecutive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FitnessMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/FitnessMatching.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FitnessSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/FitnessSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FitnessStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/FitnessStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FittestComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/FittestComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GAMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/JSwingLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/JavaFXLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MockGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/MockGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Population.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PopulationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/PopulationComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RankSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/RankSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RouletteSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/RouletteSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/Selection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TruncationSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/TruncationSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WorstSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/WorstSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ChromosomeComponentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ChromosomeComponentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ChromosomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ChromosomeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/EvolutionComponentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EvolutionComponentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FitnessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FitnessTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presentation/EvolutionFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/EvolutionFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presentation/EvolutionViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/EvolutionViewer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presentation/MockGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/MockGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SettingsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SettingsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SystemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SystemTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +61,11 @@
     </system>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="seperationOfLayersBranch" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -140,7 +88,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
   </component>
-  <component name="RunManager" selected="Gradle.CSSE375-Team5 [test]">
+  <component name="RunManager" selected="Application.JavaFXLauncher">
     <configuration name="JSwingLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="presentation.JSwingLauncher" />
       <module name="CSSE375-Team5.main" />
@@ -224,8 +172,16 @@
       <updated>1682365068216</updated>
       <workItem from="1682365074506" duration="3562000" />
       <workItem from="1682964050929" duration="23000" />
-      <workItem from="1683216900858" duration="1039000" />
+      <workItem from="1683216900858" duration="5222000" />
     </task>
+    <task id="LOCAL-00001" summary="Seperation of concerns into different packages as follows&#10;components: contains components used in Java Swing&#10;data: I/O FileLoader case&#10;logic: Base units of the algorithm, includes Chromosome, Population, and settings&#10;operations: different parts of the algorithm that operate on a Chromosome or Population &#10;presentation: main controllers for GUIs">
+      <created>1683220211175</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683220211175</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,5 +197,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Seperation of concerns into different packages as follows&#10;components: contains components used in Java Swing&#10;data: I/O FileLoader case&#10;logic: Base units of the algorithm, includes Chromosome, Population, and settings&#10;operations: different parts of the algorithm that operate on a Chromosome or Population &#10;presentation: main controllers for GUIs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Seperation of concerns into different packages as follows&#10;components: contains components used in Java Swing&#10;data: I/O FileLoader case&#10;logic: Base units of the algorithm, includes Chromosome, Population, and settings&#10;operations: different parts of the algorithm that operate on a Chromosome or Population &#10;presentation: main controllers for GUIs" />
   </component>
 </project>

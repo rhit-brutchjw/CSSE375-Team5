@@ -71,7 +71,7 @@ public class SettingsTest {
     void testSelectionMethodSet() {
         Settings settings = new Settings();
         MockGUI display = new MockGUI(settings);
-        display.setSelectionMethod(new RankSelection());
+        display.setSelectionMethod(4);
         Assertions.assertInstanceOf(RankSelection.class, settings.getSelectionMethod());
     }
 

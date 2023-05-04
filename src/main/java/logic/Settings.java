@@ -9,7 +9,6 @@ import java.util.HashMap;
 public class Settings {
     private boolean crossover = false;
     private int mutationFactor = 1;
-//    private int fitnessMethod = 0; // change to polymorphic solution
     private int maxGen = 500;
     private int genomeLength = 100;
     private int populationSize = 100;
@@ -19,6 +18,7 @@ public class Settings {
     private Chromosome target = new Chromosome();
     private FitnessStrategy fitnessMethod = new FitnessSimple();
     private HashMap<Integer, FitnessStrategy> fitMap = new HashMap<Integer, FitnessStrategy>();
+    private HashMap<Integer, Selection> selMap = new HashMap<>();
 
     public int getPopulationSize() {
         return populationSize;
@@ -45,7 +45,6 @@ public class Settings {
     }
 
     public FitnessStrategy getFitnessMethod() {
-
         return fitnessMethod;
     }
 
@@ -83,8 +82,9 @@ public class Settings {
         return selectionMethod;
     }
 
-    public void setSelectionMethod(Selection selectionMethod) {
-    	this.selectionMethod = selectionMethod;
+    public void setSelectionMethod(int selectionIndex) {
+    	initSelecMap();
+        this.selectionMethod = selMap.get(selectionIndex);
     }
 
     public int getElitism() {
@@ -100,6 +100,16 @@ public class Settings {
         fitMap.put(1, new FitnessMatching());
         fitMap.put(0, new FitnessSimple());
         fitMap.put(2, new FitnessConsecutive());
+        fitMap.put(3, new FitnessAlternating());
+
+    }
+
+    public void initSelecMap() {
+        selMap.put(0, new TruncationSelection());
+        selMap.put(1, new RouletteSelection());
+        selMap.put(2, new RankSelection());
+        selMap.put(3, new DiversitySelection());
+        selMap.put(4, new WorstSelection());
     }
     //need method to set target, and when setting target make it so that genomeLength = target.length(),
     //gets rid of need to error check

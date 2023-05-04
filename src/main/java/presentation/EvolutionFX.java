@@ -68,8 +68,8 @@ public class EvolutionFX extends Application implements Display {
     public void start(Stage stage) {
         settings = new Settings();
 
-        selection.getItems().addAll("Truncation", "Roulette", "Ranked");
-        fitness.getItems().addAll("Simple", "Matching", "Consecutive");
+        selection.getItems().addAll("Truncation", "Roulette", "Ranked", "Diversity", "Worst");
+        fitness.getItems().addAll("Simple", "Matching", "Consecutive", "Alternating");
         options.setSpacing(10);
         options.getChildren().addAll(start, new VBox(10, mutationText, mutationRate),
                 new VBox(10, elitismText, elitism),
@@ -213,13 +213,7 @@ public class EvolutionFX extends Application implements Display {
 
         @Override
         public void handle(ActionEvent event) {
-            if(selection.getSelectionModel().getSelectedIndex() == 0) {
-                settings.setSelectionMethod(new TruncationSelection());
-            }else if(selection.getSelectionModel().getSelectedIndex() == 1) {
-                settings.setSelectionMethod(new RouletteSelection());
-            } else if(selection.getSelectionModel().getSelectedIndex() == 2) {
-                settings.setSelectionMethod(new RankSelection());
-            }
+            settings.setSelectionMethod(selection.getSelectionModel().getSelectedIndex());
         }
     }
 
@@ -232,6 +226,9 @@ public class EvolutionFX extends Application implements Display {
                 File f = chooser.showOpenDialog(null);
                 if(f != null) {
                     settings.setTarget(f);
+                }else {
+                    System.out.println("No target selected for matching...Using default");
+                    settings.setTarget(new File("genotypes/size_100.txt"));
                 }
             }
             settings.setFitnessMethod(fitness.getSelectionModel().getSelectedIndex());
