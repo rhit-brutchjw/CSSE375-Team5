@@ -1,3 +1,5 @@
+import components.EvolutionComponent;
+import logic.Population;
 import org.easymock.EasyMock;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

@@ -81,7 +81,7 @@ class FittestComponent extends JComponent {
  # paintComponent(Graphics g): void
 }
 
-class GAMain {
+class JSwingLauncher {
  + {static} main(String[] args): void
 }
 
@@ -142,7 +142,7 @@ EvolutionaryViewer --> FittestComponent
 EvolutionaryViewer --> PopulationComponent
 Fitness ..> Chromosome
 FitnessComponent --> Chromosome
-GAMain ..> EvolutionaryModel
+JSwingLauncher ..> EvolutionaryModel
 Mutation ..> Chromosome
 Population --> Selection
 Population --> Crossover

@@ -1,5 +1,12 @@
+import logic.Chromosome;
+import logic.EvolutionaryModel;
+import logic.Population;
+import logic.Settings;
+import operations.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import presentation.Display;
+import presentation.MockGUI;
 
 public class IntegrationTest {
     //add indepth tests with real objects things like going through a full seelction rotation or building up pop.

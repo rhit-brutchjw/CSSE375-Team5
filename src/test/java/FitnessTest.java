@@ -1,4 +1,9 @@
 
+import logic.Chromosome;
+import operations.FitnessConsecutive;
+import operations.FitnessMatching;
+import operations.FitnessSimple;
+import operations.FitnessStrategy;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
