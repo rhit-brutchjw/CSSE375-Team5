@@ -1,5 +1,11 @@
+import data.FileLoader;
+import logic.Chromosome;
+import logic.Settings;
+import operations.FitnessSimple;
+import operations.RankSelection;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import presentation.MockGUI;
 
 import java.io.File;
 

@@ -1,5 +1,8 @@
+import logic.EvolutionaryModel;
+import logic.Settings;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import presentation.MockGUI;
 
 public class SystemTest {
 
