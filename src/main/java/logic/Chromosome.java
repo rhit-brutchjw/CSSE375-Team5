@@ -1,6 +1,9 @@
 package logic;
 
-import java.awt.Color;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
+
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 import java.util.Random;
@@ -70,7 +73,8 @@ public class Chromosome implements Comparable<Chromosome> {
         g.fillRect(x, y, 40, 40);
         g.setColor(getTextColorBasedOnCellValue(value));
         g.drawString(Integer.toString(index), x + 20, y + 20);
-    } // drawOn
+
+    }
 
     public void drawSmallOn(Graphics2D g2, int x, int y, int value) {
         g2 = (Graphics2D) g2.create();
@@ -78,11 +82,11 @@ public class Chromosome implements Comparable<Chromosome> {
         g2.fillRect(x, y, 4, 4);
     } // drawSmallOn
 
-    public Color getRectColorBasedOnCellValue(int value) {
-        return value == 0 ? Color.BLACK : Color.GREEN;
+    public java.awt.Color getRectColorBasedOnCellValue(int value) {
+        return value == 0 ? java.awt.Color.BLACK : java.awt.Color.GREEN;
     }
-    public Color getTextColorBasedOnCellValue(int value) {
-        return value == 0 ? Color.WHITE : Color.BLACK;
+    public java.awt.Color getTextColorBasedOnCellValue(int value) {
+        return value == 0 ? java.awt.Color.WHITE : java.awt.Color.BLACK;
     }
 
     public int getRank() { return this.rank; }

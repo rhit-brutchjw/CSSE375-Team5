@@ -17,9 +17,7 @@ import logic.Chromosome;
 import logic.EvolutionaryModel;
 import logic.Population;
 import logic.Settings;
-import operations.RankSelection;
-import operations.RouletteSelection;
-import operations.TruncationSelection;
+import operations.*;
 
 import java.io.File;
 
