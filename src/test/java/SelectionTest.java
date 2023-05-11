@@ -1,3 +1,9 @@
+import data.FileLoader;
+import logic.Chromosome;
+import operations.RankSelection;
+import operations.RouletteSelection;
+import operations.Selection;
+import operations.TruncationSelection;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
