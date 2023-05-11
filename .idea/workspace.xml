@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="CSSE375-Team5:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc808d60-d551-4c59-859b-44415381902c" name="Changes" comment="Seperation of concerns into different packages as follows&#10;components: contains components used in Java Swing&#10;data: I/O FileLoader case&#10;logic: Base units of the algorithm, includes Chromosome, Population, and settings&#10;operations: different parts of the algorithm that operate on a Chromosome or Population &#10;presentation: main controllers for GUIs">
+    <list default="true" id="fc808d60-d551-4c59-859b-44415381902c" name="Changes" comment="Minor bug fix in matching fitness. &#10;Refactored bad smell: Switch statement&#10;Refactored bad smell: Code dupe &#10;Corrected list of fitness and selection inside ComboBox">
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/EvolutionaryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/EvolutionaryModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/logic/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/presentation/EvolutionFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/EvolutionFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presentation/EvolutionViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/EvolutionViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presentation/MockGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/MockGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SettingsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SettingsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +57,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="CSSE375-Team5" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="CSSE375-Team5" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
@@ -84,8 +96,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
   </component>
   <component name="RunManager" selected="Application.JavaFXLauncher">
@@ -105,9 +117,57 @@
     <configuration name="JavaFXLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="presentation.JavaFXLauncher" />
       <module name="CSSE375-Team5.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="presentation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="CSSE375-Team5 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CSSE375-Team5 [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="CSSE375-Team5 [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -130,35 +190,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ChromosomeComponentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ChromosomeComponentTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.CSSE375-Team5 [test]" />
         <item itemvalue="Application.JSwingLauncher" />
         <item itemvalue="Application.JavaFXLauncher" />
-        <item itemvalue="Gradle.ChromosomeComponentTest" />
+        <item itemvalue="Gradle.CSSE375-Team5 [build]" />
+        <item itemvalue="Gradle.CSSE375-Team5 [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +210,8 @@
       <updated>1682365068216</updated>
       <workItem from="1682365074506" duration="3562000" />
       <workItem from="1682964050929" duration="23000" />
-      <workItem from="1683216900858" duration="5222000" />
+      <workItem from="1683216900858" duration="9207000" />
+      <workItem from="1683754801883" duration="17463000" />
     </task>
     <task id="LOCAL-00001" summary="Seperation of concerns into different packages as follows&#10;components: contains components used in Java Swing&#10;data: I/O FileLoader case&#10;logic: Base units of the algorithm, includes Chromosome, Population, and settings&#10;operations: different parts of the algorithm that operate on a Chromosome or Population &#10;presentation: main controllers for GUIs">
       <created>1683220211175</created>
@@ -181,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683220211175</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Minor bug fix in matching fitness. &#10;Refactored bad smell: Switch statement&#10;Refactored bad smell: Code dupe &#10;Corrected list of fitness and selection inside ComboBox">
+      <created>1683224271825</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683224271825</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +246,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Seperation of concerns into different packages as follows&#10;components: contains components used in Java Swing&#10;data: I/O FileLoader case&#10;logic: Base units of the algorithm, includes Chromosome, Population, and settings&#10;operations: different parts of the algorithm that operate on a Chromosome or Population &#10;presentation: main controllers for GUIs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Seperation of concerns into different packages as follows&#10;components: contains components used in Java Swing&#10;data: I/O FileLoader case&#10;logic: Base units of the algorithm, includes Chromosome, Population, and settings&#10;operations: different parts of the algorithm that operate on a Chromosome or Population &#10;presentation: main controllers for GUIs" />
+    <MESSAGE value="Minor bug fix in matching fitness. &#10;Refactored bad smell: Switch statement&#10;Refactored bad smell: Code dupe &#10;Corrected list of fitness and selection inside ComboBox" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor bug fix in matching fitness. &#10;Refactored bad smell: Switch statement&#10;Refactored bad smell: Code dupe &#10;Corrected list of fitness and selection inside ComboBox" />
   </component>
 </project>

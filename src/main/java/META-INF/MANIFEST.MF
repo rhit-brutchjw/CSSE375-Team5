@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Main-Class: presentation.JavaFXLauncher
+Class-Path: objenesis-1.2.jar javafx-base-20.jar javafx-fxml-20-win.jar 
+ javafx-graphics-20-win.jar javafx-base-20-win.jar javafx-controls-20.ja
+ r javafx-controls-20-win.jar cglib-nodep-2.2.2.jar opentest4j-1.2.0.jar
+  junit-jupiter-engine-5.8.1.jar javafx-graphics-20.jar junit-platform-e
+ ngine-1.8.1.jar junit-jupiter-api-5.8.1.jar junit-platform-commons-1.8.
+ 1.jar easymock-3.1.jar
+

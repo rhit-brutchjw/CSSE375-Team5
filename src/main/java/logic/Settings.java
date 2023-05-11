@@ -83,7 +83,7 @@ public class Settings {
     }
 
     public void setSelectionMethod(int selectionIndex) {
-    	initSelecMap();
+    	initSelectMap();
         this.selectionMethod = selMap.get(selectionIndex);
     }
 
@@ -104,7 +104,7 @@ public class Settings {
 
     }
 
-    public void initSelecMap() {
+    public void initSelectMap() {
         selMap.put(0, new TruncationSelection());
         selMap.put(1, new RouletteSelection());
         selMap.put(2, new RankSelection());
