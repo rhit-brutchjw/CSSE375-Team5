@@ -14,6 +14,7 @@ public class EvolutionaryModel {
     public Population getPopulation() {return population;}
 
     public EvolutionaryModel(Settings settings, Display display) {
+        population = new Population(settings.getPopulationSize(), settings.getGenomeLength());;
         this.settings = settings;
         this.display = display;
         t = new AnimationTimer() {

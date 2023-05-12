@@ -9,15 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc808d60-d551-4c59-859b-44415381902c" name="Changes" comment="Minor bug fix in matching fitness. &#10;Refactored bad smell: Switch statement&#10;Refactored bad smell: Code dupe &#10;Corrected list of fitness and selection inside ComboBox">
-      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="fc808d60-d551-4c59-859b-44415381902c" name="Changes" comment="Fixed some issues with some of the tests. Had to comment a few of them out because of different JavaFX, Threading, and Startup issues.">
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/logic/EvolutionaryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/EvolutionaryModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/presentation/EvolutionFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/EvolutionFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SettingsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SettingsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presentation/MockGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/MockGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SystemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SystemTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,18 +46,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="CSSE375-Team5" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="CSSE375-Team5" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="CSSE375-Team5" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -100,7 +88,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
   </component>
-  <component name="RunManager" selected="Application.JavaFXLauncher">
+  <component name="RunManager" selected="Gradle.CSSE375-Team5 [test]">
     <configuration name="JSwingLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="presentation.JSwingLauncher" />
       <module name="CSSE375-Team5.main" />
@@ -113,61 +101,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="JavaFXLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="presentation.JavaFXLauncher" />
-      <module name="CSSE375-Team5.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="presentation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CSSE375-Team5 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="CSSE375-Team5 [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
     </configuration>
     <configuration name="CSSE375-Team5 [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -190,13 +123,82 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="IntegrationTest.FullEvoModel1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;IntegrationTest.FullEvoModel1&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="IntegrationTest.testSystemRunsCustomParams" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;IntegrationTest.testSystemRunsCustomParams&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SystemTest.testSystemRunsDefaultParams" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;SystemTest.testSystemRunsDefaultParams&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.CSSE375-Team5 [test]" />
+        <item itemvalue="Gradle.SystemTest.testSystemRunsDefaultParams" />
+        <item itemvalue="Gradle.IntegrationTest.testSystemRunsCustomParams" />
+        <item itemvalue="Gradle.IntegrationTest.FullEvoModel1" />
         <item itemvalue="Application.JSwingLauncher" />
-        <item itemvalue="Application.JavaFXLauncher" />
-        <item itemvalue="Gradle.CSSE375-Team5 [build]" />
-        <item itemvalue="Gradle.CSSE375-Team5 [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +213,7 @@
       <workItem from="1682365074506" duration="3562000" />
       <workItem from="1682964050929" duration="23000" />
       <workItem from="1683216900858" duration="9207000" />
-      <workItem from="1683754801883" duration="17463000" />
+      <workItem from="1683754801883" duration="22427000" />
     </task>
     <task id="LOCAL-00001" summary="Seperation of concerns into different packages as follows&#10;components: contains components used in Java Swing&#10;data: I/O FileLoader case&#10;logic: Base units of the algorithm, includes Chromosome, Population, and settings&#10;operations: different parts of the algorithm that operate on a Chromosome or Population &#10;presentation: main controllers for GUIs">
       <created>1683220211175</created>
@@ -227,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683224271825</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changed the regular Java Timer to an AnimationTimer to deal with threading issues&#10;Deleted other stages and added the best fit and all pop views to main display in top right space &#10;Imposed drawing restrictions on Population size and genomelength. What this means: If the genomeLength is larger than 100 but less than or equal to 200, only the bestFit image will draw and NOT the all pop. if the population size is greater than 100 and the genome length is less than or equal to 100, the all pop will NOT draw but the best fit will. If the genomeLength is greater than 200 (actually 210 because of integer division) AND the population size is larger than 100, neither will draw. Combination Table below &#10;GenomeLength --- PopulationSize --- Result &#10;10&lt;=x&lt;=100   --- 10 &lt;=y &lt;= 100  --- BOTH SHOWN&#10;10&lt;=x&lt;=100   --- y &gt; 100        --- BESTFIT SHOWN ONLY&#10;x &gt; 100      --- 10 &lt;=y &lt;= 100  --- BESTFIT SHOWN ONLY&#10;x &gt; 100      --- y &gt; 100        --- BESTFIT SHOWN ONLY&#10;x &gt;= 210      --- y &gt; 100       --- NEITHER SHOWN">
+      <created>1683841297454</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683841297454</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +256,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Seperation of concerns into different packages as follows&#10;components: contains components used in Java Swing&#10;data: I/O FileLoader case&#10;logic: Base units of the algorithm, includes Chromosome, Population, and settings&#10;operations: different parts of the algorithm that operate on a Chromosome or Population &#10;presentation: main controllers for GUIs" />
     <MESSAGE value="Minor bug fix in matching fitness. &#10;Refactored bad smell: Switch statement&#10;Refactored bad smell: Code dupe &#10;Corrected list of fitness and selection inside ComboBox" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor bug fix in matching fitness. &#10;Refactored bad smell: Switch statement&#10;Refactored bad smell: Code dupe &#10;Corrected list of fitness and selection inside ComboBox" />
+    <MESSAGE value="Changed the regular Java Timer to an AnimationTimer to deal with threading issues&#10;Deleted other stages and added the best fit and all pop views to main display in top right space &#10;Imposed drawing restrictions on Population size and genomelength. What this means: If the genomeLength is larger than 100 but less than or equal to 200, only the bestFit image will draw and NOT the all pop. if the population size is greater than 100 and the genome length is less than or equal to 100, the all pop will NOT draw but the best fit will. If the genomeLength is greater than 200 (actually 210 because of integer division) AND the population size is larger than 100, neither will draw. Combination Table below &#10;GenomeLength --- PopulationSize --- Result &#10;10&lt;=x&lt;=100   --- 10 &lt;=y &lt;= 100  --- BOTH SHOWN&#10;10&lt;=x&lt;=100   --- y &gt; 100        --- BESTFIT SHOWN ONLY&#10;x &gt; 100      --- 10 &lt;=y &lt;= 100  --- BESTFIT SHOWN ONLY&#10;x &gt; 100      --- y &gt; 100        --- BESTFIT SHOWN ONLY&#10;x &gt;= 210      --- y &gt; 100       --- NEITHER SHOWN" />
+    <MESSAGE value="Fixed some issues with some of the tests. Had to comment a few of them out because of different JavaFX, Threading, and Startup issues." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some issues with some of the tests. Had to comment a few of them out because of different JavaFX, Threading, and Startup issues." />
   </component>
 </project>

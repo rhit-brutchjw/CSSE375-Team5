@@ -1,5 +1,8 @@
 package presentation;
 
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.stage.Stage;
 import logic.Chromosome;
 import logic.EvolutionaryModel;
 import logic.Population;
@@ -8,7 +11,7 @@ import operations.Selection;
 
 import java.io.File;
 
-public class MockGUI implements Display {
+public class MockGUI extends Application implements Display {
 
     private boolean finished;
     private Population population;
@@ -80,5 +83,8 @@ public class MockGUI implements Display {
         EvolutionaryModel.t.start();
     }
 
-
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Thread.sleep(2000);
+    }
 }

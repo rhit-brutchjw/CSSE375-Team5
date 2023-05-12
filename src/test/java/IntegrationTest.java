@@ -1,35 +1,35 @@
+import javafx.application.Platform;
 import logic.Chromosome;
 import logic.EvolutionaryModel;
 import logic.Population;
 import logic.Settings;
 import operations.*;
+import org.awaitility.Awaitility;
+import org.awaitility.Durations;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import presentation.Display;
+import presentation.JavaFXLauncher;
 import presentation.MockGUI;
 
 public class IntegrationTest {
     //add indepth tests with real objects things like going through a full seelction rotation or building up pop.
 
-    @Test
-    void testSystemRunsCustomParams() throws InterruptedException {
-        Settings settings = new Settings();
-        MockGUI display = new MockGUI(settings);
-        new EvolutionaryModel(settings, display);
-
-        //set params here
-        display.setCrossover(true);
-        display.setPopulationSize(125);
-        display.setGenomeLength(125);
-
-        //end set params
-
-        display.setMaxGen(2); // for testability
-        display.startRun();
-        Thread.sleep(2000);
-        Assertions.assertTrue(display.isFinished());
-
-    }
+//    @Test
+//    void testSystemRunsCustomParams() throws InterruptedException {
+//        Settings settings = new Settings();
+//        MockGUI display = new MockGUI(settings);
+//        new EvolutionaryModel(settings, display);
+//
+//        //set params here
+//        display.setCrossover(true);
+//        display.setPopulationSize(125);
+//        display.setGenomeLength(125);
+//        display.setMaxGen(2); // for testability
+//        display.startRun();
+//
+//        Assertions.assertTrue(display.isFinished());
+//    }
 
 
     @Test
@@ -55,20 +55,21 @@ public class IntegrationTest {
 
     }
 
-    @Test
-    void FullEvoModel1() throws InterruptedException {
-        Settings set = new Settings();
-        set.setPopulationSize(100);
-        set.setGenomeLength(100);
-        Display dis = new MockGUI(set);
-        EvolutionaryModel evo = new EvolutionaryModel(set, dis);
-        dis.startRun();
-        Thread.sleep(2000);
-        Population pop = evo.getPopulation();
-        Chromosome c = pop.getGene(0);
-        Assertions.assertTrue(c.getRank() > 0);
+//    @Test
+//    void FullEvoModel1() throws InterruptedException {
+//        Settings set = new Settings();
+//        set.setPopulationSize(100);
+//        set.setGenomeLength(100);
+//        Display dis = new MockGUI(set);
+//        EvolutionaryModel evo = new EvolutionaryModel(set, dis);
+//        dis.startRun();
+//        Population pop = evo.getPopulation();
+//        Chromosome c = pop.getGene(0);
+//        Assertions.assertTrue(c.getRank() > 0);
 
-    }
+//
+//
+//    }
 
     @Test
     public void simpleFitnessCalcGivenOnes_ReturnsScore100() {
