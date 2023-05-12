@@ -1,4 +1,4 @@
-package presentation;
+package presentation.evolutionFX;
 
 import javafx.application.Application;
 import javafx.event.*;
@@ -17,6 +17,7 @@ import logic.Chromosome;
 import logic.EvolutionaryModel;
 import logic.Population;
 import logic.Settings;
+import presentation.Display;
 
 
 import java.awt.*;

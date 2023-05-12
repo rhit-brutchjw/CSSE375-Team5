@@ -1,4 +1,4 @@
-package presentation;
+package presentation.javaSwing;
 import components.ChromosomeComponent;
 import data.FileLoader;
 import logic.Chromosome;
