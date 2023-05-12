@@ -1,4 +1,4 @@
-package presentation;
+package presentation.javaSwing;
 
 import components.EvolutionComponent;
 import components.FittestComponent;
@@ -7,7 +7,7 @@ import logic.Chromosome;
 import logic.EvolutionaryModel;
 import logic.Population;
 import logic.Settings;
-import operations.*;
+import presentation.Display;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;

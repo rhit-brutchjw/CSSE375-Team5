@@ -1,7 +1,8 @@
-package presentation;
+package presentation.javaSwing;
 
 import logic.EvolutionaryModel;
 import logic.Settings;
+import presentation.Display;
 
 public class JSwingLauncher {
 

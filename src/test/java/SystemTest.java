@@ -2,9 +2,7 @@ import javafx.application.Platform;
 import logic.EvolutionaryModel;
 import logic.Settings;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import presentation.JavaFXLauncher;
 import presentation.MockGUI;
 
 public class SystemTest {
@@ -24,7 +22,11 @@ public class SystemTest {
 
                 display.setMaxGen(2); // for testability
                 display.startRun();
-
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
                 Assertions.assertTrue(display.isFinished());
             }

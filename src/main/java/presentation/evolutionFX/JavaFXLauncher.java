@@ -1,4 +1,4 @@
-package presentation;
+package presentation.evolutionFX;
 
 public class JavaFXLauncher {
 

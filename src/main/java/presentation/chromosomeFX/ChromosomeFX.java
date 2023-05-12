@@ -1,4 +1,4 @@
-package presentation;
+package presentation.chromosomeFX;
 
 import components.ChromosomeComponentFX;
 import data.FileLoader;
