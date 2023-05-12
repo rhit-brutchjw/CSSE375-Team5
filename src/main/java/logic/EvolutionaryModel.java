@@ -1,37 +1,35 @@
 package logic;
 
+import javafx.animation.AnimationTimer;
 import presentation.Display;
-import logic.Settings;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.Timer;
+
 
 public class EvolutionaryModel {
     private final Settings settings;
     private final Display display;
 
-    public static Timer t;
-    private Population population;
 
+    private Population population;
+    public static AnimationTimer t;
     public Population getPopulation() {return population;}
 
     public EvolutionaryModel(Settings settings, Display display) {
+        population = new Population(settings.getPopulationSize(), settings.getGenomeLength());;
         this.settings = settings;
         this.display = display;
-        t = new Timer(50, new ActionListener() {
+        t = new AnimationTimer() {
             int curGen = 0;
             @Override
-            public void actionPerformed(ActionEvent arg0) {
+            public void handle(long now) {
                 initializePopulation();
                 curGen++;
                 calculateFitness();
-                checkTermination(arg0);
+                checkTermination();
                 addGraphPoints();
 //                reportToConsole();
                 handleSelectionToMutation();
                 updateDisplays();
             }
-
             private void updateDisplays() {
                 display.updatePopulation(population);
                 display.updateMostFit(population.getGene(0));
@@ -58,10 +56,11 @@ public class EvolutionaryModel {
                 population.setCurGen(curGen);
             }
 
-            private void checkTermination(ActionEvent arg0) {
+            private void checkTermination() {
                 if(population.maxFitAchieved() || settings.getMaxGenerations() == curGen) {
                     display.markFinished();
-                    ((Timer) arg0.getSource()).stop();
+                    t.stop();
+
                 }
             }
 
@@ -79,7 +78,8 @@ public class EvolutionaryModel {
                     population.setElitism(settings.getElitism());
                 }
             }
-        });
+        };
+
 
     }
 }

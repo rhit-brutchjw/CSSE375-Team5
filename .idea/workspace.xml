@@ -1,73 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="CSSE375-Team5:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc808d60-d551-4c59-859b-44415381902c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/CSSE375-Team5.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/CSSE375-Team5.test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="fc808d60-d551-4c59-859b-44415381902c" name="Changes" comment="Fixed some issues with some of the tests. Had to comment a few of them out because of different JavaFX, Threading, and Startup issues.">
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Chromosome.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeComponent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$LoadListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer$MouseMutateListener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChromosomeViewer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Crossover.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionComponent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionViewer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/EvolutionaryModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Fitness.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/FittestComponent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/GAMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Population.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/PopulationComponent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Selection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/initialDesign.puml" beforeDir="false" afterPath="$PROJECT_DIR$/initialDesign.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Chromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Chromosome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChromosomeComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/ChromosomeComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChromosomeViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/ChromosomeViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Crossover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/Crossover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DiversitySelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/DiversitySelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/EvolutionComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/EvolutionFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionViewer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/EvolutionViewer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EvolutionaryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/EvolutionaryModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FileLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/FileLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Fitness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/Fitness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FitnessAlternating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/FitnessAlternating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FitnessConsecutive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/FitnessConsecutive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FitnessMatching.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/FitnessMatching.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FitnessSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/FitnessSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FitnessStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/FitnessStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FittestComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/FittestComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GAMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/JSwingLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/JavaFXLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MockGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/MockGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Population.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PopulationComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/components/PopulationComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RankSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/RankSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RouletteSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/RouletteSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Selection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/Selection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/TruncationSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/TruncationSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/WorstSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/operations/WorstSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ChromosomeComponentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ChromosomeComponentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ChromosomeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ChromosomeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/EvolutionComponentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EvolutionComponentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FitnessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FitnessTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logic/EvolutionaryModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/EvolutionaryModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/presentation/MockGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/presentation/MockGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/IntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SettingsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SettingsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SystemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SystemTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,12 +51,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="CSSE375-Team5" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="CSSE375-Team5" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
@@ -118,6 +61,11 @@
     </system>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="seperationOfLayersBranch" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -136,8 +84,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
   </component>
   <component name="RunManager" selected="Gradle.CSSE375-Team5 [test]">
@@ -150,13 +98,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JavaFXLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="presentation.JavaFXLauncher" />
-      <module name="CSSE375-Team5.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -182,7 +123,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ChromosomeComponentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="IntegrationTest.FullEvoModel1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -195,7 +136,53 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ChromosomeComponentTest&quot;" />
+            <option value="&quot;IntegrationTest.FullEvoModel1&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="IntegrationTest.testSystemRunsCustomParams" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;IntegrationTest.testSystemRunsCustomParams&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SystemTest.testSystemRunsDefaultParams" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;SystemTest.testSystemRunsDefaultParams&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -208,9 +195,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.CSSE375-Team5 [test]" />
+        <item itemvalue="Gradle.SystemTest.testSystemRunsDefaultParams" />
+        <item itemvalue="Gradle.IntegrationTest.testSystemRunsCustomParams" />
+        <item itemvalue="Gradle.IntegrationTest.FullEvoModel1" />
         <item itemvalue="Application.JSwingLauncher" />
-        <item itemvalue="Application.JavaFXLauncher" />
-        <item itemvalue="Gradle.ChromosomeComponentTest" />
       </list>
     </recent_temporary>
   </component>
@@ -224,8 +212,31 @@
       <updated>1682365068216</updated>
       <workItem from="1682365074506" duration="3562000" />
       <workItem from="1682964050929" duration="23000" />
-      <workItem from="1683216900858" duration="1039000" />
+      <workItem from="1683216900858" duration="9207000" />
+      <workItem from="1683754801883" duration="22427000" />
     </task>
+    <task id="LOCAL-00001" summary="Seperation of concerns into different packages as follows&#10;components: contains components used in Java Swing&#10;data: I/O FileLoader case&#10;logic: Base units of the algorithm, includes Chromosome, Population, and settings&#10;operations: different parts of the algorithm that operate on a Chromosome or Population &#10;presentation: main controllers for GUIs">
+      <created>1683220211175</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683220211175</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Minor bug fix in matching fitness. &#10;Refactored bad smell: Switch statement&#10;Refactored bad smell: Code dupe &#10;Corrected list of fitness and selection inside ComboBox">
+      <created>1683224271825</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683224271825</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Changed the regular Java Timer to an AnimationTimer to deal with threading issues&#10;Deleted other stages and added the best fit and all pop views to main display in top right space &#10;Imposed drawing restrictions on Population size and genomelength. What this means: If the genomeLength is larger than 100 but less than or equal to 200, only the bestFit image will draw and NOT the all pop. if the population size is greater than 100 and the genome length is less than or equal to 100, the all pop will NOT draw but the best fit will. If the genomeLength is greater than 200 (actually 210 because of integer division) AND the population size is larger than 100, neither will draw. Combination Table below &#10;GenomeLength --- PopulationSize --- Result &#10;10&lt;=x&lt;=100   --- 10 &lt;=y &lt;= 100  --- BOTH SHOWN&#10;10&lt;=x&lt;=100   --- y &gt; 100        --- BESTFIT SHOWN ONLY&#10;x &gt; 100      --- 10 &lt;=y &lt;= 100  --- BESTFIT SHOWN ONLY&#10;x &gt; 100      --- y &gt; 100        --- BESTFIT SHOWN ONLY&#10;x &gt;= 210      --- y &gt; 100       --- NEITHER SHOWN">
+      <created>1683841297454</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683841297454</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,5 +252,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Seperation of concerns into different packages as follows&#10;components: contains components used in Java Swing&#10;data: I/O FileLoader case&#10;logic: Base units of the algorithm, includes Chromosome, Population, and settings&#10;operations: different parts of the algorithm that operate on a Chromosome or Population &#10;presentation: main controllers for GUIs" />
+    <MESSAGE value="Minor bug fix in matching fitness. &#10;Refactored bad smell: Switch statement&#10;Refactored bad smell: Code dupe &#10;Corrected list of fitness and selection inside ComboBox" />
+    <MESSAGE value="Changed the regular Java Timer to an AnimationTimer to deal with threading issues&#10;Deleted other stages and added the best fit and all pop views to main display in top right space &#10;Imposed drawing restrictions on Population size and genomelength. What this means: If the genomeLength is larger than 100 but less than or equal to 200, only the bestFit image will draw and NOT the all pop. if the population size is greater than 100 and the genome length is less than or equal to 100, the all pop will NOT draw but the best fit will. If the genomeLength is greater than 200 (actually 210 because of integer division) AND the population size is larger than 100, neither will draw. Combination Table below &#10;GenomeLength --- PopulationSize --- Result &#10;10&lt;=x&lt;=100   --- 10 &lt;=y &lt;= 100  --- BOTH SHOWN&#10;10&lt;=x&lt;=100   --- y &gt; 100        --- BESTFIT SHOWN ONLY&#10;x &gt; 100      --- 10 &lt;=y &lt;= 100  --- BESTFIT SHOWN ONLY&#10;x &gt; 100      --- y &gt; 100        --- BESTFIT SHOWN ONLY&#10;x &gt;= 210      --- y &gt; 100       --- NEITHER SHOWN" />
+    <MESSAGE value="Fixed some issues with some of the tests. Had to comment a few of them out because of different JavaFX, Threading, and Startup issues." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some issues with some of the tests. Had to comment a few of them out because of different JavaFX, Threading, and Startup issues." />
   </component>
 </project>
