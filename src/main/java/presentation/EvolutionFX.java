@@ -17,28 +17,33 @@ import logic.Chromosome;
 import logic.EvolutionaryModel;
 import logic.Population;
 import logic.Settings;
-import operations.RankSelection;
-import operations.RouletteSelection;
-import operations.TruncationSelection;
 
+
+import java.awt.*;
 import java.io.File;
+import java.util.ArrayList;
 
 
 public class EvolutionFX extends Application implements Display {
-    private static final int FRAME_WIDTH = 1400;
-    private static final int FRAME_HEIGHT = 600;
+    private static final int FRAME_WIDTH = 1500;
+    private static final int FRAME_HEIGHT = 800;
+    private static final int OTHER_VIEWS_WIDTH_OFFSET = 1150;
+    private static final int BEST_FIT_Y_OFFSET = 25;
+    private static final int ALL_POP_Y_OFFSET = 375;
     private FileChooser chooser = new FileChooser();
     private Stage evolutionGUI = new Stage();
-    private Stage bestGUI = new Stage();
-    private Stage allPopGUI = new Stage();
+
 
     private BorderPane root = new BorderPane();
+
     private VBox wordPanel = new VBox();
     private VBox legends = new VBox();
     private HBox options = new HBox();
     private Button start = new Button("Start");
     private CheckBox crossover = new CheckBox();
     private Label title = new Label("Fitness over Generations");
+
+
     private Label mutationText = new Label("Mutation Rate (N/pop)");
     private Label populationSizeText = new Label("Population Size");
     private Label generationsText = new Label("Generations");
@@ -54,6 +59,8 @@ public class EvolutionFX extends Application implements Display {
     private TextField genomeLength = new TextField();
     private TextField elitism = new TextField();
 
+
+
     private ComboBox<String> selection = new ComboBox<>();
     private ComboBox<String> fitness = new ComboBox<>();
     private boolean isFinished = true;
@@ -68,8 +75,8 @@ public class EvolutionFX extends Application implements Display {
     public void start(Stage stage) {
         settings = new Settings();
 
-        selection.getItems().addAll("Truncation", "Roulette", "Ranked");
-        fitness.getItems().addAll("Simple", "Matching", "Consecutive");
+        selection.getItems().addAll("Truncation", "Roulette", "Ranked", "Diversity", "Worst");
+        fitness.getItems().addAll("Simple", "Matching", "Consecutive", "Alternating");
         options.setSpacing(10);
         options.getChildren().addAll(start, new VBox(10, mutationText, mutationRate),
                 new VBox(10, elitismText, elitism),
@@ -88,6 +95,10 @@ public class EvolutionFX extends Application implements Display {
                 if(isFinished) {
                     gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
                     isFinished = false;
+                    gc.setStroke(Color.BLACK);
+                    gc.fillText("Best Fit View", 1175, 20);
+                    gc.fillText("All Pop View", 1175, 370);
+                    System.out.println("Hello World!");
                     startRun();
                 }
             }
@@ -132,12 +143,15 @@ public class EvolutionFX extends Application implements Display {
         });
         wordPanel.getChildren().addAll(title);
 
+
         root.setPadding(new Insets(10, 10, 10, 10));
         root.setCenter(canvas);
         root.setTop(wordPanel);
         root.setBottom(options);
+
         Scene scene = new Scene(root, FRAME_WIDTH, FRAME_HEIGHT);
         stage.setScene(scene);
+
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent t) {
@@ -152,8 +166,67 @@ public class EvolutionFX extends Application implements Display {
         stage.show();
 
     }
+    public Color getRectColorBasedOnCellValue(int value) {
+        return value == 0 ? Color.BLACK : Color.GREEN;
+    }
+    public Color getTextColorBasedOnCellValue(int value) {
+        return value == 0 ? Color.WHITE : Color.BLACK;
+    }
 
 
+
+    private void drawRects(int x, int y, int value, int index) {
+        gc.setFill(getRectColorBasedOnCellValue(value));
+        gc.fillRect(x, y,33, 33);
+        gc.setFill(getTextColorBasedOnCellValue(value));
+        gc.fillText(Integer.toString(index), x + 10, y +15);
+    }
+
+    private void drawBestFit(Chromosome chromosome) {
+        gc.setStroke(Color.BLACK);
+        double height = (chromosome.getLength() / 10) * 33;
+        gc.strokeRect(1150, 25, 330, height);
+        int[][] bestGenes = chromosome.getGenes();
+
+            for (int i = 0; i < bestGenes.length; i++) {
+                int y = BEST_FIT_Y_OFFSET;
+                y += i * 33;
+                for (int j = 0; j < bestGenes[i].length; j++) {
+                    drawRects(OTHER_VIEWS_WIDTH_OFFSET + j * 33,  y, bestGenes[i][j], i * 10 + j);
+                }
+            }
+    }
+
+    private void drawAllPop(GraphicsContext gcAllPop, ArrayList<Chromosome> population) {
+        gc.setStroke(Color.BLACK);
+        gc.strokeRect(1150, 375, 330, 325);
+        int x = 0;
+        int y = 0;
+
+        for (int i = 0; i < population.size() / 10; i++) {
+            for (int l = 0; l < 10; l++) {
+                Chromosome curChrome = population.get(i * 10 + l);
+                int[][] curChromeGenes = curChrome.getGenes();
+                int newRow = ALL_POP_Y_OFFSET + (i) * 3 * (curChromeGenes.length);
+                int newCol = OTHER_VIEWS_WIDTH_OFFSET + l * 33;
+                x = newCol;
+                y = newRow;
+                for (int k = 0; k < curChromeGenes.length; k++) {
+                    for (int j = 0; j < curChromeGenes[0].length; j++) {
+                        drawSmallOn(gcAllPop, x, y, curChromeGenes[k][j]);
+                        x += 2;
+                    }
+                    x -= 20;
+                    y += 2;
+                }
+            }
+        }
+    }
+
+    private void drawSmallOn(GraphicsContext gcAllPop, int x, int y, int value) {
+        gcAllPop.setFill(getRectColorBasedOnCellValue(value));
+        gcAllPop.fillRect(x, y, 3, 3);
+    }
 
     private void drawShapes(GraphicsContext gc, Population population) {
         gc.setStroke(Color.BLACK);
@@ -213,13 +286,7 @@ public class EvolutionFX extends Application implements Display {
 
         @Override
         public void handle(ActionEvent event) {
-            if(selection.getSelectionModel().getSelectedIndex() == 0) {
-                settings.setSelectionMethod(new TruncationSelection());
-            }else if(selection.getSelectionModel().getSelectedIndex() == 1) {
-                settings.setSelectionMethod(new RouletteSelection());
-            } else if(selection.getSelectionModel().getSelectedIndex() == 2) {
-                settings.setSelectionMethod(new RankSelection());
-            }
+            settings.setSelectionMethod(selection.getSelectionModel().getSelectedIndex());
         }
     }
 
@@ -232,6 +299,9 @@ public class EvolutionFX extends Application implements Display {
                 File f = chooser.showOpenDialog(null);
                 if(f != null) {
                     settings.setTarget(f);
+                }else {
+                    System.out.println("No target selected for matching...Using default");
+                    settings.setTarget(new File("genotypes/size_100.txt"));
                 }
             }
             settings.setFitnessMethod(fitness.getSelectionModel().getSelectedIndex());
@@ -247,12 +317,19 @@ public class EvolutionFX extends Application implements Display {
 
     @Override
     public void updateMostFit(Chromosome chromosome) {
+        if(chromosome.getLength() <= 200) {
+            drawBestFit(chromosome);
+        }
 
     }
 
     @Override
     public void updatePopulation(Population population) {
         drawShapes(gc, population);
+        if(population.getSize() >= 10 && population.getSize() <= 100 && population.getGenomeLength() <= 100) {
+            drawAllPop(gc, population.getPopulation());
+        }
+
     }
 
     @Override
