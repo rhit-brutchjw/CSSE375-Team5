@@ -55,12 +55,11 @@ ChromosomeViewer {
         fileTitle = new JLabel();
         fileTitle.setHorizontalAlignment(JLabel.CENTER);
 
-
         chooser = new JFileChooser(DEFAULT_FOLDER_PATH);
         fileLoader = new FileLoader();
         currentFile = new File(DEFAULT_FILE_PATH);
         chromosome = fileLoader.load(currentFile);
-        int[][] genes = chromosome.getGenes();
+        genes = chromosome.getGenes();
         chromosomeComponent = new ChromosomeComponent(chromosome, genes);
 
     	setUpFrame();

@@ -8,6 +8,7 @@ public class Crossover {
     public Crossover() {
     } // Crossover
 
+    /*
     public ArrayList<Chromosome> performCross(ArrayList<Chromosome> pop) {
         ArrayList<Chromosome> temp = new ArrayList<Chromosome>();
         for (int c = 0; c < pop.size(); c += 2) {
@@ -28,4 +29,23 @@ public class Crossover {
         }
         return temp;
     } // performCross
+*/
+    public ArrayList<Chromosome> performCross(ArrayList<Chromosome> population) {
+        ArrayList<Chromosome> result = new ArrayList<>();
+        for (Chromosome parent1 : population) {
+            Chromosome parent2 = population.get(population.indexOf(parent1) + 1);
+            Chromosome child1 = parent1.clone();
+            Chromosome child2 = parent2.clone();
+            for (int i = 5; i < child1.getGenes().length; i++) {
+                for (int j = 0; j < child1.getGenes()[0].length; j++) {
+                    int tempGeneValue = child1.getGenes()[i][j];
+                    child1.updateGeneValue(i, j, child2.getGenes()[i][j]);
+                    child2.updateGeneValue(i, j, tempGeneValue);
+                }
+            }
+            result.add(child1);
+            result.add(child2);
+        }
+        return result;
+    }
 } // end Crossover

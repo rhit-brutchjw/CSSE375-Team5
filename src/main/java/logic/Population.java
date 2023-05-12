@@ -174,9 +174,4 @@ public class Population {
     public ArrayList<Integer> getHammDist() {
         return hammDist;
     }
-
-    public void drawOn(Graphics2D g) {
-
-
-    } // drawOn
 } // end Population
